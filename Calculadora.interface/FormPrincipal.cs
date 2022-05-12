@@ -31,7 +31,52 @@
 
         private void Btn0_Click(object sender, EventArgs e)
         {
-            
+            TxtValorCalcular.Text += "0";
+        }
+
+        private void Btn1_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "1";
+        }
+
+        private void Btn2_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "2";
+        }
+
+        private void Btn3_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "3";
+        }
+
+        private void Btn4_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "4";
+        }
+
+        private void Btn5_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "5";
+        }
+
+        private void Btn6_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "6";
+        }
+
+        private void Btn7_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "7";
+        }
+
+        private void Btn8_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "8";
+        }
+
+        private void Btn9_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += "9";
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
