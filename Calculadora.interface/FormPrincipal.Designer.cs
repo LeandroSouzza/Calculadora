@@ -38,7 +38,7 @@
             this.BtnRaizQuadrada = new System.Windows.Forms.Button();
             this.Btn9 = new System.Windows.Forms.Button();
             this.Btn6 = new System.Windows.Forms.Button();
-            this.BtnVirgula = new System.Windows.Forms.Button();
+            this.BtnPonto = new System.Windows.Forms.Button();
             this.Btn3 = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.Btn8 = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.Btn1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnApagar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -162,15 +162,15 @@
             this.Btn6.UseVisualStyleBackColor = true;
             this.Btn6.Click += new System.EventHandler(this.Btn6_Click);
             // 
-            // BtnVirgula
+            // BtnPonto
             // 
-            this.BtnVirgula.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnVirgula.Location = new System.Drawing.Point(203, 433);
-            this.BtnVirgula.Name = "BtnVirgula";
-            this.BtnVirgula.Size = new System.Drawing.Size(90, 59);
-            this.BtnVirgula.TabIndex = 8;
-            this.BtnVirgula.Text = ",";
-            this.BtnVirgula.UseVisualStyleBackColor = true;
+            this.BtnPonto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnPonto.Location = new System.Drawing.Point(203, 433);
+            this.BtnPonto.Name = "BtnPonto";
+            this.BtnPonto.Size = new System.Drawing.Size(90, 59);
+            this.BtnPonto.TabIndex = 8;
+            this.BtnPonto.Text = ".";
+            this.BtnPonto.UseVisualStyleBackColor = true;
             // 
             // Btn3
             // 
@@ -310,15 +310,15 @@
             this.button2.Text = "CE";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnLimpar
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(203, 98);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 61);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "C";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnLimpar.Location = new System.Drawing.Point(203, 98);
+            this.BtnLimpar.Name = "BtnLimpar";
+            this.BtnLimpar.Size = new System.Drawing.Size(90, 61);
+            this.BtnLimpar.TabIndex = 23;
+            this.BtnLimpar.Text = "C";
+            this.BtnLimpar.UseVisualStyleBackColor = true;
             // 
             // BtnApagar
             // 
@@ -337,7 +337,7 @@
             this.ClientSize = new System.Drawing.Size(399, 495);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnApagar);
             this.Controls.Add(this.BtnPercentual);
             this.Controls.Add(this.Btn7);
@@ -352,7 +352,7 @@
             this.Controls.Add(this.BtnRaizQuadrada);
             this.Controls.Add(this.Btn9);
             this.Controls.Add(this.Btn6);
-            this.Controls.Add(this.BtnVirgula);
+            this.Controls.Add(this.BtnPonto);
             this.Controls.Add(this.Btn3);
             this.Controls.Add(this.BtnDivide);
             this.Controls.Add(this.BtnVezez);
@@ -380,7 +380,7 @@
         private Button BtnRaizQuadrada;
         private Button Btn9;
         private Button Btn6;
-        private Button BtnVirgula;
+        private Button BtnPonto;
         private Button Btn3;
         private Button BtnCancelar;
         private Button Btn8;
@@ -394,7 +394,7 @@
         private Button Btn1;
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button BtnLimpar;
         private Button BtnApagar;
     }
 }

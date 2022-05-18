@@ -7,14 +7,26 @@
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
+            LimparOperacoes();
+
             EhSubtracao = true;
             ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
 
             LblValorCalcular.Text = $"{ValorCalcular} -";
         }
 
+        private void LimparOperacoes()
+        {
+            EhSoma = false;
+            EhDivisao = false;
+            EhMultiplicacao = false;
+            EhSubtracao = false;
+        }
+
         private void BtnVezez_Click(object sender, EventArgs e)
         {
+            LimparOperacoes();
+
             EhMultiplicacao = true;
             ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
 
@@ -23,10 +35,22 @@
 
         private void BtnDivide_Click(object sender, EventArgs e)
         {
+            LimparOperacoes();
+
             EhDivisao = true;
             ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
 
             LblValorCalcular.Text = $"{ValorCalcular} /";
+        }
+
+        private void BtnMais_Click(object sender, EventArgs e)
+        {
+            LimparOperacoes();
+
+            EhSoma = true;
+            ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
+
+            LblValorCalcular.Text = $"{ValorCalcular} +";
         }
 
         private void Btn0_Click(object sender, EventArgs e)
@@ -88,30 +112,25 @@
                 LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
                 TxtValorCalcular.Text = ValorTotal.ToString();
-
             }
             else if (EhSubtracao)
             {
-
                 decimal ValorTotal = ValorCalcular - decimal.Parse(TxtValorCalcular.Text);
 
                 LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
                 TxtValorCalcular.Text = ValorTotal.ToString();
-
             }
             else if (EhMultiplicacao)
             {
-
                 decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text);
 
                 LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
                 TxtValorCalcular.Text = ValorTotal.ToString();
-
             }
             else if (EhDivisao)
-                    {
+            {
                 decimal ValorTotal = ValorCalcular / decimal.Parse(TxtValorCalcular.Text);
 
                 LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
@@ -119,17 +138,10 @@
                 TxtValorCalcular.Text = ValorTotal.ToString();
             }
         }
-            public FormPrincipal()
-            {
-                InitializeComponent();
-            }
 
-            private void BtnMais_Click(object sender, EventArgs e)
-            {
-                EhSoma = true;
-                ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-
-                LblValorCalcular.Text = $"{ValorCalcular} +";
-            }
+        public FormPrincipal()
+        {
+            InitializeComponent();
         }
     }
+}
