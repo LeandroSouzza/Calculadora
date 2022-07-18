@@ -38,7 +38,7 @@
             this.BtnRaizQuadrada = new System.Windows.Forms.Button();
             this.Btn9 = new System.Windows.Forms.Button();
             this.Btn6 = new System.Windows.Forms.Button();
-            this.BtnPonto = new System.Windows.Forms.Button();
+            this.BtnVírgula = new System.Windows.Forms.Button();
             this.Btn3 = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.Btn8 = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.Btn4 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.Btn1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPorcentagem = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnApagar = new System.Windows.Forms.Button();
@@ -162,15 +162,16 @@
             this.Btn6.UseVisualStyleBackColor = true;
             this.Btn6.Click += new System.EventHandler(this.Btn6_Click);
             // 
-            // BtnPonto
+            // BtnVírgula
             // 
-            this.BtnPonto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnPonto.Location = new System.Drawing.Point(203, 433);
-            this.BtnPonto.Name = "BtnPonto";
-            this.BtnPonto.Size = new System.Drawing.Size(90, 59);
-            this.BtnPonto.TabIndex = 8;
-            this.BtnPonto.Text = ".";
-            this.BtnPonto.UseVisualStyleBackColor = true;
+            this.BtnVírgula.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnVírgula.Location = new System.Drawing.Point(203, 433);
+            this.BtnVírgula.Name = "BtnVírgula";
+            this.BtnVírgula.Size = new System.Drawing.Size(90, 59);
+            this.BtnVírgula.TabIndex = 8;
+            this.BtnVírgula.Text = ",";
+            this.BtnVírgula.UseVisualStyleBackColor = true;
+            this.BtnVírgula.Click += new System.EventHandler(this.BtnVírgula_Click);
             // 
             // Btn3
             // 
@@ -290,15 +291,16 @@
             this.Btn1.UseVisualStyleBackColor = true;
             this.Btn1.Click += new System.EventHandler(this.Btn1_Click);
             // 
-            // button1
+            // btnPorcentagem
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(11, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 61);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "%";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPorcentagem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPorcentagem.Location = new System.Drawing.Point(11, 98);
+            this.btnPorcentagem.Name = "btnPorcentagem";
+            this.btnPorcentagem.Size = new System.Drawing.Size(90, 61);
+            this.btnPorcentagem.TabIndex = 25;
+            this.btnPorcentagem.Text = "%";
+            this.btnPorcentagem.UseVisualStyleBackColor = true;
+            this.btnPorcentagem.Click += new System.EventHandler(this.btnPorcentagem_Click);
             // 
             // button2
             // 
@@ -309,6 +311,7 @@
             this.button2.TabIndex = 24;
             this.button2.Text = "CE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // BtnLimpar
             // 
@@ -319,6 +322,7 @@
             this.BtnLimpar.TabIndex = 23;
             this.BtnLimpar.Text = "C";
             this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // BtnApagar
             // 
@@ -335,7 +339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 495);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPorcentagem);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnApagar);
@@ -352,7 +356,7 @@
             this.Controls.Add(this.BtnRaizQuadrada);
             this.Controls.Add(this.Btn9);
             this.Controls.Add(this.Btn6);
-            this.Controls.Add(this.BtnPonto);
+            this.Controls.Add(this.BtnVírgula);
             this.Controls.Add(this.Btn3);
             this.Controls.Add(this.BtnDivide);
             this.Controls.Add(this.BtnVezez);
@@ -380,7 +384,7 @@
         private Button BtnRaizQuadrada;
         private Button Btn9;
         private Button Btn6;
-        private Button BtnPonto;
+        private Button BtnVírgula;
         private Button Btn3;
         private Button BtnCancelar;
         private Button Btn8;
@@ -392,7 +396,7 @@
         private Button Btn4;
         private Button button14;
         private Button Btn1;
-        private Button button1;
+        private Button btnPorcentagem;
         private Button button2;
         private Button BtnLimpar;
         private Button BtnApagar;

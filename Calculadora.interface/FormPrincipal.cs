@@ -3,7 +3,7 @@
     public partial class FormPrincipal : Form
     {
         private decimal ValorCalcular;
-        private bool EhSoma, EhMultiplicacao, EhDivisao, EhSubtracao;
+        private bool EhSoma, EhMultiplicacao, EhDivisao, EhSubtracao, EhPercentual;
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
@@ -11,7 +11,7 @@
 
             EhSubtracao = true;
             ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-
+            TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} -";
         }
 
@@ -21,6 +21,7 @@
             EhDivisao = false;
             EhMultiplicacao = false;
             EhSubtracao = false;
+            EhPercentual = false;
         }
 
         private void BtnVezez_Click(object sender, EventArgs e)
@@ -29,7 +30,7 @@
 
             EhMultiplicacao = true;
             ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-
+            TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} *";
         }
 
@@ -39,7 +40,7 @@
 
             EhDivisao = true;
             ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-
+            TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} /";
         }
 
@@ -49,7 +50,7 @@
 
             EhSoma = true;
             ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-
+            TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} +";
         }
 
@@ -98,6 +99,33 @@
             TxtValorCalcular.Text += "8";
         }
 
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text = "";
+            LblValorCalcular.Text = "";
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text = "";
+        }
+
+        private void BtnVírgula_Click(object sender, EventArgs e)
+        {
+            TxtValorCalcular.Text += ",";
+        }
+
+        private void btnPorcentagem_Click(object sender, EventArgs e)
+        {
+            LimparOperacoes ();
+
+            EhPercentual = true;
+            ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
+            TxtValorCalcular.Text = "";
+            LblValorCalcular.Text = $"{ValorCalcular} %";
+        }
+
         private void Btn9_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text += "9";
@@ -138,7 +166,7 @@
                 TxtValorCalcular.Text = ValorTotal.ToString();
             }
         }
-
+        
         public FormPrincipal()
         {
             InitializeComponent();
