@@ -51,7 +51,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.Btn1 = new System.Windows.Forms.Button();
             this.btnPorcentagem = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cancelarRegistro = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnApagar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -64,6 +64,8 @@
             this.TxtValorCalcular.Size = new System.Drawing.Size(375, 52);
             this.TxtValorCalcular.TabIndex = 0;
             this.TxtValorCalcular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtValorCalcular.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtValorCalcular_KeyDown);
+            this.TxtValorCalcular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtValorCalcular_KeyPress);
             // 
             // BtnMais
             // 
@@ -302,16 +304,16 @@
             this.btnPorcentagem.UseVisualStyleBackColor = true;
             this.btnPorcentagem.Click += new System.EventHandler(this.btnPorcentagem_Click);
             // 
-            // button2
+            // cancelarRegistro
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(107, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 61);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "CE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.cancelarRegistro.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cancelarRegistro.Location = new System.Drawing.Point(107, 98);
+            this.cancelarRegistro.Name = "cancelarRegistro";
+            this.cancelarRegistro.Size = new System.Drawing.Size(90, 61);
+            this.cancelarRegistro.TabIndex = 24;
+            this.cancelarRegistro.Text = "CE";
+            this.cancelarRegistro.UseVisualStyleBackColor = true;
+            this.cancelarRegistro.Click += new System.EventHandler(this.button2_Click);
             // 
             // BtnLimpar
             // 
@@ -333,6 +335,7 @@
             this.BtnApagar.TabIndex = 22;
             this.BtnApagar.Text = "(x)";
             this.BtnApagar.UseVisualStyleBackColor = true;
+            this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
             // 
             // FormPrincipal
             // 
@@ -340,7 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 495);
             this.Controls.Add(this.btnPorcentagem);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cancelarRegistro);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.BtnApagar);
             this.Controls.Add(this.BtnPercentual);
@@ -365,8 +368,10 @@
             this.Controls.Add(this.LblValorCalcular);
             this.Controls.Add(this.BtnMais);
             this.Controls.Add(this.TxtValorCalcular);
+            this.KeyPreview = true;
             this.Name = "FormPrincipal";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,7 +402,7 @@
         private Button button14;
         private Button Btn1;
         private Button btnPorcentagem;
-        private Button button2;
+        private Button cancelarRegistro;
         private Button BtnLimpar;
         private Button BtnApagar;
     }
