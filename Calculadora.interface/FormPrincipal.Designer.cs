@@ -35,17 +35,14 @@
             this.BtnMenos = new System.Windows.Forms.Button();
             this.BtnVezez = new System.Windows.Forms.Button();
             this.BtnDivide = new System.Windows.Forms.Button();
-            this.BtnRaizQuadrada = new System.Windows.Forms.Button();
             this.Btn9 = new System.Windows.Forms.Button();
             this.Btn6 = new System.Windows.Forms.Button();
             this.BtnVírgula = new System.Windows.Forms.Button();
             this.Btn3 = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
             this.Btn8 = new System.Windows.Forms.Button();
             this.Btn5 = new System.Windows.Forms.Button();
             this.Btn0 = new System.Windows.Forms.Button();
             this.Btn2 = new System.Windows.Forms.Button();
-            this.BtnPercentual = new System.Windows.Forms.Button();
             this.Btn7 = new System.Windows.Forms.Button();
             this.Btn4 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -54,6 +51,9 @@
             this.cancelarRegistro = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnApagar = new System.Windows.Forms.Button();
+            this.BtnPercentual = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnRaizQuadrada = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtValorCalcular
@@ -63,7 +63,9 @@
             this.TxtValorCalcular.Name = "TxtValorCalcular";
             this.TxtValorCalcular.Size = new System.Drawing.Size(375, 52);
             this.TxtValorCalcular.TabIndex = 0;
+            this.TxtValorCalcular.Text = "0";
             this.TxtValorCalcular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtValorCalcular.TextChanged += new System.EventHandler(this.TxtValorCalcular_TextChanged);
             this.TxtValorCalcular.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtValorCalcular_KeyDown);
             this.TxtValorCalcular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtValorCalcular_KeyPress);
             // 
@@ -84,9 +86,9 @@
             this.LblValorCalcular.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblValorCalcular.Location = new System.Drawing.Point(12, 9);
             this.LblValorCalcular.Name = "LblValorCalcular";
-            this.LblValorCalcular.Size = new System.Drawing.Size(23, 28);
+            this.LblValorCalcular.Size = new System.Drawing.Size(0, 28);
             this.LblValorCalcular.TabIndex = 2;
-            this.LblValorCalcular.Text = "0";
+            this.LblValorCalcular.Click += new System.EventHandler(this.LblValorCalcular_Click);
             // 
             // BtnIgual
             // 
@@ -132,16 +134,6 @@
             this.BtnDivide.UseVisualStyleBackColor = true;
             this.BtnDivide.Click += new System.EventHandler(this.BtnDivide_Click);
             // 
-            // BtnRaizQuadrada
-            // 
-            this.BtnRaizQuadrada.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnRaizQuadrada.Location = new System.Drawing.Point(203, 165);
-            this.BtnRaizQuadrada.Name = "BtnRaizQuadrada";
-            this.BtnRaizQuadrada.Size = new System.Drawing.Size(90, 61);
-            this.BtnRaizQuadrada.TabIndex = 11;
-            this.BtnRaizQuadrada.Text = "²/x";
-            this.BtnRaizQuadrada.UseVisualStyleBackColor = true;
-            // 
             // Btn9
             // 
             this.Btn9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -185,16 +177,6 @@
             this.Btn3.Text = "3";
             this.Btn3.UseVisualStyleBackColor = true;
             this.Btn3.Click += new System.EventHandler(this.Btn3_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancelar.Location = new System.Drawing.Point(107, 165);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(90, 61);
-            this.BtnCancelar.TabIndex = 16;
-            this.BtnCancelar.Text = "x²";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
             // Btn8
             // 
@@ -240,16 +222,6 @@
             this.Btn2.UseVisualStyleBackColor = true;
             this.Btn2.Click += new System.EventHandler(this.Btn2_Click);
             // 
-            // BtnPercentual
-            // 
-            this.BtnPercentual.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnPercentual.Location = new System.Drawing.Point(11, 165);
-            this.BtnPercentual.Name = "BtnPercentual";
-            this.BtnPercentual.Size = new System.Drawing.Size(90, 61);
-            this.BtnPercentual.TabIndex = 21;
-            this.BtnPercentual.Text = "¹/x";
-            this.BtnPercentual.UseVisualStyleBackColor = true;
-            // 
             // Btn7
             // 
             this.Btn7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -281,6 +253,7 @@
             this.button14.TabIndex = 18;
             this.button14.Text = "+/-";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Btn1
             // 
@@ -296,7 +269,7 @@
             // btnPorcentagem
             // 
             this.btnPorcentagem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPorcentagem.Location = new System.Drawing.Point(11, 98);
+            this.btnPorcentagem.Location = new System.Drawing.Point(12, 165);
             this.btnPorcentagem.Name = "btnPorcentagem";
             this.btnPorcentagem.Size = new System.Drawing.Size(90, 61);
             this.btnPorcentagem.TabIndex = 25;
@@ -307,7 +280,7 @@
             // cancelarRegistro
             // 
             this.cancelarRegistro.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cancelarRegistro.Location = new System.Drawing.Point(107, 98);
+            this.cancelarRegistro.Location = new System.Drawing.Point(107, 165);
             this.cancelarRegistro.Name = "cancelarRegistro";
             this.cancelarRegistro.Size = new System.Drawing.Size(90, 61);
             this.cancelarRegistro.TabIndex = 24;
@@ -318,7 +291,7 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnLimpar.Location = new System.Drawing.Point(203, 98);
+            this.BtnLimpar.Location = new System.Drawing.Point(203, 165);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(90, 61);
             this.BtnLimpar.TabIndex = 23;
@@ -336,6 +309,33 @@
             this.BtnApagar.Text = "(x)";
             this.BtnApagar.UseVisualStyleBackColor = true;
             this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
+            // 
+            // BtnPercentual
+            // 
+            this.BtnPercentual.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnPercentual.Location = new System.Drawing.Point(11, 98);
+            this.BtnPercentual.Name = "BtnPercentual";
+            this.BtnPercentual.Size = new System.Drawing.Size(90, 61);
+            this.BtnPercentual.TabIndex = 21;
+            this.BtnPercentual.UseVisualStyleBackColor = true;
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnCancelar.Location = new System.Drawing.Point(107, 98);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(90, 61);
+            this.BtnCancelar.TabIndex = 16;
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // BtnRaizQuadrada
+            // 
+            this.BtnRaizQuadrada.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnRaizQuadrada.Location = new System.Drawing.Point(203, 98);
+            this.BtnRaizQuadrada.Name = "BtnRaizQuadrada";
+            this.BtnRaizQuadrada.Size = new System.Drawing.Size(90, 61);
+            this.BtnRaizQuadrada.TabIndex = 11;
+            this.BtnRaizQuadrada.UseVisualStyleBackColor = true;
             // 
             // FormPrincipal
             // 
@@ -386,17 +386,14 @@
         private Button BtnMenos;
         private Button BtnVezez;
         private Button BtnDivide;
-        private Button BtnRaizQuadrada;
         private Button Btn9;
         private Button Btn6;
         private Button BtnVírgula;
         private Button Btn3;
-        private Button BtnCancelar;
         private Button Btn8;
         private Button Btn5;
         private Button Btn0;
         private Button Btn2;
-        private Button BtnPercentual;
         private Button Btn7;
         private Button Btn4;
         private Button button14;
@@ -405,5 +402,8 @@
         private Button cancelarRegistro;
         private Button BtnLimpar;
         private Button BtnApagar;
+        private Button BtnPercentual;
+        private Button BtnCancelar;
+        private Button BtnRaizQuadrada;
     }
 }

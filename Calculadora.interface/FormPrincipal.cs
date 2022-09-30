@@ -71,7 +71,7 @@
 
         private void Btn1_Click(object sender, EventArgs e)
         {
-            TxtValorCalcular.Text += "1";
+                TxtValorCalcular.Text += "1";
         }
 
         private void Btn2_Click(object sender, EventArgs e)
@@ -112,18 +112,22 @@
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text = "";
-            LblValorCalcular.Text = "";
-
+            TxtValorCalcular.Text = "0";
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text = "";
+            TxtValorCalcular.Text = "0";
+            LblValorCalcular.Text = "";
         }
 
         private void BtnVírgula_Click(object sender, EventArgs e)
         {
-            TxtValorCalcular.Text += ",";
+            if (TxtValorCalcular.Text != "")
+                if (!TxtValorCalcular.Text.Contains(","))
+                    TxtValorCalcular.Text += ",";
         }
 
         private void BtnApagar_Click(object sender, EventArgs e)
@@ -148,7 +152,7 @@
             if (!char.IsDigit(e.KeyChar))
                 e.Handled = true;
             {
-                LblValorCalcular.Text += "";
+
             }
         }
 
@@ -179,6 +183,14 @@
                 {
                     LblValorCalcular.Text = "/";
                 }
+                if (e.KeyValue == 98)
+                {
+                    LblValorCalcular.Text = "2";
+                }
+                if (e.KeyValue == 99)
+                {
+                    LblValorCalcular.Text = "3";
+                }
                 if (e.KeyValue == 8)
 
                     LimparOperacoes();
@@ -191,7 +203,21 @@
                 LblValorCalcular.Text = "";
             }
         }
-    
+
+        private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblValorCalcular_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
@@ -218,14 +244,13 @@
                 {
                     decimal ValorTotal = ValorCalcular + decimal.Parse(TxtValorCalcular.Text);
 
-                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {LblValorCalcular.Text} =";
 
                     TxtValorCalcular.Text = ValorTotal.ToString();
-
                 }
                 else if (EhPercentual)
                 {
-                    decimal ValorTotal = (ValorCalcular * decimal.Parse(TxtValorCalcular.Text)) /100;
+                    decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text) / 100;
 
                     LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
