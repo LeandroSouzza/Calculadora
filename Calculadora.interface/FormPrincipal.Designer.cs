@@ -61,7 +61,7 @@
             this.TxtValorCalcular.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtValorCalcular.Location = new System.Drawing.Point(12, 40);
             this.TxtValorCalcular.Name = "TxtValorCalcular";
-            this.TxtValorCalcular.Size = new System.Drawing.Size(375, 52);
+            this.TxtValorCalcular.Size = new System.Drawing.Size(378, 52);
             this.TxtValorCalcular.TabIndex = 0;
             this.TxtValorCalcular.Text = "0";
             this.TxtValorCalcular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -372,6 +372,7 @@
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormPrincipal_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

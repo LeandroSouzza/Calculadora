@@ -154,6 +154,7 @@
             {
 
             }
+
         }
 
         private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
@@ -183,13 +184,81 @@
                 {
                     LblValorCalcular.Text = "/";
                 }
-                if (e.KeyValue == 98)
+                if (e.KeyValue == 96 || e.KeyValue == 48)
+                {
+                    LblValorCalcular.Text = "0";
+                }
+                if (e.KeyValue == 97 || e.KeyValue == 49)
+                {
+                    LblValorCalcular.Text = "1";
+                }
+                if (e.KeyValue == 98 || e.KeyValue == 50)
                 {
                     LblValorCalcular.Text = "2";
                 }
-                if (e.KeyValue == 99)
+                if (e.KeyValue == 99 || e.KeyValue == 51)
                 {
                     LblValorCalcular.Text = "3";
+                }
+                if (e.KeyValue == 100 || e.KeyValue == 52)
+                {
+                    LblValorCalcular.Text = "4";
+                }
+                if (e.KeyValue == 101 || e.KeyValue == 53)
+                {
+                    LblValorCalcular.Text = "5";
+                }
+                if (e.KeyValue ==  102 || e.KeyValue == 54)
+                {
+                    LblValorCalcular.Text = "6";
+                }
+                if (e.KeyValue == 103 || e.KeyValue == 55)
+                {
+                    LblValorCalcular.Text = "7";
+                }
+                if (e.KeyValue == 104 || e.KeyValue == 56)
+                {
+                    LblValorCalcular.Text = "8";
+                }
+                if (e.KeyValue == 105 || e.KeyValue == 57)
+                {
+                    LblValorCalcular.Text = "9";
+                }
+                if (e.KeyValue == 20)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 16)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 13)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 37)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 38)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 39)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 40)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 8)
+                {
+                    LblValorCalcular.Text = "";
+                }
+                if (e.KeyValue == 32)
+                {
+                    LblValorCalcular.Text = "";
                 }
                 if (e.KeyValue == 8)
 
@@ -198,7 +267,7 @@
                 Apagar = Apagar.Remove(Apagar.Length - 1);
                 TxtValorCalcular.Text = Apagar;
             }
-            catch (Exception ex)
+            catch 
             {
                 LblValorCalcular.Text = "";
             }
@@ -206,7 +275,7 @@
 
         private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
         {
-
+         
         }
 
         private void LblValorCalcular_Click(object sender, EventArgs e)
@@ -216,10 +285,23 @@
 
         private void button14_Click(object sender, EventArgs e)
         {
-            
+            TxtValorCalcular.Text = (double.Parse(TxtValorCalcular.Text) * -1).ToString();
         }
 
-        private void btnPorcentagem_Click(object sender, EventArgs e)
+        private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                e.Handled = false;
+            }
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
+            {
+
+            }
+        }
+
+        private  void btnPorcentagem_Click(object sender, EventArgs e)
         {
             LimparOperacoes();
 
@@ -228,7 +310,7 @@
             if (TxtValorCalcular.Text != "")
                 ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
             TxtValorCalcular.Text = "";
-            LblValorCalcular.Text = $"{ValorCalcular} %";
+            TxtValorCalcular.Text = $"{ValorCalcular} %";
         }
 
         private void Btn9_Click(object sender, EventArgs e)
