@@ -154,7 +154,6 @@
             {
 
             }
-
         }
 
         private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
@@ -167,7 +166,7 @@
             try
             {
 
-                LblValorCalcular.Text = Convert.ToString(e.KeyValue);
+                TxtTeclado.Text = Convert.ToString(e.KeyValue);
                 if (e.KeyValue == 107)
                 {
                     LblValorCalcular.Text = "+";
@@ -208,7 +207,7 @@
                 {
                     LblValorCalcular.Text = "5";
                 }
-                if (e.KeyValue ==  102 || e.KeyValue == 54)
+                if (e.KeyValue == 102 || e.KeyValue == 54)
                 {
                     LblValorCalcular.Text = "6";
                 }
@@ -224,42 +223,6 @@
                 {
                     LblValorCalcular.Text = "9";
                 }
-                if (e.KeyValue == 20)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 16)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 13)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 37)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 38)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 39)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 40)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 8)
-                {
-                    LblValorCalcular.Text = "";
-                }
-                if (e.KeyValue == 32)
-                {
-                    LblValorCalcular.Text = "";
-                }
                 if (e.KeyValue == 8)
 
                     LimparOperacoes();
@@ -267,10 +230,11 @@
                 Apagar = Apagar.Remove(Apagar.Length - 1);
                 TxtValorCalcular.Text = Apagar;
             }
-            catch 
+            catch
             {
-                LblValorCalcular.Text = "";
+                
             }
+
         }
 
         private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
@@ -290,18 +254,25 @@
 
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
-            {
-                e.Handled = false;
-            }
-            if (!char.IsDigit(e.KeyChar))
-                e.Handled = true;
-            {
-
-            }
+            
         }
 
-        private  void btnPorcentagem_Click(object sender, EventArgs e)
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtTeclado_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void TxtTeclado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void btnPorcentagem_Click(object sender, EventArgs e)
         {
             LimparOperacoes();
 

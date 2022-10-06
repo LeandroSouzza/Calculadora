@@ -54,6 +54,7 @@
             this.BtnPercentual = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnRaizQuadrada = new System.Windows.Forms.Button();
+            this.TxtTeclado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtValorCalcular
@@ -337,11 +338,23 @@
             this.BtnRaizQuadrada.TabIndex = 11;
             this.BtnRaizQuadrada.UseVisualStyleBackColor = true;
             // 
+            // TxtTeclado
+            // 
+            this.TxtTeclado.Location = new System.Drawing.Point(83, 5);
+            this.TxtTeclado.Name = "TxtTeclado";
+            this.TxtTeclado.Size = new System.Drawing.Size(94, 29);
+            this.TxtTeclado.TabIndex = 26;
+            this.TxtTeclado.UseVisualStyleBackColor = true;
+            this.TxtTeclado.Visible = false;
+            this.TxtTeclado.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTeclado_KeyDown);
+            this.TxtTeclado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTeclado_KeyPress);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 495);
+            this.Controls.Add(this.TxtTeclado);
             this.Controls.Add(this.btnPorcentagem);
             this.Controls.Add(this.cancelarRegistro);
             this.Controls.Add(this.BtnLimpar);
@@ -371,6 +384,7 @@
             this.KeyPreview = true;
             this.Name = "FormPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormPrincipal_KeyPress);
             this.ResumeLayout(false);
@@ -406,5 +420,6 @@
         private Button BtnPercentual;
         private Button BtnCancelar;
         private Button BtnRaizQuadrada;
+        private Button TxtTeclado;
     }
 }
