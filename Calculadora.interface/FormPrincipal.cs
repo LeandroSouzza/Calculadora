@@ -146,7 +146,7 @@
 
 
         }
-
+        //Textbox aceitar só números//
         private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar))
@@ -158,6 +158,7 @@
 
         private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
         {
+
         }
 
 
@@ -239,8 +240,10 @@
 
         private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
         {
-         
+            //string teste = TxtValorCalcular.Text;
+            //TxtValorCalcular.Text = teste.TrimStart('0');
         }
+        
 
         private void LblValorCalcular_Click(object sender, EventArgs e)
         {
@@ -297,7 +300,7 @@
                 {
                     decimal ValorTotal = ValorCalcular + decimal.Parse(TxtValorCalcular.Text);
 
-                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {LblValorCalcular.Text} =";
+                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
                     TxtValorCalcular.Text = ValorTotal.ToString();
                 }
