@@ -71,7 +71,7 @@
 
         private void Btn1_Click(object sender, EventArgs e)
         {
-                TxtValorCalcular.Text += "1";
+            TxtValorCalcular.Text += "1";
         }
 
         private void Btn2_Click(object sender, EventArgs e)
@@ -152,13 +152,14 @@
             if (!char.IsDigit(e.KeyChar))
                 e.Handled = true;
             {
-
+                
             }
+            
         }
 
         private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
         {
-
+            
         }
 
 
@@ -171,60 +172,102 @@
                 if (e.KeyValue == 107)
                 {
                     LblValorCalcular.Text = "+";
+
+                    LimparOperacoes();
+
+                    EhSoma = true;
+
+                    if (TxtValorCalcular.Text != "")
+                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
+                    TxtValorCalcular.Text = "";
+                    LblValorCalcular.Text = $"{ValorCalcular} +";
                 }
                 if (e.KeyValue == 109)
                 {
                     LblValorCalcular.Text = "-";
+
+                    LimparOperacoes();
+
+                    EhSubtracao = true;
+
+                    if (TxtValorCalcular.Text != "")
+                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
+                    TxtValorCalcular.Text = "";
+                    LblValorCalcular.Text = $"{ValorCalcular} -";
                 }
                 if (e.KeyValue == 106)
                 {
                     LblValorCalcular.Text = "*";
+
+                    LimparOperacoes();
+
+                    EhMultiplicacao = true;
+
+                    if (TxtValorCalcular.Text != "")
+                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
+                    TxtValorCalcular.Text = "";
+                    LblValorCalcular.Text = $"{ValorCalcular} *";
                 }
                 if (e.KeyValue == 111)
                 {
                     LblValorCalcular.Text = "/";
+
+                    LimparOperacoes();
+
+                    EhDivisao = true;
+
+                    if (TxtValorCalcular.Text != "")
+                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
+                    TxtValorCalcular.Text = "";
+                    LblValorCalcular.Text = $"{ValorCalcular} /";
                 }
-                if (e.KeyValue == 96 || e.KeyValue == 48)
+                if (e.KeyValue == 13)
                 {
-                    LblValorCalcular.Text = "0";
+                    if (TxtValorCalcular.Text != "")
+
+                        if (EhSoma)
+                        {
+                            decimal ValorTotal = ValorCalcular + decimal.Parse(TxtValorCalcular.Text);
+
+                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+
+                            TxtValorCalcular.Text = ValorTotal.ToString();
+                        }
+                        else if (EhPercentual)
+                        {
+                            decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text) / 100;
+
+                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+
+                            TxtValorCalcular.Text = ValorTotal.ToString();
+                        }
+                        else if (EhSubtracao)
+                        {
+                            decimal ValorTotal = ValorCalcular - decimal.Parse(TxtValorCalcular.Text);
+
+                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+
+                            TxtValorCalcular.Text = ValorTotal.ToString();
+                        }
+                        else if (EhMultiplicacao)
+                        {
+                            decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text);
+
+                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+
+                            TxtValorCalcular.Text = ValorTotal.ToString();
+                        }
+                        else if (EhDivisao)
+                        {
+                            decimal ValorTotal = ValorCalcular / decimal.Parse(TxtValorCalcular.Text);
+
+                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+
+                            TxtValorCalcular.Text = ValorTotal.ToString();
+                        }
                 }
-                if (e.KeyValue == 97 || e.KeyValue == 49)
-                {
-                    LblValorCalcular.Text = "1";
-                }
-                if (e.KeyValue == 98 || e.KeyValue == 50)
-                {
-                    LblValorCalcular.Text = "2";
-                }
-                if (e.KeyValue == 99 || e.KeyValue == 51)
-                {
-                    LblValorCalcular.Text = "3";
-                }
-                if (e.KeyValue == 100 || e.KeyValue == 52)
-                {
-                    LblValorCalcular.Text = "4";
-                }
-                if (e.KeyValue == 101 || e.KeyValue == 53)
-                {
-                    LblValorCalcular.Text = "5";
-                }
-                if (e.KeyValue == 102 || e.KeyValue == 54)
-                {
-                    LblValorCalcular.Text = "6";
-                }
-                if (e.KeyValue == 103 || e.KeyValue == 55)
-                {
-                    LblValorCalcular.Text = "7";
-                }
-                if (e.KeyValue == 104 || e.KeyValue == 56)
-                {
-                    LblValorCalcular.Text = "8";
-                }
-                if (e.KeyValue == 105 || e.KeyValue == 57)
-                {
-                    LblValorCalcular.Text = "9";
-                }
-                if (e.KeyValue == 8)
+
+                    if (e.KeyValue == 8)
 
                     LimparOperacoes();
                 string Apagar = TxtValorCalcular.Text;
@@ -336,6 +379,7 @@
 
                     TxtValorCalcular.Text = ValorTotal.ToString();
                 }
+            
         }
 
         public FormPrincipal()

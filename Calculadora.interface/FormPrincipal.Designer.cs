@@ -59,13 +59,14 @@
             // 
             // TxtValorCalcular
             // 
+            this.TxtValorCalcular.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.TxtValorCalcular.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtValorCalcular.Location = new System.Drawing.Point(12, 40);
             this.TxtValorCalcular.Name = "TxtValorCalcular";
+            this.TxtValorCalcular.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TxtValorCalcular.Size = new System.Drawing.Size(378, 52);
             this.TxtValorCalcular.TabIndex = 0;
             this.TxtValorCalcular.Text = "0";
-            this.TxtValorCalcular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TxtValorCalcular.TextChanged += new System.EventHandler(this.TxtValorCalcular_TextChanged);
             this.TxtValorCalcular.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtValorCalcular_KeyDown);
             this.TxtValorCalcular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtValorCalcular_KeyPress);
