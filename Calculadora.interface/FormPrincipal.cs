@@ -5,7 +5,6 @@
         private decimal ValorCalcular;
         private bool EhSoma, EhMultiplicacao, EhDivisao, EhSubtracao, EhPercentual;
 
-
         private void BtnMenos_Click(object sender, EventArgs e)
         {
             LimparOperacoes();
@@ -16,9 +15,11 @@
                 ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
             TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} -";
+
         }
 
         private void LimparOperacoes()
+
         {
             EhSoma = false;
             EhDivisao = false;
@@ -62,6 +63,7 @@
                 ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
             TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} +";
+
         }
 
         private void Btn0_Click(object sender, EventArgs e)
@@ -248,6 +250,7 @@
                             LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
                             TxtValorCalcular.Text = ValorTotal.ToString();
+
                         }
                         else if (EhMultiplicacao)
                         {
@@ -283,8 +286,7 @@
 
         private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
         {
-            //string teste = TxtValorCalcular.Text;
-            //TxtValorCalcular.Text = teste.TrimStart('0');
+           
         }
         
 
@@ -316,6 +318,16 @@
         private void TxtTeclado_KeyPress(object sender, KeyPressEventArgs e)
         {
            
+        }
+
+        private void agregarNumero(object sender, EventArgs e)
+        {
+            var button = ((Button)sender);
+
+            if (TxtValorCalcular.Text == "0")
+                TxtValorCalcular.Text = "";
+
+            TxtValorCalcular.Text += button.Text;
         }
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
