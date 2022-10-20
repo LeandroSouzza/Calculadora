@@ -4,6 +4,25 @@
     {
         private decimal ValorCalcular;
         private bool EhSoma, EhMultiplicacao, EhDivisao, EhSubtracao, EhPercentual;
+        private void LimparOperacoes()
+
+        {
+            EhSoma = false;
+            EhDivisao = false;
+            EhMultiplicacao = false;
+            EhSubtracao = false;
+            EhPercentual = false;
+        }
+
+        private void agregarNumero(object sender, EventArgs e)
+        {
+            var button = ((Button)sender);
+
+            if (TxtValorCalcular.Text == "0")
+                TxtValorCalcular.Text = "";
+
+            TxtValorCalcular.Text += button.Text;
+        }
 
         private void BtnMenos_Click(object sender, EventArgs e)
         {
@@ -17,17 +36,6 @@
             LblValorCalcular.Text = $"{ValorCalcular} -";
 
         }
-
-        private void LimparOperacoes()
-
-        {
-            EhSoma = false;
-            EhDivisao = false;
-            EhMultiplicacao = false;
-            EhSubtracao = false;
-            EhPercentual = false;
-        }
-
         private void BtnVezez_Click(object sender, EventArgs e)
 
         {
@@ -65,52 +73,17 @@
             LblValorCalcular.Text = $"{ValorCalcular} +";
 
         }
-
-        private void Btn0_Click(object sender, EventArgs e)
+        private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-            TxtValorCalcular.Text += "0";
-        }
+            LimparOperacoes();
 
-        private void Btn1_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "1";
-        }
+            EhPercentual = true;
 
-        private void Btn2_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "2";
+            if (TxtValorCalcular.Text != "")
+                ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
+            TxtValorCalcular.Text = "";
+            TxtValorCalcular.Text = $"{ValorCalcular} %";
         }
-
-        private void Btn3_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "3";
-        }
-
-        private void Btn4_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "4";
-        }
-
-        private void Btn5_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "5";
-        }
-
-        private void Btn6_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "6";
-        }
-
-        private void Btn7_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "7";
-        }
-
-        private void Btn8_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "8";
-        }
-
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text = "";
@@ -143,7 +116,7 @@
             }
             catch (Exception ex)
             {
-                TxtValorCalcular.Text = TxtValorCalcular.Text = "";
+                TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
             }
 
 
@@ -151,14 +124,10 @@
         //Textbox aceitar só números//
         private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar))
-                e.Handled = true;
-            {
-                
-            }
-            
-        }
+            Program.DecNumber(sender, e);
 
+        }
+        
         private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
         {
             
@@ -302,7 +271,7 @@
 
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+          
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -319,34 +288,6 @@
         {
            
         }
-
-        private void agregarNumero(object sender, EventArgs e)
-        {
-            var button = ((Button)sender);
-
-            if (TxtValorCalcular.Text == "0")
-                TxtValorCalcular.Text = "";
-
-            TxtValorCalcular.Text += button.Text;
-        }
-
-        private void btnPorcentagem_Click(object sender, EventArgs e)
-        {
-            LimparOperacoes();
-
-            EhPercentual = true;
-
-            if (TxtValorCalcular.Text != "")
-                ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-            TxtValorCalcular.Text = "";
-            TxtValorCalcular.Text = $"{ValorCalcular} %";
-        }
-
-        private void Btn9_Click(object sender, EventArgs e)
-        {
-            TxtValorCalcular.Text += "9";
-        }
-
         private void BtnIgual_Click(object sender, EventArgs e)
         {
             if (TxtValorCalcular.Text != "")
@@ -391,7 +332,8 @@
 
                     TxtValorCalcular.Text = ValorTotal.ToString();
                 }
-            
+
+
         }
 
         public FormPrincipal()
