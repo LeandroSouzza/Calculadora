@@ -160,7 +160,7 @@
             // btnPorcentagem
             // 
             this.btnPorcentagem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPorcentagem.Location = new System.Drawing.Point(297, 98);
+            this.btnPorcentagem.Location = new System.Drawing.Point(300, 98);
             this.btnPorcentagem.Name = "btnPorcentagem";
             this.btnPorcentagem.Size = new System.Drawing.Size(90, 61);
             this.btnPorcentagem.TabIndex = 25;
