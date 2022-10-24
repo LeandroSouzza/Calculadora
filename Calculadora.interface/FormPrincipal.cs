@@ -209,7 +209,6 @@
 
                             TxtValorCalcular.Text = ValorTotal.ToString();
                         }
-                        
                         else if (EhSubtracao)
                         {
                             decimal ValorTotal = ValorCalcular - decimal.Parse(TxtValorCalcular.Text);
@@ -238,11 +237,14 @@
                 }
 
                     if (e.KeyValue == 8)
+                {
 
                     LimparOperacoes();
-                string Apagar = TxtValorCalcular.Text;
-                Apagar = Apagar.Remove(Apagar.Length - 1);
-                TxtValorCalcular.Text = Apagar;
+                    string Apagar = TxtValorCalcular.Text;
+                    Apagar = Apagar.Remove(Apagar.Length - 1);
+                    TxtValorCalcular.Text = Apagar;
+                }
+
             }
             catch
             {

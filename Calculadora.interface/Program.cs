@@ -17,6 +17,12 @@ internal static class Program
     {
         if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 44)
             e.Handled = true;
+        else if (e.KeyChar == 44)
+        {
+            TextBox txt = (TextBox)sender;
+            if (txt.Text.Contains(","))
+                e.Handled = true;
+        }
     }
 }
 
