@@ -4,6 +4,7 @@
     {
         private decimal ValorCalcular;
         private bool EhSoma, EhMultiplicacao, EhDivisao, EhSubtracao, EhPercentual;
+
         private void LimparOperacoes()
 
         {
@@ -19,7 +20,14 @@
             var button = ((Button)sender);
 
             if (TxtValorCalcular.Text == "0")
+            {
                 TxtValorCalcular.Text = "";
+            }
+             else if (TxtValorCalcular.Text != "")
+             {
+                 TxtValorCalcular.Text = "";
+                 LblValorCalcular.Text = "";
+             }
 
             TxtValorCalcular.Text += button.Text;
         }
@@ -131,7 +139,6 @@
         private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
         {
             Program.DecNumber(sender, e);
-
         }
 
         private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
@@ -236,7 +243,7 @@
                         }
                 }
 
-                    if (e.KeyValue == 8)
+                if (e.KeyValue == 8)
                 {
 
                     LimparOperacoes();
@@ -248,16 +255,16 @@
             }
             catch
             {
-                
+
             }
 
         }
 
         private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
-        
+
 
         private void LblValorCalcular_Click(object sender, EventArgs e)
         {
@@ -271,7 +278,7 @@
 
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -281,12 +288,12 @@
 
         private void TxtTeclado_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void TxtTeclado_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
         private void BtnIgual_Click(object sender, EventArgs e)
         {
@@ -333,9 +340,7 @@
                     TxtValorCalcular.Text = ValorTotal.ToString();
                 }
 
-
         }
-
         public FormPrincipal()
         {
             InitializeComponent();
