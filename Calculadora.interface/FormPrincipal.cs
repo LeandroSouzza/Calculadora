@@ -20,14 +20,7 @@
             var button = ((Button)sender);
 
             if (TxtValorCalcular.Text == "0")
-            {
                 TxtValorCalcular.Text = "";
-            }
-             else if (TxtValorCalcular.Text != "")
-             {
-                 TxtValorCalcular.Text = "";
-                 LblValorCalcular.Text = "";
-             }
 
             TxtValorCalcular.Text += button.Text;
         }
@@ -42,8 +35,8 @@
                 ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
             TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} -";
-
         }
+
         private void BtnVezez_Click(object sender, EventArgs e)
 
         {
@@ -79,8 +72,8 @@
                 ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
             TxtValorCalcular.Text = "";
             LblValorCalcular.Text = $"{ValorCalcular} +";
-
         }
+
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
             decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text) / 100;
@@ -98,12 +91,12 @@
             TxtValorCalcular.Text = "";
             TxtValorCalcular.Text = $"{ValorCalcular}";
         }
+
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text = "";
             TxtValorCalcular.Text = "0";
         }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -132,9 +125,8 @@
             {
                 TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
             }
-
-
         }
+
         //Textbox aceitar só números//
         private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -143,14 +135,12 @@
 
         private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
-
                 TxtTeclado.Text = Convert.ToString(e.KeyValue);
                 if (e.KeyValue == 107)
                 {
@@ -223,7 +213,6 @@
                             LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
                             TxtValorCalcular.Text = ValorTotal.ToString();
-
                         }
                         else if (EhMultiplicacao)
                         {
@@ -245,30 +234,23 @@
 
                 if (e.KeyValue == 8)
                 {
-
                     LimparOperacoes();
                     string Apagar = TxtValorCalcular.Text;
                     Apagar = Apagar.Remove(Apagar.Length - 1);
                     TxtValorCalcular.Text = Apagar;
                 }
-
             }
             catch
             {
-
             }
-
         }
 
         private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
         {
-
         }
-
 
         private void LblValorCalcular_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -278,23 +260,20 @@
 
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
-
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-
         }
 
         private void TxtTeclado_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void TxtTeclado_KeyPress(object sender, KeyPressEventArgs e)
         {
-
         }
+
         private void BtnIgual_Click(object sender, EventArgs e)
         {
             if (TxtValorCalcular.Text != "")
@@ -302,6 +281,14 @@
                 if (EhSoma)
                 {
                     decimal ValorTotal = ValorCalcular + decimal.Parse(TxtValorCalcular.Text);
+
+                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+
+                    TxtValorCalcular.Text = ValorTotal.ToString();
+                }
+                else if (EhPercentual)
+                {
+                    decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text) / 100;
 
                     LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
@@ -331,8 +318,8 @@
 
                     TxtValorCalcular.Text = ValorTotal.ToString();
                 }
-
         }
+
         public FormPrincipal()
         {
             InitializeComponent();
