@@ -307,14 +307,6 @@
 
                     TxtValorCalcular.Text = ValorTotal.ToString();
                 }
-                else if (EhPercentual)
-                {
-                    decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text) / 100;
-
-                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-
-                    TxtValorCalcular.Text = ValorTotal.ToString();
-                }
                 else if (EhSubtracao)
                 {
                     decimal ValorTotal = ValorCalcular - decimal.Parse(TxtValorCalcular.Text);
