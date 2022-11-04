@@ -76,20 +76,13 @@
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-            decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text) / 100;
-
-            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-
+            decimal ValorTotal = decimal.Parse(TxtValorCalcular.Text) / 100;
+                       
             TxtValorCalcular.Text = ValorTotal.ToString();
 
             LimparOperacoes();
 
             EhPercentual = true;
-
-            if (TxtValorCalcular.Text != "")
-                ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-            TxtValorCalcular.Text = "";
-            TxtValorCalcular.Text = $"{ValorCalcular}";
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -288,7 +281,7 @@
                 }
                 else if (EhPercentual)
                 {
-                    decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text) / 100;
+                    decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text);
 
                     LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
