@@ -285,7 +285,7 @@
 
                     LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
 
-                    TxtValorCalcular.Text = ValorTotal.ToString();
+                    TxtValorCalcular.Text = ValorTotal.ToString("N0");
                 }
                 else if (EhSubtracao)
                 {
