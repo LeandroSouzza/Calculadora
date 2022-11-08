@@ -20,7 +20,14 @@
             var button = ((Button)sender);
 
             if (TxtValorCalcular.Text == "0")
+            {
                 TxtValorCalcular.Text = "";
+            }
+             else if (TxtValorCalcular.Text != "")
+            {
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = "";
+            }
 
             TxtValorCalcular.Text += button.Text;
         }
