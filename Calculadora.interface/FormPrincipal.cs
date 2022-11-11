@@ -19,14 +19,12 @@
         {
             var button = ((Button)sender);
 
+            string value = "000000123456";
+            string newValue = value.TrimStart('0');
+
             if (TxtValorCalcular.Text == "0")
             {
                 TxtValorCalcular.Text = "";
-            }
-             else if (TxtValorCalcular.Text != "")
-            {
-                TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = "";
             }
 
             TxtValorCalcular.Text += button.Text;
@@ -84,7 +82,7 @@
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
             decimal ValorTotal = decimal.Parse(TxtValorCalcular.Text) / 100;
-                       
+
             TxtValorCalcular.Text = ValorTotal.ToString();
 
             LimparOperacoes();
@@ -96,13 +94,13 @@
         {
             TxtValorCalcular.Text = "";
             TxtValorCalcular.Text = "0";
+            LblValorCalcular.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text = "";
             TxtValorCalcular.Text = "0";
-            LblValorCalcular.Text = "";
         }
 
         private void BtnVírgula_Click(object sender, EventArgs e)
@@ -131,10 +129,6 @@
         private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
         {
             Program.DecNumber(sender, e);
-        }
-
-        private void TxtValorCalcular_KeyDown(object sender, KeyEventArgs e)
-        {
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -245,33 +239,9 @@
             }
         }
 
-        private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void LblValorCalcular_Click(object sender, EventArgs e)
-        {
-        }
-
         private void button14_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text = (double.Parse(TxtValorCalcular.Text) * -1).ToString();
-        }
-
-        private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void TxtTeclado_KeyDown(object sender, KeyEventArgs e)
-        {
-        }
-
-        private void TxtTeclado_KeyPress(object sender, KeyPressEventArgs e)
-        {
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
