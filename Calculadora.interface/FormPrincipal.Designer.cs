@@ -260,6 +260,7 @@
             this.btnPorcentagem.TabIndex = 25;
             this.btnPorcentagem.Text = "%";
             this.btnPorcentagem.UseVisualStyleBackColor = true;
+            this.btnPorcentagem.Click += new System.EventHandler(this.clickOperacao);
             // 
             // BtnApagar
             // 
@@ -296,7 +297,6 @@
             // 
             // TxtValorCalcular
             // 
-            this.TxtValorCalcular.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.TxtValorCalcular.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtValorCalcular.Location = new System.Drawing.Point(11, 40);
             this.TxtValorCalcular.MaxLength = 16;

@@ -17,6 +17,7 @@
             Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             Operacao = Convert.ToChar(boton.Text);
 
+            LblValorCalcular.Text += boton.Text;
             TxtValorCalcular.Text = "";
         }
 
@@ -30,7 +31,6 @@
 
             TxtValorCalcular.Text += button.Text;
             LblValorCalcular.Text += button.Text;
-
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -50,7 +50,9 @@
         {
             if (TxtValorCalcular.Text != "")
                 if (!TxtValorCalcular.Text.Contains(","))
+
                     TxtValorCalcular.Text += ",";
+                    LblValorCalcular.Text += ",";
         }
 
         private void BtnApagar_Click(object sender, EventArgs e)
@@ -179,14 +181,6 @@
             catch
             {
             }*/
-        }
-
-        private void TxtValorCalcular_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void LblValorCalcular_Click(object sender, EventArgs e)
-        {
         }
 
         private void button14_Click(object sender, EventArgs e)
