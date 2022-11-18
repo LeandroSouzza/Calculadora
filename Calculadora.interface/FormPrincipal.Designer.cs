@@ -52,6 +52,8 @@
             this.cancelarRegistro = new System.Windows.Forms.Button();
             this.TxtValorCalcular = new System.Windows.Forms.TextBox();
             this.TxtTeclado = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHistorico = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblValorCalcular
@@ -317,12 +319,32 @@
             this.TxtTeclado.UseVisualStyleBackColor = true;
             this.TxtTeclado.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(436, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(379, 449);
+            this.panel1.TabIndex = 37;
+            // 
+            // btnHistorico
+            // 
+            this.btnHistorico.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnHistorico.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHistorico.Location = new System.Drawing.Point(436, 8);
+            this.btnHistorico.Name = "btnHistorico";
+            this.btnHistorico.Size = new System.Drawing.Size(142, 36);
+            this.btnHistorico.TabIndex = 38;
+            this.btnHistorico.Text = "Histórico";
+            this.btnHistorico.UseVisualStyleBackColor = false;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(399, 495);
+            this.ClientSize = new System.Drawing.Size(401, 506);
+            this.Controls.Add(this.btnHistorico);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn9);
@@ -348,6 +370,7 @@
             this.Controls.Add(this.BtnMais);
             this.Controls.Add(this.TxtValorCalcular);
             this.KeyPreview = true;
+            this.MaximumSize = new System.Drawing.Size(845, 561);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
@@ -381,5 +404,7 @@
         private Button cancelarRegistro;
         private TextBox TxtValorCalcular;
         private Button TxtTeclado;
+        private Panel panel1;
+        private Button btnHistorico;
     }
 }
