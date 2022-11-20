@@ -190,12 +190,9 @@
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
+                decimal Operacao = decimal.Parse(TxtValorCalcular.Text) / 100;
 
-            if (Operacao == '%')
-            {
-                TxtValorCalcular.Text = (Num1 * Num2).ToString();
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
-            }
+                TxtValorCalcular.Text = Operacao.ToString();
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
@@ -215,6 +212,11 @@
             else if (Operacao == 'x')
             {
                 TxtValorCalcular.Text = (Num1 * Num2).ToString();
+                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+            }
+            else if (Operacao == '%')
+            {
+                TxtValorCalcular.Text = (Num1 * Num2).ToString("N0");
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
             else if (Operacao == '/')
