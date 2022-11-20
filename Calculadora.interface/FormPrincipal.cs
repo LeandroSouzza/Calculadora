@@ -17,6 +17,8 @@
             Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             Operacao = Convert.ToChar(boton.Text);
 
+            LblValorCalcular.Text += TxtValorCalcular.Text;
+
             LblValorCalcular.Text += boton.Text;
             TxtValorCalcular.Text = "";
         }
@@ -30,7 +32,7 @@
                 TxtValorCalcular.Text = "";
 
             TxtValorCalcular.Text += button.Text;
-            LblValorCalcular.Text += button.Text;
+
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -52,7 +54,6 @@
                 if (!TxtValorCalcular.Text.Contains(","))
 
                     TxtValorCalcular.Text += ",";
-                    LblValorCalcular.Text += ",";
         }
 
         private void BtnApagar_Click(object sender, EventArgs e)
@@ -193,6 +194,8 @@
                 decimal Operacao = decimal.Parse(TxtValorCalcular.Text) / 100;
 
                 TxtValorCalcular.Text = Operacao.ToString();
+
+                LblValorCalcular.Text += TxtValorCalcular.Text;
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
@@ -201,16 +204,19 @@
 
             if (Operacao == '+')
             {
+                LblValorCalcular.Text += TxtValorCalcular.Text;
                 TxtValorCalcular.Text = (Num1 + Num2).ToString();
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
             else if (Operacao == '-')
             {
+                LblValorCalcular.Text += TxtValorCalcular.Text;
                 TxtValorCalcular.Text = (Num1 - Num2).ToString();
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
             else if (Operacao == 'x')
             {
+                LblValorCalcular.Text += TxtValorCalcular.Text;
                 TxtValorCalcular.Text = (Num1 * Num2).ToString();
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
@@ -223,6 +229,7 @@
             {
                 if (TxtValorCalcular.Text != "0")
                 {
+                    LblValorCalcular.Text += TxtValorCalcular.Text;
                     TxtValorCalcular.Text = (Num1 / Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
