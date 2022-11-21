@@ -32,7 +32,6 @@
                 TxtValorCalcular.Text = "";
 
             TxtValorCalcular.Text += button.Text;
-
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -204,9 +203,9 @@
 
             if (Operacao == '+')
             {
-                LblValorCalcular.Text += TxtValorCalcular.Text;
+                LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                 TxtValorCalcular.Text = (Num1 + Num2).ToString();
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                Num1 = Convert.ToDouble(TxtValorCalcular.Text);   
             }
             else if (Operacao == '-')
             {
@@ -216,12 +215,13 @@
             }
             else if (Operacao == 'x')
             {
-                LblValorCalcular.Text += TxtValorCalcular.Text;
+                
                 TxtValorCalcular.Text = (Num1 * Num2).ToString();
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
             else if (Operacao == '%')
             {
+                LblValorCalcular.Text += TxtValorCalcular.Text;
                 TxtValorCalcular.Text = (Num1 * Num2).ToString("N0");
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
