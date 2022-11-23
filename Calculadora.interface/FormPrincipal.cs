@@ -76,111 +76,30 @@
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
-        {/*
-            try
+        {
+            TxtTeclado.Text = Convert.ToString(e.KeyValue);
+
+            if (e.KeyValue == 107)
+            
+                LblValorCalcular.Text = "+";
+            LblValorCalcular.Text += TxtValorCalcular.Text;
+
+            if (e.KeyValue == 109)
+            
+                LblValorCalcular.Text = "-";
+
+            if (e.KeyValue == 106)
+            
+                LblValorCalcular.Text = "*";
+
+            if (e.KeyValue == 111)
+            
+                LblValorCalcular.Text = "/";
+
+            if (e.KeyValue == 13)
             {
-                TxtTeclado.Text = Convert.ToString(e.KeyValue);
-                if (e.KeyValue == 107)
-                {
-                    LblValorCalcular.Text = "+";
 
-                    LimparOperacoes();
-
-                    EhSoma = true;
-
-                    if (TxtValorCalcular.Text != "")
-                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                    TxtValorCalcular.Text = "";
-                    LblValorCalcular.Text = $"{ValorCalcular} +";
-                }
-                if (e.KeyValue == 109)
-                {
-                    LblValorCalcular.Text = "-";
-
-                    LimparOperacoes();
-
-                    EhSubtracao = true;
-
-                    if (TxtValorCalcular.Text != "")
-                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                    TxtValorCalcular.Text = "";
-                    LblValorCalcular.Text = $"{ValorCalcular} -";
-                }
-                if (e.KeyValue == 106)
-                {
-                    LblValorCalcular.Text = "*";
-
-                    LimparOperacoes();
-
-                    EhMultiplicacao = true;
-
-                    if (TxtValorCalcular.Text != "")
-                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                    TxtValorCalcular.Text = "";
-                    LblValorCalcular.Text = $"{ValorCalcular} *";
-                }
-                if (e.KeyValue == 111)
-                {
-                    LblValorCalcular.Text = "/";
-
-                    LimparOperacoes();
-
-                    EhDivisao = true;
-
-                    if (TxtValorCalcular.Text != "")
-                        ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                    TxtValorCalcular.Text = "";
-                    LblValorCalcular.Text = $"{ValorCalcular} /";
-                }
-                if (e.KeyValue == 13)
-                {
-                    if (TxtValorCalcular.Text != "")
-
-                        if (EhSoma)
-                        {
-                            decimal ValorTotal = ValorCalcular + decimal.Parse(TxtValorCalcular.Text);
-
-                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-
-                            TxtValorCalcular.Text = ValorTotal.ToString();
-                        }
-                        else if (EhSubtracao)
-                        {
-                            decimal ValorTotal = ValorCalcular - decimal.Parse(TxtValorCalcular.Text);
-
-                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-
-                            TxtValorCalcular.Text = ValorTotal.ToString();
-                        }
-                        else if (EhMultiplicacao)
-                        {
-                            decimal ValorTotal = ValorCalcular * decimal.Parse(TxtValorCalcular.Text);
-
-                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-
-                            TxtValorCalcular.Text = ValorTotal.ToString();
-                        }
-                        else if (EhDivisao)
-                        {
-                            decimal ValorTotal = ValorCalcular / decimal.Parse(TxtValorCalcular.Text);
-
-                            LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-
-                            TxtValorCalcular.Text = ValorTotal.ToString();
-                        }
-        }
-
-                if (e.KeyValue == 8)
-                {
-                    LimparOperacoes();
-                    string Apagar = TxtValorCalcular.Text;
-                    Apagar = Apagar.Remove(Apagar.Length - 1);
-                    TxtValorCalcular.Text = Apagar;
-                }
             }
-            catch
-            {
-            }*/
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -205,7 +124,7 @@
             {
                 LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                 TxtValorCalcular.Text = (Num1 + Num2).ToString();
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);   
+                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
             else if (Operacao == '-')
             {
@@ -215,13 +134,11 @@
             }
             else if (Operacao == 'x')
             {
-                
                 TxtValorCalcular.Text = (Num1 * Num2).ToString();
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
             else if (Operacao == '%')
             {
-                LblValorCalcular.Text += TxtValorCalcular.Text;
                 TxtValorCalcular.Text = (Num1 * Num2).ToString("N0");
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
