@@ -5,6 +5,8 @@
         double Num1 = 0, Num2 = 0;
         char Operacao;
 
+        public double Resultado { get; set; }
+
         public FormPrincipal()
         {
             InitializeComponent();
@@ -21,15 +23,22 @@
 
             LblValorCalcular.Text += boton.Text;
             TxtValorCalcular.Text = "";
-        }
 
+        }
 
         private void agregarNumero(object sender, EventArgs e)
         {
             var button = ((Button)sender);
 
             if (TxtValorCalcular.Text == "0")
+            {
                 TxtValorCalcular.Text = "";
+            }
+            else if (TxtValorCalcular.Text != "")
+            {
+                TxtValorCalcular.Text += "";
+                LblValorCalcular.Text = "";
+            }
 
             TxtValorCalcular.Text += button.Text;
         }
@@ -122,13 +131,13 @@
 
             if (Operacao == '+')
             {
-                LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+                LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";   
                 TxtValorCalcular.Text = (Num1 + Num2).ToString();
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
             else if (Operacao == '-')
             {
-                LblValorCalcular.Text += TxtValorCalcular.Text;
+                LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                 TxtValorCalcular.Text = (Num1 - Num2).ToString();
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
             }
@@ -146,13 +155,11 @@
             {
                 if (TxtValorCalcular.Text != "0")
                 {
-                    LblValorCalcular.Text += TxtValorCalcular.Text;
+                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                     TxtValorCalcular.Text = (Num1 / Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
             }
-
-
         }
     }
 }
