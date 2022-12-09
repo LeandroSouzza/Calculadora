@@ -6,7 +6,7 @@
         char Operacao;
 
 
-        public double Resultado { get; set; }
+        public bool Resultado { get; set; }
 
         public FormPrincipal()
         {
@@ -16,6 +16,7 @@
         private void clickOperacao(object sender, EventArgs e)
         {
             var boton = ((Button)sender);
+            
 
             if (TxtValorCalcular.Text != "")
             {
@@ -40,9 +41,9 @@
             {
                 TxtValorCalcular.Text = "";
             }
-            else if (TxtValorCalcular.Text != "")
+            else if (Resultado)
             {
-                TxtValorCalcular.Text += "";
+                TxtValorCalcular.Text = "";
                 LblValorCalcular.Text = "";
             }
 
@@ -133,6 +134,8 @@
 
         private void BtnIgual_Click(object sender, EventArgs e)
         {
+            Resultado = true;
+
             if (TxtValorCalcular.Text != "")
             
 
