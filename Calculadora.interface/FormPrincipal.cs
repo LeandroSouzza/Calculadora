@@ -47,6 +47,8 @@
                 LblValorCalcular.Text = "";
             }
 
+            Resultado = false;
+
             TxtValorCalcular.Text += button.Text;
         }
 
