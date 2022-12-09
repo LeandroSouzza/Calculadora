@@ -5,6 +5,7 @@
         double Num1 = 0, Num2 = 0;
         char Operacao;
 
+
         public double Resultado { get; set; }
 
         public FormPrincipal()
@@ -16,13 +17,18 @@
         {
             var boton = ((Button)sender);
 
-            Num1 = Convert.ToDouble(TxtValorCalcular.Text);
-            Operacao = Convert.ToChar(boton.Text);
+            if (TxtValorCalcular.Text != "")
+            {
+                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
 
-            LblValorCalcular.Text += TxtValorCalcular.Text;
+                Operacao = Convert.ToChar(boton.Text);
 
-            LblValorCalcular.Text += boton.Text;
-            TxtValorCalcular.Text = "";
+                LblValorCalcular.Text += TxtValorCalcular.Text;
+
+                LblValorCalcular.Text += boton.Text;
+
+                TxtValorCalcular.Text = "";
+            }
 
         }
 
@@ -127,7 +133,10 @@
 
         private void BtnIgual_Click(object sender, EventArgs e)
         {
-            Num2 = Convert.ToDouble(TxtValorCalcular.Text);
+            if (TxtValorCalcular.Text != "")
+            
+
+                Num2 = Convert.ToDouble(TxtValorCalcular.Text);
 
             if (Operacao == '+')
             {
