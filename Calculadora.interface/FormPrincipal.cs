@@ -4,7 +4,6 @@
     {
         double Num1 = 0, Num2 = 0;
         char Operacao;
-        decimal ValorCalcular;
 
 
         public bool Resultado { get; set; }
