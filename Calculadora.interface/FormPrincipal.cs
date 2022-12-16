@@ -112,45 +112,22 @@
 
             if (e.KeyValue == 107)
             {
-                LblValorCalcular.Text = "+";
 
-                if (TxtValorCalcular.Text != "")
-                ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{ValorCalcular} +";
             }
 
             if (e.KeyValue == 109)
             {
 
-                LblValorCalcular.Text = "-";
-
-                if (TxtValorCalcular.Text != "")
-                    ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{ValorCalcular} -";
             }
 
             if (e.KeyValue == 106)
             {
 
-                LblValorCalcular.Text = "*";
-
-                if (TxtValorCalcular.Text != "")
-                    ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{ValorCalcular} *";
             }
 
             if (e.KeyValue == 111)
             {
 
-                LblValorCalcular.Text = "/";
-
-                if (TxtValorCalcular.Text != "")
-                    ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
-                TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{ValorCalcular} /";
             }
 
             if (e.KeyValue == 13)
