@@ -81,10 +81,13 @@
                 string Apagar = TxtValorCalcular.Text;
                 Apagar = Apagar.Remove(Apagar.Length - 1);
                 TxtValorCalcular.Text = Apagar;
+
+                if (TxtValorCalcular.Text == "")
+                    TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
             }
             catch (Exception ex)
             {
-                TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+
             }
         }
 
@@ -143,10 +146,28 @@
 
             if (e.KeyValue == 13)
             {
-
+                
             }
-            
-            
+
+            if (e.KeyValue == 8)
+            {
+                try
+                {
+                    string Apagar = TxtValorCalcular.Text;
+                    Apagar = Apagar.Remove(Apagar.Length - 1);
+                    TxtValorCalcular.Text = Apagar;
+
+                    if (TxtValorCalcular.Text == "")
+                        TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+
+
         }
 
         private void button14_Click(object sender, EventArgs e)
