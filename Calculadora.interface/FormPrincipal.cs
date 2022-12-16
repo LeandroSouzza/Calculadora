@@ -31,12 +31,21 @@
 
                 TxtValorCalcular.Text = "";
             }
+            else if (Resultado)
+            {
+
+            }
+            Resultado = false;
 
         }
 
         private void agregarNumero(object sender, EventArgs e)
         {
             var button = ((Button)sender);
+            const int TamanhoMaximo = 16;
+
+            if (TxtValorCalcular.Text.Length > TamanhoMaximo)
+                return;
 
             if (TxtValorCalcular.Text == "0")
             {
