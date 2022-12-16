@@ -52,6 +52,27 @@
             {
                 TxtValorCalcular.Text = "";
             }
+
+            else if (LblValorCalcular.Text == "0+")
+            {
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = "";
+            }
+            else if (LblValorCalcular.Text == "0-")
+            {
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = "";
+            }
+            else if (LblValorCalcular.Text == "0x")
+            {
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = "";
+            }
+            else if (LblValorCalcular.Text == "0/")
+            {
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = "";
+            }
             else if (Resultado)
             {
                 TxtValorCalcular.Text = "";
@@ -133,7 +154,7 @@
 
             if (e.KeyValue == 13)
             {
-                Resultado = true;
+                
             }
 
             if (e.KeyValue == 8)
