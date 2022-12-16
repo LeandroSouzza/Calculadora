@@ -4,6 +4,7 @@
     {
         double Num1 = 0, Num2 = 0;
         char Operacao;
+        decimal ValorCalcular;
 
 
         public bool Resultado { get; set; }
@@ -102,46 +103,50 @@
                 LblValorCalcular.Text = "+";
 
                 if (TxtValorCalcular.Text != "")
-                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
                 TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{Operacao} +";
+                LblValorCalcular.Text = $"{ValorCalcular} +";
             }
 
             if (e.KeyValue == 109)
             {
+
                 LblValorCalcular.Text = "-";
 
                 if (TxtValorCalcular.Text != "")
-                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                    ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
                 TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{Operacao} -";
+                LblValorCalcular.Text = $"{ValorCalcular} -";
             }
 
             if (e.KeyValue == 106)
             {
+
                 LblValorCalcular.Text = "*";
 
                 if (TxtValorCalcular.Text != "")
-                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                    ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
                 TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{Operacao} *";
+                LblValorCalcular.Text = $"{ValorCalcular} *";
             }
 
             if (e.KeyValue == 111)
             {
+
                 LblValorCalcular.Text = "/";
 
                 if (TxtValorCalcular.Text != "")
-                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                    ValorCalcular = Decimal.Parse(TxtValorCalcular.Text);
                 TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = $"{Operacao} /";
+                LblValorCalcular.Text = $"{ValorCalcular} /";
             }
 
             if (e.KeyValue == 13)
             {
-                Resultado = true;
-                TxtValorCalcular.Text = Resultado.ToString();
+
             }
+            
+            
         }
 
         private void button14_Click(object sender, EventArgs e)
