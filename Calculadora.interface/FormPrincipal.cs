@@ -23,6 +23,7 @@
 
         private void Calcular(string operacao)
         {
+
             if (TxtValorCalcular.Text != "")
             {
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
@@ -35,8 +36,9 @@
 
                 TxtValorCalcular.Text = "";
             }
-            Resultado = false;
+
         }
+
 
         private void agregarNumero(object sender, EventArgs e)
         {
@@ -111,27 +113,27 @@
 
             if (e.KeyValue == 107)
             {
-
+                Calcular("+");
             }
 
             if (e.KeyValue == 109)
             {
-
+                Calcular("-");
             }
 
             if (e.KeyValue == 106)
             {
-
+                Calcular("*");
             }
 
             if (e.KeyValue == 111)
             {
-
+                Calcular("/");
             }
 
             if (e.KeyValue == 13)
             {
-                
+                Resultado = true;
             }
 
             if (e.KeyValue == 8)
