@@ -18,25 +18,25 @@
         {
             var boton = ((Button)sender);
 
+            Calcular(boton.Text);
 
+        }
+
+        private void Calcular(string operacao)
+        {
             if (TxtValorCalcular.Text != "")
             {
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
 
-                Operacao = Convert.ToChar(boton.Text);
+                Operacao = Convert.ToChar(operacao);
 
                 LblValorCalcular.Text += TxtValorCalcular.Text;
 
-                LblValorCalcular.Text += boton.Text;
+                LblValorCalcular.Text += operacao;
 
                 TxtValorCalcular.Text = "";
             }
-            else if (Resultado)
-            {
-
-            }
             Resultado = false;
-
         }
 
         private void agregarNumero(object sender, EventArgs e)
