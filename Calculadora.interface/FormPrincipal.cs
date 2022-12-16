@@ -16,7 +16,7 @@
         private void clickOperacao(object sender, EventArgs e)
         {
             var boton = ((Button)sender);
-            
+
 
             if (TxtValorCalcular.Text != "")
             {
@@ -98,25 +98,49 @@
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
 
             if (e.KeyValue == 107)
-            
+            {
                 LblValorCalcular.Text = "+";
-            LblValorCalcular.Text += TxtValorCalcular.Text;
+
+                if (TxtValorCalcular.Text != "")
+                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = $"{Operacao} +";
+            }
 
             if (e.KeyValue == 109)
-            
+            {
                 LblValorCalcular.Text = "-";
 
+                if (TxtValorCalcular.Text != "")
+                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = $"{Operacao} -";
+            }
+
             if (e.KeyValue == 106)
-            
+            {
                 LblValorCalcular.Text = "*";
 
+                if (TxtValorCalcular.Text != "")
+                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = $"{Operacao} *";
+            }
+
             if (e.KeyValue == 111)
-            
+            {
                 LblValorCalcular.Text = "/";
+
+                if (TxtValorCalcular.Text != "")
+                    Operacao = Convert.ToChar(TxtValorCalcular.Text);
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = $"{Operacao} /";
+            }
 
             if (e.KeyValue == 13)
             {
-
+                Resultado = true;
+                TxtValorCalcular.Text = Resultado.ToString();
             }
         }
 
@@ -127,53 +151,53 @@
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-                decimal Operacao = decimal.Parse(TxtValorCalcular.Text) / 100;
+            decimal Operacao = decimal.Parse(TxtValorCalcular.Text) / 100;
 
-                TxtValorCalcular.Text = Operacao.ToString();
+            TxtValorCalcular.Text = Operacao.ToString();
 
-                LblValorCalcular.Text += TxtValorCalcular.Text;
+            LblValorCalcular.Text += TxtValorCalcular.Text;
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
         {
             Resultado = true;
 
+            Num2 = Convert.ToDouble(TxtValorCalcular.Text);
+
             if (TxtValorCalcular.Text != "")
-            
 
-                Num2 = Convert.ToDouble(TxtValorCalcular.Text);
-
-            if (Operacao == '+')
-            {
-                LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";   
-                TxtValorCalcular.Text = (Num1 + Num2).ToString();
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
-            }
-            else if (Operacao == '-')
-            {
-                LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-                TxtValorCalcular.Text = (Num1 - Num2).ToString();
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
-            }
-            else if (Operacao == 'x')
-            {
-                TxtValorCalcular.Text = (Num1 * Num2).ToString();
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
-            }
-            else if (Operacao == '%')
-            {
-                TxtValorCalcular.Text = (Num1 * Num2).ToString("N0");
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
-            }
-            else if (Operacao == '/')
-            {
-                if (TxtValorCalcular.Text != "0")
+                if (Operacao == '+')
                 {
                     LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
-                    TxtValorCalcular.Text = (Num1 / Num2).ToString();
+                    TxtValorCalcular.Text = (Num1 + Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
-            }
+                else if (Operacao == '-')
+                {
+                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+                    TxtValorCalcular.Text = (Num1 - Num2).ToString();
+                    Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                }
+                else if (Operacao == 'x')
+                {
+                    TxtValorCalcular.Text = (Num1 * Num2).ToString();
+                    Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                }
+                else if (Operacao == '%')
+                {
+                    TxtValorCalcular.Text = (Num1 * Num2).ToString("N0");
+                    Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                }
+                else if (Operacao == '/')
+                {
+                    if (TxtValorCalcular.Text != "0")
+                    {
+                        LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
+                        TxtValorCalcular.Text = (Num1 / Num2).ToString();
+                        Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                    }
+
+                }
         }
     }
 }
