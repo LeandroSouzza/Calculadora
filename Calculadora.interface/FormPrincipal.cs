@@ -141,6 +141,13 @@
             {
                 TxtValorCalcular.Text = "";
             }
+            else if (Resultado)
+            {
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = "";
+            }
+
+            Resultado = false;
 
             if (e.KeyValue == 107)
             {
@@ -207,7 +214,9 @@
         private void Igual(string resultado)
         {
 
-            Num2 = Convert.ToDouble(TxtValorCalcular.Text);
+            if (TxtValorCalcular.Text != "")
+
+                Num2 = Convert.ToDouble(TxtValorCalcular.Text);
 
             if (TxtValorCalcular.Text != "")
 
