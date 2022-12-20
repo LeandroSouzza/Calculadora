@@ -144,7 +144,7 @@
 
             if (e.KeyValue == 106)
             {
-                Calcular("*");
+                Calcular("x");
             }
 
             if (e.KeyValue == 111)
