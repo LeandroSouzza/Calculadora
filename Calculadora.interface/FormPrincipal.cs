@@ -37,10 +37,10 @@
                 TxtValorCalcular.Text = "";
             }
             //Testando
-            else if (Resultado)
+             if (Resultado)
             {
-                LblValorCalcular.Text += "";
-            }
+                LblValorCalcular.Text = "";
+            }            
         }
 
 
