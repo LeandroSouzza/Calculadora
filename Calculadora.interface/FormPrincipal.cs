@@ -154,7 +154,11 @@
 
             if (e.KeyValue == 13)
             {
-                
+                Resultado = true;
+
+                {
+                    Igual("resultado");
+                }
             }
 
             if (e.KeyValue == 8)
@@ -173,9 +177,6 @@
 
                 }
             }
-
-
-
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -192,9 +193,9 @@
             LblValorCalcular.Text += TxtValorCalcular.Text;
         }
 
-        private void BtnIgual_Click(object sender, EventArgs e)
+
+        private void Igual(string resultado)
         {
-            Resultado = true;
 
             Num2 = Convert.ToDouble(TxtValorCalcular.Text);
 
@@ -232,6 +233,15 @@
                     }
 
                 }
+        }
+
+        private void BtnIgual_Click(object sender, EventArgs e)
+        {
+            Resultado = true;
+
+            {
+                Igual("resultado");
+            }
         }
     }
 }
