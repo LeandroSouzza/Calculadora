@@ -3,7 +3,7 @@
     public partial class FormPrincipal : Form
     {
         double Num1 = 0, Num2 = 0;
-        char Operacao;
+        char Calcular;
 
 
         public bool Resultado { get; set; }
@@ -17,22 +17,23 @@
         {
             var boton = ((Button)sender);
 
-            Calcular(boton.Text);
+            Operador(boton.Text);
 
         }
 
-        private void Calcular(string operacao)
+        private void Operador(string operacao)
         {
               if (Resultado)
             {
-                LblValorCalcular.Text += TxtValorCalcular.Text;
+                LblValorCalcular.Text ="";
             }
+            Resultado = false;
 
             if (TxtValorCalcular.Text != "")
             {
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
 
-                Operacao = Convert.ToChar(operacao);
+                Calcular = Convert.ToChar(operacao);
 
                 LblValorCalcular.Text += TxtValorCalcular.Text;
 
@@ -153,22 +154,22 @@
 
             if (e.KeyValue == 107)
             {
-                Calcular("+");
+                Operador("+");
             }
 
             if (e.KeyValue == 109)
             {
-                Calcular("-");
+                Operador("-");
             }
 
             if (e.KeyValue == 106)
             {
-                Calcular("x");
+                Operador("x");
             }
 
             if (e.KeyValue == 111)
             {
-                Calcular("/");
+                Operador("/");
             }
 
             if (e.KeyValue == 13)
@@ -222,36 +223,29 @@
 
             if (TxtValorCalcular.Text != "")
 
-                if (Operacao == '+')
+                if (Calcular == '+')
                 {
                     LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                     TxtValorCalcular.Text = (Num1 + Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
-                    
-                    //if (Resultado)
-                    //{
-                    //    LblValorCalcular.Text = TxtValorCalcular.Text;
-                    //}
-                    Resultado = false;
-
                 }
-                else if (Operacao == '-')
+                else if (Calcular == '-')
                 {
                     LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                     TxtValorCalcular.Text = (Num1 - Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
-                else if (Operacao == 'x')
+                else if (Calcular == 'x')
                 {
                     TxtValorCalcular.Text = (Num1 * Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
-                else if (Operacao == '%')
+                else if (Calcular == '%')
                 {
                     TxtValorCalcular.Text = (Num1 * Num2).ToString("N0");
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
-                else if (Operacao == '/')
+                else if (Calcular == '/')
                 {
                     if (TxtValorCalcular.Text != "0")
                     {
