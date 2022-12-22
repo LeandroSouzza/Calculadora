@@ -189,11 +189,17 @@
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-            decimal Operacao = decimal.Parse(TxtValorCalcular.Text) / 100;
-
-            TxtValorCalcular.Text = Operacao.ToString();
-
-            LblValorCalcular.Text += TxtValorCalcular.Text;
+            if (Calcular == 'x')
+            {
+                decimal Operacao = decimal.Parse(TxtValorCalcular.Text) / 100;
+                TxtValorCalcular.Text = Operacao.ToString();
+                LblValorCalcular.Text += TxtValorCalcular.Text;
+            }
+            //Rascunho do calculo porcentagem ao utiliza a SOMA
+            else if (Calcular == '+') 
+            {
+                TxtValorCalcular.Text = (Num1 / 100 * Num2).ToString();
+            }
         }
 
         private void Igual(string resultado)
