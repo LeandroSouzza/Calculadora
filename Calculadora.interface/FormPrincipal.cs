@@ -23,6 +23,10 @@
 
         private void Calcular(string operacao)
         {
+              if (Resultado)
+            {
+                LblValorCalcular.Text += TxtValorCalcular.Text;
+            }
 
             if (TxtValorCalcular.Text != "")
             {
@@ -37,11 +41,7 @@
                 TxtValorCalcular.Text = "";
             }
             //Testando
-            /*else if (Resultado)
-            {
-                LblValorCalcular.Text = "";
-                LblValorCalcular.Text += TxtValorCalcular.Text;
-            }*/
+          
 
             
         }
@@ -228,10 +228,10 @@
                     TxtValorCalcular.Text = (Num1 + Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                     
-                    if (Resultado)
-                    {
-                        LblValorCalcular.Text = "";
-                    }
+                    //if (Resultado)
+                    //{
+                    //    LblValorCalcular.Text = TxtValorCalcular.Text;
+                    //}
                     Resultado = false;
 
                 }
