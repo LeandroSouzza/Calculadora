@@ -23,9 +23,9 @@
 
         private void Operador(string operacao)
         {
-              if (Resultado)
+            if (Resultado)
             {
-                LblValorCalcular.Text ="";
+                LblValorCalcular.Text = "";
             }
             Resultado = false;
 
@@ -41,10 +41,7 @@
 
                 TxtValorCalcular.Text = "";
             }
-            //Testando
-          
 
-            
         }
 
         private void agregarNumero(object sender, EventArgs e)
@@ -174,8 +171,6 @@
 
             if (e.KeyValue == 13)
             {
-                Resultado = true;
-
                 {
                     Igual("resultado");
                 }
@@ -190,7 +185,9 @@
                     TxtValorCalcular.Text = Apagar;
 
                     if (TxtValorCalcular.Text == "")
+
                         TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+
                 }
                 catch (Exception ex)
                 {
@@ -213,9 +210,10 @@
             LblValorCalcular.Text += TxtValorCalcular.Text;
         }
 
-
         private void Igual(string resultado)
         {
+
+            Resultado = true;
 
             if (TxtValorCalcular.Text != "")
 
@@ -259,8 +257,6 @@
 
         private void BtnIgual_Click(object sender, EventArgs e)
         {
-            Resultado = true;
-
             {
                 Igual("resultado");
             }
