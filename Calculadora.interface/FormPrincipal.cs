@@ -111,19 +111,16 @@
 
         private void BtnApagar_Click(object sender, EventArgs e)
         {
-            try
+            if (TxtValorCalcular.Text != "")
             {
                 string Apagar = TxtValorCalcular.Text;
                 Apagar = Apagar.Remove(Apagar.Length - 1);
                 TxtValorCalcular.Text = Apagar;
-
-                if (TxtValorCalcular.Text == "")
-                    TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
             }
-            catch (Exception ex)
-            {
 
-            }
+            if (TxtValorCalcular.Text == "")
+
+                TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
         }
 
         //Textbox aceitar só números//
@@ -178,21 +175,17 @@
 
             if (e.KeyValue == 8)
             {
-                try
+                if (TxtValorCalcular.Text != "")
                 {
                     string Apagar = TxtValorCalcular.Text;
                     Apagar = Apagar.Remove(Apagar.Length - 1);
                     TxtValorCalcular.Text = Apagar;
-
-                    if (TxtValorCalcular.Text == "")
-
-                        TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
-
                 }
-                catch (Exception ex)
-                {
 
-                }
+                if (TxtValorCalcular.Text == "")
+
+                    TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+
             }
         }
 
