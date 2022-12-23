@@ -139,6 +139,13 @@
                 TxtValorCalcular.Text = "";
             }
 
+            if (Resultado)
+            {
+                TxtValorCalcular.Text = "";
+                LblValorCalcular.Text = "";
+            }
+            Resultado = false;
+
             if (e.KeyValue == 107)
             {
                 Operador("+");
