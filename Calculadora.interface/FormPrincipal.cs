@@ -2,10 +2,8 @@
 {
     public partial class FormPrincipal : Form
     {
-        double Num1 = 0, Num2 = 0;
-        char Calcular;
-
-
+        private double Num1 = 0, Num2 = 0;
+        private char Calcular;
         public bool Resultado { get; set; }
 
         public FormPrincipal()
@@ -18,7 +16,6 @@
             var boton = ((Button)sender);
 
             Operador(boton.Text);
-
         }
 
         private void Operador(string operacao)
@@ -41,7 +38,6 @@
 
                 TxtValorCalcular.Text = "";
             }
-
         }
 
         private void agregarNumero(object sender, EventArgs e)
@@ -56,7 +52,6 @@
             {
                 TxtValorCalcular.Text = "";
             }
-
             else if (LblValorCalcular.Text == "0+")
             {
                 TxtValorCalcular.Text = "";
@@ -133,7 +128,6 @@
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
 
-
             if (TxtValorCalcular.Text == "0")
             {
                 TxtValorCalcular.Text = "";
@@ -185,7 +179,6 @@
                 if (TxtValorCalcular.Text == "")
 
                     TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
-
             }
         }
 
@@ -203,7 +196,7 @@
                 LblValorCalcular.Text += TxtValorCalcular.Text;
             }
             //Rascunho do calculo porcentagem ao utiliza a SOMA
-            else if (Calcular == '+') 
+            else if (Calcular == '+')
             {
                 TxtValorCalcular.Text = (Num1 / 100 * Num2).ToString();
             }
@@ -211,24 +204,22 @@
 
         private void Igual(string resultado)
         {
-
-            Resultado = true;
-
             if (TxtValorCalcular.Text != "")
+            {
+                if (!Resultado)
+                {
+                    Num2 = Convert.ToDouble(TxtValorCalcular.Text);
+                }
 
-                Num2 = Convert.ToDouble(TxtValorCalcular.Text);
-
-            if (TxtValorCalcular.Text != "")
+                AtribuirValores();
 
                 if (Calcular == '+')
                 {
-                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                     TxtValorCalcular.Text = (Num1 + Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
                 else if (Calcular == '-')
                 {
-                    LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                     TxtValorCalcular.Text = (Num1 - Num2).ToString();
                     Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                 }
@@ -250,8 +241,15 @@
                         TxtValorCalcular.Text = (Num1 / Num2).ToString();
                         Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                     }
-
                 }
+            }
+
+            Resultado = true;
+        }
+
+        private void AtribuirValores()
+        {
+            LblValorCalcular.Text = $"{Num1} {Calcular} {Num2} = ";
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
