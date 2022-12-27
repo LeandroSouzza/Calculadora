@@ -35,7 +35,7 @@
 
                 Calcular = Convert.ToChar(operacao);
 
-                LblValorCalcular.Text += TxtValorCalcular.Text;
+                LblValorCalcular.Text = TxtValorCalcular.Text;
 
                 LblValorCalcular.Text += operacao;
 
@@ -141,8 +141,8 @@
 
             if (Resultado)
             {
-                TxtValorCalcular.Text = "";
                 LblValorCalcular.Text = "";
+                TxtValorCalcular.Text = "";
             }
             Resultado = false;
 
