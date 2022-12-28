@@ -118,6 +118,7 @@
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
 
+
             if (e.KeyValue == 107)
             {
                 Operador("+");
@@ -138,14 +139,6 @@
                 Operador("/");
             }
 
-            else if (Resultado)
-            {
-                TxtValorCalcular.Text = "";
-                LblValorCalcular.Text = "";
-            }
-
-            Resultado = false;
-
             if (e.KeyValue == 13)
             {
                 {
@@ -162,6 +155,7 @@
             {
                 Virgula("virgula");
             }
+
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -219,7 +213,6 @@
                 {
                     if (TxtValorCalcular.Text != "0")
                     {
-                        LblValorCalcular.Text = $"{LblValorCalcular.Text} {TxtValorCalcular.Text} =";
                         TxtValorCalcular.Text = (Num1 / Num2).ToString();
                         Num1 = Convert.ToDouble(TxtValorCalcular.Text);
                     }
