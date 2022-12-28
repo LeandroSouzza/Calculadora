@@ -138,18 +138,6 @@
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
 
-            if (TxtValorCalcular.Text == "0")
-            {
-                TxtValorCalcular.Text = "";
-            }
-
-            /*if (Resultado)
-            {
-                LblValorCalcular.Text = "";
-                TxtValorCalcular.Text = "";
-            }
-            Resultado = false;*/
-
             if (e.KeyValue == 107)
             {
                 Operador("+");
