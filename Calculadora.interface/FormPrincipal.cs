@@ -83,6 +83,28 @@
             TxtValorCalcular.Text += button.Text;
         }
 
+        private void Apagador(string apagador)
+        {
+            if (TxtValorCalcular.Text != "")
+            {
+                string Apagar = TxtValorCalcular.Text;
+                Apagar = Apagar.Remove(Apagar.Length - 1);
+                TxtValorCalcular.Text = Apagar;
+            }
+
+            if (TxtValorCalcular.Text == "")
+
+                TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+        }
+
+        private void Virgula(string virgula)
+        {
+            if (TxtValorCalcular.Text != "")
+                if (!TxtValorCalcular.Text.Contains(","))
+
+                    TxtValorCalcular.Text += ",";
+        }
+
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
             TxtValorCalcular.Text = "";
@@ -98,24 +120,12 @@
 
         private void BtnVírgula_Click(object sender, EventArgs e)
         {
-            if (TxtValorCalcular.Text != "")
-                if (!TxtValorCalcular.Text.Contains(","))
-
-                    TxtValorCalcular.Text += ",";
+            Virgula("virgula");
         }
 
         private void BtnApagar_Click(object sender, EventArgs e)
         {
-            if (TxtValorCalcular.Text != "")
-            {
-                string Apagar = TxtValorCalcular.Text;
-                Apagar = Apagar.Remove(Apagar.Length - 1);
-                TxtValorCalcular.Text = Apagar;
-            }
-
-            if (TxtValorCalcular.Text == "")
-
-                TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+            Apagador("apagador");
         }
 
         //Textbox aceitar só números//
@@ -133,12 +143,12 @@
                 TxtValorCalcular.Text = "";
             }
 
-            if (Resultado)
+            /*if (Resultado)
             {
                 LblValorCalcular.Text = "";
                 TxtValorCalcular.Text = "";
             }
-            Resultado = false;
+            Resultado = false;*/
 
             if (e.KeyValue == 107)
             {
@@ -169,16 +179,12 @@
 
             if (e.KeyValue == 8)
             {
-                if (TxtValorCalcular.Text != "")
-                {
-                    string Apagar = TxtValorCalcular.Text;
-                    Apagar = Apagar.Remove(Apagar.Length - 1);
-                    TxtValorCalcular.Text = Apagar;
-                }
+                Apagador("apagador");
+            }
 
-                if (TxtValorCalcular.Text == "")
-
-                    TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+            if (e.KeyValue == 188)
+            {
+                Virgula("virgula");
             }
         }
 
@@ -249,7 +255,7 @@
 
         private void AtribuirValores()
         {
-            LblValorCalcular.Text = $"{Num1} {Calcular} {Num2} = ";
+            LblValorCalcular.Text = $"{Num1}{Calcular}{Num2} = ";
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
