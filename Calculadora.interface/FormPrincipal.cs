@@ -74,7 +74,7 @@
 
             if (TxtValorCalcular.Text == "")
 
-                TxtValorCalcular.Text = TxtValorCalcular.Text = "0";
+                TxtValorCalcular.Text = "0";
         }
 
         private void Virgula(string virgula)
