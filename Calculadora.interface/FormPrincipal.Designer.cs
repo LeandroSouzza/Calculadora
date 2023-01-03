@@ -52,7 +52,7 @@
             this.cancelarRegistro = new System.Windows.Forms.Button();
             this.TxtValorCalcular = new System.Windows.Forms.TextBox();
             this.TxtTeclado = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelHistorico = new System.Windows.Forms.Panel();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -319,12 +319,12 @@
             this.TxtTeclado.UseVisualStyleBackColor = true;
             this.TxtTeclado.Visible = false;
             // 
-            // panel1
+            // panelHistorico
             // 
-            this.panel1.Location = new System.Drawing.Point(437, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 449);
-            this.panel1.TabIndex = 37;
+            this.panelHistorico.Location = new System.Drawing.Point(437, 43);
+            this.panelHistorico.Name = "panelHistorico";
+            this.panelHistorico.Size = new System.Drawing.Size(379, 449);
+            this.panelHistorico.TabIndex = 37;
             // 
             // btnHistorico
             // 
@@ -342,9 +342,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(401, 507);
+            this.ClientSize = new System.Drawing.Size(826, 512);
             this.Controls.Add(this.btnHistorico);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelHistorico);
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn9);
@@ -404,7 +404,7 @@
         private Button cancelarRegistro;
         private TextBox TxtValorCalcular;
         private Button TxtTeclado;
-        private Panel panel1;
+        private Panel panelHistorico;
         private Button btnHistorico;
     }
 }

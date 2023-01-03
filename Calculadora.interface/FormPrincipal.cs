@@ -6,9 +6,83 @@
         private char Calcular;
         public bool Resultado { get; set; }
 
+
         public FormPrincipal()
         {
             InitializeComponent();
+        }
+
+        //Declarar variáveis
+
+        Panel pnHis;
+        Label lbl1His, lbl2His;
+        int nHis = 1;
+        Label[] lb1His = new Label[0], lb2His = new Label[0];
+
+        //Função Histórico
+
+        private void Historico(string num, string men)
+        {
+            pnHis = new Panel();
+            lbl1His = new Label();
+            lbl2His = new Label();
+
+            pnHis.Height = 70;
+            pnHis.Dock = DockStyle.Top;
+            pnHis.MouseEnter += new EventHandler(PnFoco);
+            pnHis.MouseLeave += new EventHandler(PnForaFoco);
+            pnHis.Click += new EventHandler(PnCliqueHis);
+            pnHis.Name = "pn" + nHis;
+
+            lbl1His.Text = men + " =";
+            lbl1His.Font = new Font("Segoe UI", 10);
+            lbl1His.Name = "lbl1_" + nHis;
+            lbl1His.Left = panelHistorico.Width - lbl1His.Width;
+
+            lbl2His.Text = num;
+            lbl2His.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            lbl2His.Top = 20;
+            lbl2His.Name = "lbl2_" + nHis;
+            lbl2His.Height = 32;
+            lbl2His.Left = panelHistorico.Width - lbl2His.Width;
+
+            panelHistorico.Controls.Add(pnHis);
+            pnHis.Controls.Add(lbl2His);
+            pnHis.Controls.Add(lbl1His);
+
+            Array.Resize(ref lb1His, nHis);
+            Array.Resize(ref lb2His, nHis);
+            lb1His[nHis - 1] = lbl1His;
+            lb2His[nHis - 1] = lbl2His;
+            nHis++;
+
+        }
+
+        private void PnFoco(object sender, EventArgs e)
+        {
+            Panel pn = sender as Panel;
+            pn.BackColor = Color.Silver;
+        }
+
+        private void PnForaFoco(object sender, EventArgs e)
+        {
+            Panel pn = sender as Panel;
+            pn.BackColor = Color.Transparent;
+        }
+
+        private void PnCliqueHis(object sender, EventArgs e)
+        {
+            Panel panel = sender as Panel;
+            string a = panel.Name.Remove(0, 2);
+            lbl1His = lb1His[int.Parse(a) - 1];
+            lbl2His = lb2His[int.Parse(a) - 1];
+
+            LblValorCalcular.Text = lbl2His.Text;
+            TxtValorCalcular.Text = lbl1His.Text.Remove(lbl1His.Text.Length - 2, 2);
+
+            //
+            //
+
         }
 
         private void clickOperacao(object sender, EventArgs e)
@@ -27,7 +101,7 @@
             Resultado = false;
 
             if (TxtValorCalcular.Text != "")
-            {
+            { 
                 Num1 = Convert.ToDouble(TxtValorCalcular.Text);
 
                 Calcular = Convert.ToChar(operacao);
@@ -117,6 +191,12 @@
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
+
+             if (Resultado)
+            {
+                TxtValorCalcular.Text = "";
+                
+            }
 
 
             if (e.KeyValue == 107)
