@@ -342,7 +342,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(826, 512);
+            this.ClientSize = new System.Drawing.Size(397, 501);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.panelHistorico);
             this.Controls.Add(this.btn7);

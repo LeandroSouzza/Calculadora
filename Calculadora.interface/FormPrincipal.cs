@@ -34,7 +34,7 @@
             pnHis.Click += new EventHandler(PnCliqueHis);
             pnHis.Name = "pn" + nHis;
 
-            lbl1His.Text = men + " =";
+            lbl1His.Text = men;
             lbl1His.Font = new Font("Segoe UI", 10);
             lbl1His.Name = "lbl1_" + nHis;
             lbl1His.Left = panelHistorico.Width - lbl1His.Width;
@@ -80,8 +80,8 @@
             LblValorCalcular.Text = lbl2His.Text;
             TxtValorCalcular.Text = lbl1His.Text.Remove(lbl1His.Text.Length - 2, 2);
 
-            //
-            //
+
+            
 
         }
 
@@ -300,6 +300,8 @@
             }
 
             Resultado = true;
+            Historico(TxtValorCalcular.Text.ToString(), LblValorCalcular.Text);
+            
         }
 
         private void AtribuirValores()
