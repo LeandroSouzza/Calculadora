@@ -347,6 +347,7 @@
             this.AtalhoHistorico.TabIndex = 39;
             this.AtalhoHistorico.Text = "₢";
             this.AtalhoHistorico.UseVisualStyleBackColor = false;
+            this.AtalhoHistorico.Click += new System.EventHandler(this.AtalhoHistorico_Click);
             // 
             // FormPrincipal
             // 

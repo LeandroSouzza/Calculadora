@@ -258,6 +258,15 @@
             }
         }
 
+        private void AtalhoHistorico_Click(object sender, EventArgs e)
+        {
+            if (WindowState != FormWindowState.Maximized) 
+            {
+                WindowState = FormWindowState.Maximized;
+                MaximumSize = this.Size;
+            }
+        }
+
         private void Igual(string resultado)
         {
             if (TxtValorCalcular.Text != "")
