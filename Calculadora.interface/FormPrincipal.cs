@@ -90,6 +90,14 @@
             }
         }
 
+        private void LimpaHist_Click(object sender, EventArgs e)
+        {
+            lbl1His.Text = "";
+            lbl2His.Text = "";
+
+            LblMensagemHist.Text = "Ainda não há histórico";
+        }
+
         private void clickOperacao(object sender, EventArgs e)
         {
             var boton = ((Button)sender);
@@ -263,12 +271,9 @@
             }
         }
 
-        private void LimpaHist_Click(object sender, EventArgs e)
+        private void panelHistorico_Paint(object sender, PaintEventArgs e)
         {
-            lbl1His.Text = "";
-            lbl2His.Text = "";
 
-            lbl2His.Text = "Ainda não há histórico";
         }
 
         private void Igual(string resultado)

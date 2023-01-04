@@ -53,6 +53,7 @@
             this.TxtValorCalcular = new System.Windows.Forms.TextBox();
             this.TxtTeclado = new System.Windows.Forms.Button();
             this.panelHistorico = new System.Windows.Forms.Panel();
+            this.LblMensagemHist = new System.Windows.Forms.Label();
             this.LimpaHist = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.AtalhoHistorico = new System.Windows.Forms.Button();
@@ -324,11 +325,21 @@
             // 
             // panelHistorico
             // 
+            this.panelHistorico.Controls.Add(this.LblMensagemHist);
             this.panelHistorico.Controls.Add(this.LimpaHist);
             this.panelHistorico.Location = new System.Drawing.Point(437, 43);
             this.panelHistorico.Name = "panelHistorico";
             this.panelHistorico.Size = new System.Drawing.Size(379, 449);
             this.panelHistorico.TabIndex = 37;
+            // 
+            // LblMensagemHist
+            // 
+            this.LblMensagemHist.AutoSize = true;
+            this.LblMensagemHist.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblMensagemHist.Location = new System.Drawing.Point(3, 4);
+            this.LblMensagemHist.Name = "LblMensagemHist";
+            this.LblMensagemHist.Size = new System.Drawing.Size(0, 28);
+            this.LblMensagemHist.TabIndex = 1;
             // 
             // LimpaHist
             // 
@@ -368,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(396, 500);
+            this.ClientSize = new System.Drawing.Size(400, 505);
             this.Controls.Add(this.AtalhoHistorico);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.panelHistorico);
@@ -402,6 +413,7 @@
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.panelHistorico.ResumeLayout(false);
+            this.panelHistorico.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +448,6 @@
         private Button btnHistorico;
         private Button AtalhoHistorico;
         private Button LimpaHist;
+        private Label LblMensagemHist;
     }
 }
