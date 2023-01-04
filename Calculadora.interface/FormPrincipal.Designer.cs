@@ -379,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(400, 505);
+            this.ClientSize = new System.Drawing.Size(400, 506);
             this.Controls.Add(this.AtalhoHistorico);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.panelHistorico);
@@ -409,6 +409,7 @@
             this.Controls.Add(this.TxtValorCalcular);
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(844, 559);
+            this.MinimumSize = new System.Drawing.Size(418, 553);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
