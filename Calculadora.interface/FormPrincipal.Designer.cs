@@ -53,8 +53,10 @@
             this.TxtValorCalcular = new System.Windows.Forms.TextBox();
             this.TxtTeclado = new System.Windows.Forms.Button();
             this.panelHistorico = new System.Windows.Forms.Panel();
+            this.LimpaHist = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.AtalhoHistorico = new System.Windows.Forms.Button();
+            this.panelHistorico.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblValorCalcular
@@ -322,10 +324,22 @@
             // 
             // panelHistorico
             // 
+            this.panelHistorico.Controls.Add(this.LimpaHist);
             this.panelHistorico.Location = new System.Drawing.Point(437, 43);
             this.panelHistorico.Name = "panelHistorico";
             this.panelHistorico.Size = new System.Drawing.Size(379, 449);
             this.panelHistorico.TabIndex = 37;
+            // 
+            // LimpaHist
+            // 
+            this.LimpaHist.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.LimpaHist.Location = new System.Drawing.Point(351, 410);
+            this.LimpaHist.Name = "LimpaHist";
+            this.LimpaHist.Size = new System.Drawing.Size(25, 36);
+            this.LimpaHist.TabIndex = 0;
+            this.LimpaHist.Text = "🗑";
+            this.LimpaHist.UseVisualStyleBackColor = false;
+            this.LimpaHist.Click += new System.EventHandler(this.LimpaHist_Click);
             // 
             // btnHistorico
             // 
@@ -345,7 +359,7 @@
             this.AtalhoHistorico.Name = "AtalhoHistorico";
             this.AtalhoHistorico.Size = new System.Drawing.Size(25, 29);
             this.AtalhoHistorico.TabIndex = 39;
-            this.AtalhoHistorico.Text = "₢";
+            this.AtalhoHistorico.Text = "🕗";
             this.AtalhoHistorico.UseVisualStyleBackColor = false;
             this.AtalhoHistorico.Click += new System.EventHandler(this.AtalhoHistorico_Click);
             // 
@@ -354,7 +368,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(397, 501);
+            this.ClientSize = new System.Drawing.Size(396, 500);
             this.Controls.Add(this.AtalhoHistorico);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.panelHistorico);
@@ -387,6 +401,7 @@
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
+            this.panelHistorico.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,5 +435,6 @@
         private Panel panelHistorico;
         private Button btnHistorico;
         private Button AtalhoHistorico;
+        private Button LimpaHist;
     }
 }

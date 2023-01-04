@@ -263,6 +263,14 @@
             }
         }
 
+        private void LimpaHist_Click(object sender, EventArgs e)
+        {
+            lbl1His.Text = "";
+            lbl2His.Text = "";
+
+            lbl2His.Text = "Ainda não há histórico";
+        }
+
         private void Igual(string resultado)
         {
             if (TxtValorCalcular.Text != "")
