@@ -79,10 +79,15 @@
 
             LblValorCalcular.Text = lbl2His.Text;
             TxtValorCalcular.Text = lbl1His.Text.Remove(lbl1His.Text.Length - 2, 2);
+        }
 
-
-            
-
+        private void AtalhoHistorico_Click(object sender, EventArgs e)
+        {
+            if (WindowState != FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Maximized;
+                MaximumSize = this.Size;
+            }
         }
 
         private void clickOperacao(object sender, EventArgs e)
@@ -255,15 +260,6 @@
             else if (Calcular == '+')
             {
                 TxtValorCalcular.Text = (Num1 / 100 * Num2).ToString();
-            }
-        }
-
-        private void AtalhoHistorico_Click(object sender, EventArgs e)
-        {
-            if (WindowState != FormWindowState.Maximized) 
-            {
-                WindowState = FormWindowState.Maximized;
-                MaximumSize = this.Size;
             }
         }
 
