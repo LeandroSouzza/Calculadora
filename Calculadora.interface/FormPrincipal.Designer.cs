@@ -54,6 +54,7 @@
             this.TxtTeclado = new System.Windows.Forms.Button();
             this.panelHistorico = new System.Windows.Forms.Panel();
             this.btnHistorico = new System.Windows.Forms.Button();
+            this.AtalhoHistorico = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblValorCalcular
@@ -312,7 +313,7 @@
             // 
             // TxtTeclado
             // 
-            this.TxtTeclado.Location = new System.Drawing.Point(296, 5);
+            this.TxtTeclado.Location = new System.Drawing.Point(11, 8);
             this.TxtTeclado.Name = "TxtTeclado";
             this.TxtTeclado.Size = new System.Drawing.Size(94, 29);
             this.TxtTeclado.TabIndex = 26;
@@ -337,12 +338,23 @@
             this.btnHistorico.Text = "Histórico";
             this.btnHistorico.UseVisualStyleBackColor = false;
             // 
+            // AtalhoHistorico
+            // 
+            this.AtalhoHistorico.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.AtalhoHistorico.Location = new System.Drawing.Point(364, 9);
+            this.AtalhoHistorico.Name = "AtalhoHistorico";
+            this.AtalhoHistorico.Size = new System.Drawing.Size(25, 29);
+            this.AtalhoHistorico.TabIndex = 39;
+            this.AtalhoHistorico.Text = "₢";
+            this.AtalhoHistorico.UseVisualStyleBackColor = false;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(397, 501);
+            this.Controls.Add(this.AtalhoHistorico);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.panelHistorico);
             this.Controls.Add(this.btn7);
@@ -406,5 +418,6 @@
         private Button TxtTeclado;
         private Panel panelHistorico;
         private Button btnHistorico;
+        private Button AtalhoHistorico;
     }
 }
