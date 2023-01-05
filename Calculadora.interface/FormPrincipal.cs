@@ -7,6 +7,8 @@
 
         public bool Resultado { get; set; }
 
+        public bool Reset { get; set; }
+
         public FormPrincipal()
         {
             InitializeComponent();
@@ -92,7 +94,13 @@
 
         private void LimpaHist_Click(object sender, EventArgs e)
         {
+            Reset = true;
             panelHistorico.Controls.Clear();
+
+            if (Reset)
+            {
+                LblMensagemHist.Text = "Ainda não há histórico";
+            }
         }
 
         private void clickOperacao(object sender, EventArgs e)

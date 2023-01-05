@@ -57,7 +57,6 @@
             this.LimpaHist = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.AtalhoHistorico = new System.Windows.Forms.Button();
-            this.panelHistorico.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblValorCalcular
@@ -325,17 +324,16 @@
             // 
             // panelHistorico
             // 
-            this.panelHistorico.Controls.Add(this.LblMensagemHist);
-            this.panelHistorico.Location = new System.Drawing.Point(407, 43);
+            this.panelHistorico.Location = new System.Drawing.Point(407, 83);
             this.panelHistorico.Name = "panelHistorico";
-            this.panelHistorico.Size = new System.Drawing.Size(375, 449);
+            this.panelHistorico.Size = new System.Drawing.Size(375, 409);
             this.panelHistorico.TabIndex = 37;
             // 
             // LblMensagemHist
             // 
             this.LblMensagemHist.AutoSize = true;
             this.LblMensagemHist.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblMensagemHist.Location = new System.Drawing.Point(3, 4);
+            this.LblMensagemHist.Location = new System.Drawing.Point(437, 52);
             this.LblMensagemHist.Name = "LblMensagemHist";
             this.LblMensagemHist.Size = new System.Drawing.Size(0, 28);
             this.LblMensagemHist.TabIndex = 1;
@@ -379,6 +377,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(400, 506);
+            this.Controls.Add(this.LblMensagemHist);
             this.Controls.Add(this.AtalhoHistorico);
             this.Controls.Add(this.LimpaHist);
             this.Controls.Add(this.btnHistorico);
@@ -413,8 +412,6 @@
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
-            this.panelHistorico.ResumeLayout(false);
-            this.panelHistorico.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
