@@ -326,10 +326,9 @@
             // panelHistorico
             // 
             this.panelHistorico.Controls.Add(this.LblMensagemHist);
-            this.panelHistorico.Controls.Add(this.LimpaHist);
-            this.panelHistorico.Location = new System.Drawing.Point(437, 43);
+            this.panelHistorico.Location = new System.Drawing.Point(407, 43);
             this.panelHistorico.Name = "panelHistorico";
-            this.panelHistorico.Size = new System.Drawing.Size(379, 449);
+            this.panelHistorico.Size = new System.Drawing.Size(375, 449);
             this.panelHistorico.TabIndex = 37;
             // 
             // LblMensagemHist
@@ -344,7 +343,7 @@
             // LimpaHist
             // 
             this.LimpaHist.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.LimpaHist.Location = new System.Drawing.Point(351, 410);
+            this.LimpaHist.Location = new System.Drawing.Point(788, 456);
             this.LimpaHist.Name = "LimpaHist";
             this.LimpaHist.Size = new System.Drawing.Size(25, 36);
             this.LimpaHist.TabIndex = 0;
@@ -381,6 +380,7 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(400, 506);
             this.Controls.Add(this.AtalhoHistorico);
+            this.Controls.Add(this.LimpaHist);
             this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.panelHistorico);
             this.Controls.Add(this.btn7);
