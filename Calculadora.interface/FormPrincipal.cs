@@ -94,7 +94,7 @@
         {
             lbl1His.Text = "";
             lbl2His.Text = "";
-
+            
             LblMensagemHist.Text = "Ainda não há histórico";
         }
 
@@ -234,9 +234,7 @@
 
             if (e.KeyValue == 13)
             {
-                {
-                    Igual("resultado");
-                }
+                Igual("resultado");
             }
 
             if (e.KeyValue == 8)
