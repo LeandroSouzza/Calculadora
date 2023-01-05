@@ -92,10 +92,7 @@
 
         private void LimpaHist_Click(object sender, EventArgs e)
         {
-            lbl1His.Text = "";
-            lbl2His.Text = "";
-            
-            LblMensagemHist.Text = "Ainda não há histórico";
+            panelHistorico.Controls.Clear();
         }
 
         private void clickOperacao(object sender, EventArgs e)
