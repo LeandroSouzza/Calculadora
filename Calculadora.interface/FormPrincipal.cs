@@ -4,8 +4,8 @@
     {
         private double Num1 = 0, Num2 = 0;
         private char Calcular;
-        public bool Resultado { get; set; }
 
+        public bool Resultado { get; set; }
 
         public FormPrincipal()
         {
@@ -205,12 +205,10 @@
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
 
-             if (Resultado)
+            if (TxtValorCalcular.Text == "0")
             {
                 TxtValorCalcular.Text = "";
-                
             }
-
 
             if (e.KeyValue == 107)
             {
