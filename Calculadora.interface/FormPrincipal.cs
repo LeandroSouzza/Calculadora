@@ -210,10 +210,12 @@
             }
 
             Program.DecNumber(sender, e);
+
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
+
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
 
             if (e.KeyValue == 107)
