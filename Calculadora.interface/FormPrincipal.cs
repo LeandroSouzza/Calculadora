@@ -203,17 +203,18 @@
         //Textbox aceitar só números//
         private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+            if (TxtValorCalcular.Text == "0")
+            {
+                TxtValorCalcular.Text = "";
+            }
+
             Program.DecNumber(sender, e);
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
-
-            if (TxtValorCalcular.Text == "0")
-            {
-                TxtValorCalcular.Text = "";
-            }
 
             if (e.KeyValue == 107)
             {
