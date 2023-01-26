@@ -50,13 +50,13 @@
             this.BtnApagar = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.cancelarRegistro = new System.Windows.Forms.Button();
-            this.TxtValorCalcular = new System.Windows.Forms.TextBox();
             this.TxtTeclado = new System.Windows.Forms.Button();
             this.panelHistorico = new System.Windows.Forms.Panel();
             this.LblMensagemHist = new System.Windows.Forms.Label();
             this.LimpaHist = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.AtalhoHistorico = new System.Windows.Forms.Button();
+            this.LabelResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblValorCalcular
@@ -300,19 +300,6 @@
             this.cancelarRegistro.UseVisualStyleBackColor = true;
             this.cancelarRegistro.Click += new System.EventHandler(this.button2_Click);
             // 
-            // TxtValorCalcular
-            // 
-            this.TxtValorCalcular.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtValorCalcular.Location = new System.Drawing.Point(11, 40);
-            this.TxtValorCalcular.MaxLength = 16;
-            this.TxtValorCalcular.Name = "TxtValorCalcular";
-            this.TxtValorCalcular.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtValorCalcular.Size = new System.Drawing.Size(378, 51);
-            this.TxtValorCalcular.TabIndex = 0;
-            this.TxtValorCalcular.Text = "0";
-            this.TxtValorCalcular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TxtValorCalcular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtValorCalcular_KeyPress);
-            // 
             // TxtTeclado
             // 
             this.TxtTeclado.Location = new System.Drawing.Point(11, 8);
@@ -371,12 +358,23 @@
             this.AtalhoHistorico.UseVisualStyleBackColor = false;
             this.AtalhoHistorico.Click += new System.EventHandler(this.AtalhoHistorico_Click);
             // 
+            // LabelResultado
+            // 
+            this.LabelResultado.AutoSize = true;
+            this.LabelResultado.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LabelResultado.Location = new System.Drawing.Point(345, 46);
+            this.LabelResultado.Name = "LabelResultado";
+            this.LabelResultado.Size = new System.Drawing.Size(43, 50);
+            this.LabelResultado.TabIndex = 40;
+            this.LabelResultado.Text = "0";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(400, 506);
+            this.Controls.Add(this.LabelResultado);
             this.Controls.Add(this.LblMensagemHist);
             this.Controls.Add(this.AtalhoHistorico);
             this.Controls.Add(this.LimpaHist);
@@ -405,7 +403,6 @@
             this.Controls.Add(this.BtnIgual);
             this.Controls.Add(this.LblValorCalcular);
             this.Controls.Add(this.BtnMais);
-            this.Controls.Add(this.TxtValorCalcular);
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(844, 559);
             this.MinimumSize = new System.Drawing.Size(418, 553);
@@ -440,12 +437,12 @@
         private Button BtnApagar;
         private Button BtnLimpar;
         private Button cancelarRegistro;
-        private TextBox TxtValorCalcular;
         private Button TxtTeclado;
         private Panel panelHistorico;
         private Button btnHistorico;
         private Button AtalhoHistorico;
         private Button LimpaHist;
         private Label LblMensagemHist;
+        private Label LabelResultado;
     }
 }

@@ -80,7 +80,7 @@
             lbl2His = lb2His[int.Parse(a) - 1];
 
             LblValorCalcular.Text = lbl2His.Text;
-            TxtValorCalcular.Text = lbl1His.Text.Remove(lbl1His.Text.Length - 2, 2);
+            LabelResultado.Text = lbl1His.Text.Remove(lbl1His.Text.Length - 2, 2);
         }
 
         private void AtalhoHistorico_Click(object sender, EventArgs e)
@@ -118,17 +118,17 @@
             }
             Resultado = false;
 
-            if (TxtValorCalcular.Text != "")
+            if (LabelResultado.Text != "")
             { 
-                Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                Num1 = Convert.ToDouble(LabelResultado.Text);
 
                 Calcular = Convert.ToChar(operacao);
 
-                LblValorCalcular.Text = TxtValorCalcular.Text;
+                LblValorCalcular.Text = LabelResultado.Text;
 
                 LblValorCalcular.Text += operacao;
 
-                TxtValorCalcular.Text = "";
+                LabelResultado.Text = "";
             }
         }
 
@@ -137,56 +137,56 @@
             var button = ((Button)sender);
             const int TamanhoMaximo = 16;
 
-            if (TxtValorCalcular.Text.Length > TamanhoMaximo)
+            if (LabelResultado.Text.Length > TamanhoMaximo)
                 return;
 
-            if (TxtValorCalcular.Text == "0")
+            if (LabelResultado.Text == "0")
             {
-                TxtValorCalcular.Text = "";
+                LabelResultado.Text = "";
             }
             else if (Resultado)
             {
-                TxtValorCalcular.Text = "";
+                LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
             }
 
             Resultado = false;
 
-            TxtValorCalcular.Text += button.Text;
+            LabelResultado.Text += button.Text;
         }
 
         private void Apagador(string apagador)
         {
-            if (TxtValorCalcular.Text != "")
+            if (LabelResultado.Text != "")
             {
-                string Apagar = TxtValorCalcular.Text;
+                string Apagar = LabelResultado.Text;
                 Apagar = Apagar.Remove(Apagar.Length - 1);
-                TxtValorCalcular.Text = Apagar;
+                LabelResultado.Text = Apagar;
             }
 
-            if (TxtValorCalcular.Text == "")
+            if (LabelResultado.Text == "")
 
-                TxtValorCalcular.Text = "0";
+                LabelResultado.Text = "0";
         }
 
         private void Virgula(string virgula)
         {
-            if (TxtValorCalcular.Text != "")
-                if (!TxtValorCalcular.Text.Contains(","))
+            if (LabelResultado.Text != "")
+                if (!LabelResultado.Text.Contains(","))
 
-                    TxtValorCalcular.Text += ",";
+                    LabelResultado.Text += ",";
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            TxtValorCalcular.Text = "";
-            TxtValorCalcular.Text = "0";
+            LabelResultado.Text = "";
+            LabelResultado.Text = "0";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TxtValorCalcular.Text = "";
-            TxtValorCalcular.Text = "0";
+            LabelResultado.Text = "";
+            LabelResultado.Text = "0";
             LblValorCalcular.Text = "";
         }
 
@@ -204,9 +204,9 @@
         private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (TxtValorCalcular.Text == "0")
+            if (LabelResultado.Text == "0")
             {
-                TxtValorCalcular.Text = "";
+                LabelResultado.Text = "";
             }
 
             Program.DecNumber(sender, e);
@@ -257,21 +257,21 @@
 
         private void button14_Click(object sender, EventArgs e)
         {
-            TxtValorCalcular.Text = (double.Parse(TxtValorCalcular.Text) * -1).ToString();
+            LabelResultado.Text = (double.Parse(LabelResultado.Text) * -1).ToString();
         }
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
             if (Calcular == 'x')
             {
-                decimal Operacao = decimal.Parse(TxtValorCalcular.Text) / 100;
-                TxtValorCalcular.Text = Operacao.ToString();
-                LblValorCalcular.Text += TxtValorCalcular.Text;
+                decimal Operacao = decimal.Parse(LabelResultado.Text) / 100;
+                LabelResultado.Text = Operacao.ToString();
+                LblValorCalcular.Text += LabelResultado.Text;
             }
             //Rascunho do calculo porcentagem ao utiliza a SOMA
             else if (Calcular == '+')
             {
-                TxtValorCalcular.Text = (Num1 / 100 * Num2).ToString();
+                LabelResultado.Text = (Num1 / 100 * Num2).ToString();
             }
         }
 
@@ -282,47 +282,47 @@
 
         private void Igual(string resultado)
         {
-            if (TxtValorCalcular.Text != "")
+            if (LabelResultado.Text != "")
             {
                 if (!Resultado)
                 {
-                    Num2 = Convert.ToDouble(TxtValorCalcular.Text);
+                    Num2 = Convert.ToDouble(LabelResultado.Text);
                 }
 
                 AtribuirValores();
 
                 if (Calcular == '+')
                 {
-                    TxtValorCalcular.Text = (Num1 + Num2).ToString();
-                    Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                    LabelResultado.Text = (Num1 + Num2).ToString();
+                    Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == '-')
                 {
-                    TxtValorCalcular.Text = (Num1 - Num2).ToString();
-                    Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                    LabelResultado.Text = (Num1 - Num2).ToString();
+                    Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == 'x')
                 {
-                    TxtValorCalcular.Text = (Num1 * Num2).ToString();
-                    Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                    LabelResultado.Text = (Num1 * Num2).ToString();
+                    Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == '%')
                 {
-                    TxtValorCalcular.Text = (Num1 * Num2).ToString("N0");
-                    Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                    LabelResultado.Text = (Num1 * Num2).ToString("N0");
+                    Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == '/')
                 {
-                    if (TxtValorCalcular.Text != "0")
+                    if (LabelResultado.Text != "0")
                     {
-                        TxtValorCalcular.Text = (Num1 / Num2).ToString();
-                        Num1 = Convert.ToDouble(TxtValorCalcular.Text);
+                        LabelResultado.Text = (Num1 / Num2).ToString();
+                        Num1 = Convert.ToDouble(LabelResultado.Text);
                     }
                 }
             }
 
             Resultado = true;
-            Historico(TxtValorCalcular.Text.ToString(), LblValorCalcular.Text);
+            Historico(LabelResultado.Text.ToString(), LblValorCalcular.Text);
             
         }
 

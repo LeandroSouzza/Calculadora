@@ -14,6 +14,7 @@ internal static class Program
         Application.Run(new FormPrincipal());
     }
     public static void DecNumber(object sender, KeyPressEventArgs e)
+    
     {
         if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 44)
             e.Handled = true;
