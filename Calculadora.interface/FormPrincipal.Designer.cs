@@ -360,11 +360,11 @@
             // 
             // LabelResultado
             // 
-            this.LabelResultado.AutoSize = true;
             this.LabelResultado.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LabelResultado.Location = new System.Drawing.Point(345, 46);
+            this.LabelResultado.Location = new System.Drawing.Point(11, 46);
             this.LabelResultado.Name = "LabelResultado";
-            this.LabelResultado.Size = new System.Drawing.Size(43, 50);
+            this.LabelResultado.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LabelResultado.Size = new System.Drawing.Size(377, 50);
             this.LabelResultado.TabIndex = 40;
             this.LabelResultado.Text = "0";
             // 
