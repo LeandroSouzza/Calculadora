@@ -217,6 +217,13 @@
             {
                 LabelResultado.Text = "";
             }
+            else if (Resultado)
+            {
+                LabelResultado.Text = "";
+                LblValorCalcular.Text = "";
+            }
+
+            Resultado = false;
 
             if (e.KeyChar == 48)
             {
@@ -260,6 +267,10 @@
             if (e.KeyChar == 57)
             {
                 LabelResultado.Text += 9;
+            }
+            if (e.KeyChar == 13)
+            {
+                Igual("resultado");
             }
         }
 
