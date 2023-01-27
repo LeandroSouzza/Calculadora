@@ -201,22 +201,73 @@
         }
 
         //Textbox aceitar só números//
-        private void TxtValorCalcular_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 44)
+                e.Handled = true;
+            else if (e.KeyChar == 44)
+            {
+                TextBox txt = (TextBox)sender;
+                if (txt.Text.Contains(","))
+                    e.Handled = true;
+            }
 
             if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
             }
 
-            Program.DecNumber(sender, e);
+            if (e.KeyChar == 48)
+            {
+                LabelResultado.Text += 0;
+            }
 
+            if (e.KeyChar == 49)
+            {
+                LabelResultado.Text += 1;
+            }
+
+            if (e.KeyChar == 50)
+            {
+                LabelResultado.Text += 2;
+            }
+
+            if (e.KeyChar == 51)
+            {
+                LabelResultado.Text += 3;
+            }
+            if (e.KeyChar == 52)
+            {
+                LabelResultado.Text += 4;
+            }
+            if (e.KeyChar == 53)
+            {
+                LabelResultado.Text += 5;
+            }
+            if (e.KeyChar == 54)
+            {
+                LabelResultado.Text += 6;
+            }
+            if (e.KeyChar == 55)
+            {
+                LabelResultado.Text += 7;
+            }
+            if (e.KeyChar == 56)
+            {
+                LabelResultado.Text += 8;
+            }
+            if (e.KeyChar == 57)
+            {
+                LabelResultado.Text += 9;
+            }
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
 
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
+
 
             if (e.KeyValue == 107)
             {

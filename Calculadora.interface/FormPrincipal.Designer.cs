@@ -410,6 +410,7 @@
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormPrincipal_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
