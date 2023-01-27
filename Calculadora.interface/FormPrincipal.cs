@@ -204,14 +204,6 @@
 
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 44)
-                e.Handled = true;
-            else if (e.KeyChar == 44)
-            {
-                TextBox txt = (TextBox)sender;
-                if (txt.Text.Contains(","))
-                    e.Handled = true;
-            }
 
             if (LabelResultado.Text == "0")
             {
@@ -272,6 +264,10 @@
             {
                 Igual("resultado");
             }
+            if (e.KeyChar == 8)
+            {
+                Apagador("apagador");
+            }
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -303,11 +299,6 @@
             if (e.KeyValue == 13)
             {
                 Igual("resultado");
-            }
-
-            if (e.KeyValue == 8)
-            {
-                Apagador("apagador");
             }
 
             if (e.KeyValue == 188)
