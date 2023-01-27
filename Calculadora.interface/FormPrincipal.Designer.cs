@@ -71,7 +71,7 @@
             // BtnIgual
             // 
             this.BtnIgual.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnIgual.Location = new System.Drawing.Point(299, 449);
+            this.BtnIgual.Location = new System.Drawing.Point(298, 447);
             this.BtnIgual.Name = "BtnIgual";
             this.BtnIgual.Size = new System.Drawing.Size(90, 59);
             this.BtnIgual.TabIndex = 3;
@@ -94,7 +94,7 @@
             // btn0
             // 
             this.btn0.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn0.Location = new System.Drawing.Point(107, 447);
+            this.btn0.Location = new System.Drawing.Point(107, 445);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(90, 61);
             this.btn0.TabIndex = 27;
@@ -105,7 +105,7 @@
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button14.Location = new System.Drawing.Point(11, 449);
+            this.button14.Location = new System.Drawing.Point(11, 447);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(90, 59);
             this.button14.TabIndex = 18;
@@ -116,7 +116,7 @@
             // BtnMais
             // 
             this.BtnMais.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMais.Location = new System.Drawing.Point(299, 382);
+            this.BtnMais.Location = new System.Drawing.Point(300, 382);
             this.BtnMais.Name = "BtnMais";
             this.BtnMais.Size = new System.Drawing.Size(90, 61);
             this.BtnMais.TabIndex = 1;
@@ -204,7 +204,7 @@
             // BtnVezez
             // 
             this.BtnVezez.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnVezez.Location = new System.Drawing.Point(298, 250);
+            this.BtnVezez.Location = new System.Drawing.Point(300, 252);
             this.BtnVezez.Name = "BtnVezez";
             this.BtnVezez.Size = new System.Drawing.Size(90, 59);
             this.BtnVezez.TabIndex = 5;
@@ -226,7 +226,7 @@
             // btn8
             // 
             this.btn8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn8.Location = new System.Drawing.Point(107, 248);
+            this.btn8.Location = new System.Drawing.Point(107, 249);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(90, 61);
             this.btn8.TabIndex = 35;
@@ -259,7 +259,7 @@
             // btnPorcentagem
             // 
             this.btnPorcentagem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPorcentagem.Location = new System.Drawing.Point(300, 116);
+            this.btnPorcentagem.Location = new System.Drawing.Point(300, 117);
             this.btnPorcentagem.Name = "btnPorcentagem";
             this.btnPorcentagem.Size = new System.Drawing.Size(90, 61);
             this.btnPorcentagem.TabIndex = 25;
@@ -350,7 +350,7 @@
             // AtalhoHistorico
             // 
             this.AtalhoHistorico.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.AtalhoHistorico.Location = new System.Drawing.Point(363, 1);
+            this.AtalhoHistorico.Location = new System.Drawing.Point(343, 1);
             this.AtalhoHistorico.Name = "AtalhoHistorico";
             this.AtalhoHistorico.Size = new System.Drawing.Size(25, 28);
             this.AtalhoHistorico.TabIndex = 39;
