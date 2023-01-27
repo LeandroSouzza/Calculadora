@@ -63,17 +63,18 @@
             // 
             this.LblValorCalcular.AutoSize = true;
             this.LblValorCalcular.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblValorCalcular.Location = new System.Drawing.Point(11, 9);
+            this.LblValorCalcular.Location = new System.Drawing.Point(10, 7);
             this.LblValorCalcular.Name = "LblValorCalcular";
-            this.LblValorCalcular.Size = new System.Drawing.Size(0, 28);
+            this.LblValorCalcular.Size = new System.Drawing.Size(0, 21);
             this.LblValorCalcular.TabIndex = 2;
             // 
             // BtnIgual
             // 
             this.BtnIgual.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnIgual.Location = new System.Drawing.Point(299, 433);
+            this.BtnIgual.Location = new System.Drawing.Point(262, 325);
+            this.BtnIgual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnIgual.Name = "BtnIgual";
-            this.BtnIgual.Size = new System.Drawing.Size(90, 59);
+            this.BtnIgual.Size = new System.Drawing.Size(79, 44);
             this.BtnIgual.TabIndex = 3;
             this.BtnIgual.Text = "=";
             this.BtnIgual.UseVisualStyleBackColor = true;
@@ -82,10 +83,11 @@
             // BtnVírgula
             // 
             this.BtnVírgula.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnVírgula.Location = new System.Drawing.Point(203, 433);
+            this.BtnVírgula.Location = new System.Drawing.Point(178, 325);
+            this.BtnVírgula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnVírgula.Name = "BtnVírgula";
             this.BtnVírgula.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnVírgula.Size = new System.Drawing.Size(90, 59);
+            this.BtnVírgula.Size = new System.Drawing.Size(79, 44);
             this.BtnVírgula.TabIndex = 8;
             this.BtnVírgula.Text = ",";
             this.BtnVírgula.UseVisualStyleBackColor = true;
@@ -94,9 +96,10 @@
             // btn0
             // 
             this.btn0.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn0.Location = new System.Drawing.Point(107, 431);
+            this.btn0.Location = new System.Drawing.Point(94, 323);
+            this.btn0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(90, 61);
+            this.btn0.Size = new System.Drawing.Size(79, 46);
             this.btn0.TabIndex = 27;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
@@ -105,9 +108,10 @@
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button14.Location = new System.Drawing.Point(11, 433);
+            this.button14.Location = new System.Drawing.Point(10, 325);
+            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(90, 59);
+            this.button14.Size = new System.Drawing.Size(79, 44);
             this.button14.TabIndex = 18;
             this.button14.Text = "+/-";
             this.button14.UseVisualStyleBackColor = true;
@@ -116,9 +120,10 @@
             // BtnMais
             // 
             this.BtnMais.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMais.Location = new System.Drawing.Point(299, 365);
+            this.BtnMais.Location = new System.Drawing.Point(262, 274);
+            this.BtnMais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMais.Name = "BtnMais";
-            this.BtnMais.Size = new System.Drawing.Size(90, 61);
+            this.BtnMais.Size = new System.Drawing.Size(79, 46);
             this.BtnMais.TabIndex = 1;
             this.BtnMais.Text = "+";
             this.BtnMais.UseVisualStyleBackColor = true;
@@ -127,9 +132,10 @@
             // btn3
             // 
             this.btn3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn3.Location = new System.Drawing.Point(203, 365);
+            this.btn3.Location = new System.Drawing.Point(178, 274);
+            this.btn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(90, 61);
+            this.btn3.Size = new System.Drawing.Size(79, 46);
             this.btn3.TabIndex = 28;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
@@ -138,9 +144,10 @@
             // btn2
             // 
             this.btn2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn2.Location = new System.Drawing.Point(107, 364);
+            this.btn2.Location = new System.Drawing.Point(94, 273);
+            this.btn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(90, 61);
+            this.btn2.Size = new System.Drawing.Size(79, 46);
             this.btn2.TabIndex = 29;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
@@ -149,9 +156,10 @@
             // btn1
             // 
             this.btn1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn1.Location = new System.Drawing.Point(11, 364);
+            this.btn1.Location = new System.Drawing.Point(10, 273);
+            this.btn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(90, 61);
+            this.btn1.Size = new System.Drawing.Size(79, 46);
             this.btn1.TabIndex = 30;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
@@ -160,9 +168,10 @@
             // BtnMenos
             // 
             this.BtnMenos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMenos.Location = new System.Drawing.Point(299, 297);
+            this.BtnMenos.Location = new System.Drawing.Point(262, 223);
+            this.BtnMenos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMenos.Name = "BtnMenos";
-            this.BtnMenos.Size = new System.Drawing.Size(90, 61);
+            this.BtnMenos.Size = new System.Drawing.Size(79, 46);
             this.BtnMenos.TabIndex = 4;
             this.BtnMenos.Text = "-";
             this.BtnMenos.UseVisualStyleBackColor = true;
@@ -171,9 +180,10 @@
             // btn6
             // 
             this.btn6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn6.Location = new System.Drawing.Point(203, 299);
+            this.btn6.Location = new System.Drawing.Point(178, 224);
+            this.btn6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(90, 61);
+            this.btn6.Size = new System.Drawing.Size(79, 46);
             this.btn6.TabIndex = 31;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
@@ -182,9 +192,10 @@
             // btn5
             // 
             this.btn5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn5.Location = new System.Drawing.Point(107, 299);
+            this.btn5.Location = new System.Drawing.Point(94, 224);
+            this.btn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(90, 61);
+            this.btn5.Size = new System.Drawing.Size(79, 46);
             this.btn5.TabIndex = 32;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
@@ -193,9 +204,10 @@
             // btn4
             // 
             this.btn4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn4.Location = new System.Drawing.Point(11, 297);
+            this.btn4.Location = new System.Drawing.Point(10, 223);
+            this.btn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(90, 61);
+            this.btn4.Size = new System.Drawing.Size(79, 46);
             this.btn4.TabIndex = 33;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
@@ -204,9 +216,10 @@
             // BtnVezez
             // 
             this.BtnVezez.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnVezez.Location = new System.Drawing.Point(299, 232);
+            this.BtnVezez.Location = new System.Drawing.Point(262, 174);
+            this.BtnVezez.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnVezez.Name = "BtnVezez";
-            this.BtnVezez.Size = new System.Drawing.Size(90, 59);
+            this.BtnVezez.Size = new System.Drawing.Size(79, 44);
             this.BtnVezez.TabIndex = 5;
             this.BtnVezez.Text = "x";
             this.BtnVezez.UseVisualStyleBackColor = true;
@@ -215,9 +228,10 @@
             // btn9
             // 
             this.btn9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn9.Location = new System.Drawing.Point(203, 229);
+            this.btn9.Location = new System.Drawing.Point(178, 172);
+            this.btn9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(90, 61);
+            this.btn9.Size = new System.Drawing.Size(79, 46);
             this.btn9.TabIndex = 34;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
@@ -226,9 +240,10 @@
             // btn8
             // 
             this.btn8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn8.Location = new System.Drawing.Point(107, 232);
+            this.btn8.Location = new System.Drawing.Point(94, 174);
+            this.btn8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(90, 61);
+            this.btn8.Size = new System.Drawing.Size(79, 46);
             this.btn8.TabIndex = 35;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
@@ -237,9 +252,10 @@
             // btn7
             // 
             this.btn7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn7.Location = new System.Drawing.Point(11, 232);
+            this.btn7.Location = new System.Drawing.Point(10, 174);
+            this.btn7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(90, 61);
+            this.btn7.Size = new System.Drawing.Size(79, 46);
             this.btn7.TabIndex = 36;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
@@ -248,9 +264,10 @@
             // BtnDivide
             // 
             this.BtnDivide.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnDivide.Location = new System.Drawing.Point(299, 165);
+            this.BtnDivide.Location = new System.Drawing.Point(262, 124);
+            this.BtnDivide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDivide.Name = "BtnDivide";
-            this.BtnDivide.Size = new System.Drawing.Size(90, 61);
+            this.BtnDivide.Size = new System.Drawing.Size(79, 46);
             this.BtnDivide.TabIndex = 6;
             this.BtnDivide.Text = "/";
             this.BtnDivide.UseVisualStyleBackColor = true;
@@ -259,9 +276,10 @@
             // btnPorcentagem
             // 
             this.btnPorcentagem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPorcentagem.Location = new System.Drawing.Point(299, 99);
+            this.btnPorcentagem.Location = new System.Drawing.Point(262, 74);
+            this.btnPorcentagem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPorcentagem.Name = "btnPorcentagem";
-            this.btnPorcentagem.Size = new System.Drawing.Size(90, 61);
+            this.btnPorcentagem.Size = new System.Drawing.Size(79, 46);
             this.btnPorcentagem.TabIndex = 25;
             this.btnPorcentagem.Text = "%";
             this.btnPorcentagem.UseVisualStyleBackColor = true;
@@ -270,9 +288,10 @@
             // BtnApagar
             // 
             this.BtnApagar.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnApagar.Location = new System.Drawing.Point(203, 97);
+            this.BtnApagar.Location = new System.Drawing.Point(178, 73);
+            this.BtnApagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnApagar.Name = "BtnApagar";
-            this.BtnApagar.Size = new System.Drawing.Size(90, 129);
+            this.BtnApagar.Size = new System.Drawing.Size(79, 97);
             this.BtnApagar.TabIndex = 22;
             this.BtnApagar.Text = "←";
             this.BtnApagar.UseVisualStyleBackColor = true;
@@ -281,9 +300,10 @@
             // BtnLimpar
             // 
             this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnLimpar.Location = new System.Drawing.Point(107, 99);
+            this.BtnLimpar.Location = new System.Drawing.Point(94, 74);
+            this.BtnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(90, 128);
+            this.BtnLimpar.Size = new System.Drawing.Size(79, 96);
             this.BtnLimpar.TabIndex = 23;
             this.BtnLimpar.Text = "C";
             this.BtnLimpar.UseVisualStyleBackColor = true;
@@ -292,9 +312,10 @@
             // cancelarRegistro
             // 
             this.cancelarRegistro.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cancelarRegistro.Location = new System.Drawing.Point(11, 99);
+            this.cancelarRegistro.Location = new System.Drawing.Point(10, 74);
+            this.cancelarRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelarRegistro.Name = "cancelarRegistro";
-            this.cancelarRegistro.Size = new System.Drawing.Size(90, 128);
+            this.cancelarRegistro.Size = new System.Drawing.Size(79, 96);
             this.cancelarRegistro.TabIndex = 24;
             this.cancelarRegistro.Text = "CE";
             this.cancelarRegistro.UseVisualStyleBackColor = true;
@@ -302,35 +323,38 @@
             // 
             // TxtTeclado
             // 
-            this.TxtTeclado.Location = new System.Drawing.Point(11, 8);
+            this.TxtTeclado.Location = new System.Drawing.Point(10, 6);
+            this.TxtTeclado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTeclado.Name = "TxtTeclado";
-            this.TxtTeclado.Size = new System.Drawing.Size(94, 29);
+            this.TxtTeclado.Size = new System.Drawing.Size(82, 22);
             this.TxtTeclado.TabIndex = 26;
             this.TxtTeclado.UseVisualStyleBackColor = true;
             this.TxtTeclado.Visible = false;
             // 
             // panelHistorico
             // 
-            this.panelHistorico.Location = new System.Drawing.Point(407, 83);
+            this.panelHistorico.Location = new System.Drawing.Point(356, 62);
+            this.panelHistorico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelHistorico.Name = "panelHistorico";
-            this.panelHistorico.Size = new System.Drawing.Size(375, 409);
+            this.panelHistorico.Size = new System.Drawing.Size(328, 307);
             this.panelHistorico.TabIndex = 37;
             // 
             // LblMensagemHist
             // 
             this.LblMensagemHist.AutoSize = true;
             this.LblMensagemHist.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblMensagemHist.Location = new System.Drawing.Point(437, 52);
+            this.LblMensagemHist.Location = new System.Drawing.Point(382, 39);
             this.LblMensagemHist.Name = "LblMensagemHist";
-            this.LblMensagemHist.Size = new System.Drawing.Size(0, 28);
+            this.LblMensagemHist.Size = new System.Drawing.Size(0, 21);
             this.LblMensagemHist.TabIndex = 1;
             // 
             // LimpaHist
             // 
             this.LimpaHist.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.LimpaHist.Location = new System.Drawing.Point(788, 456);
+            this.LimpaHist.Location = new System.Drawing.Point(690, 342);
+            this.LimpaHist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LimpaHist.Name = "LimpaHist";
-            this.LimpaHist.Size = new System.Drawing.Size(25, 36);
+            this.LimpaHist.Size = new System.Drawing.Size(22, 27);
             this.LimpaHist.TabIndex = 0;
             this.LimpaHist.Text = "🗑";
             this.LimpaHist.UseVisualStyleBackColor = false;
@@ -340,9 +364,10 @@
             // 
             this.btnHistorico.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnHistorico.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnHistorico.Location = new System.Drawing.Point(437, 8);
+            this.btnHistorico.Location = new System.Drawing.Point(382, 6);
+            this.btnHistorico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHistorico.Name = "btnHistorico";
-            this.btnHistorico.Size = new System.Drawing.Size(142, 36);
+            this.btnHistorico.Size = new System.Drawing.Size(124, 27);
             this.btnHistorico.TabIndex = 38;
             this.btnHistorico.Text = "Histórico";
             this.btnHistorico.UseVisualStyleBackColor = false;
@@ -350,9 +375,10 @@
             // AtalhoHistorico
             // 
             this.AtalhoHistorico.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.AtalhoHistorico.Location = new System.Drawing.Point(364, 9);
+            this.AtalhoHistorico.Location = new System.Drawing.Point(318, 7);
+            this.AtalhoHistorico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AtalhoHistorico.Name = "AtalhoHistorico";
-            this.AtalhoHistorico.Size = new System.Drawing.Size(25, 29);
+            this.AtalhoHistorico.Size = new System.Drawing.Size(22, 22);
             this.AtalhoHistorico.TabIndex = 39;
             this.AtalhoHistorico.Text = "🕗";
             this.AtalhoHistorico.UseVisualStyleBackColor = false;
@@ -361,19 +387,20 @@
             // LabelResultado
             // 
             this.LabelResultado.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LabelResultado.Location = new System.Drawing.Point(11, 46);
+            this.LabelResultado.Location = new System.Drawing.Point(10, 34);
             this.LabelResultado.Name = "LabelResultado";
-            this.LabelResultado.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LabelResultado.Size = new System.Drawing.Size(377, 50);
+            this.LabelResultado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelResultado.Size = new System.Drawing.Size(330, 38);
             this.LabelResultado.TabIndex = 40;
             this.LabelResultado.Text = "0";
+            this.LabelResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(400, 506);
+            this.ClientSize = new System.Drawing.Size(352, 386);
             this.Controls.Add(this.LabelResultado);
             this.Controls.Add(this.LblMensagemHist);
             this.Controls.Add(this.AtalhoHistorico);
@@ -404,8 +431,9 @@
             this.Controls.Add(this.LblValorCalcular);
             this.Controls.Add(this.BtnMais);
             this.KeyPreview = true;
-            this.MaximumSize = new System.Drawing.Size(844, 559);
-            this.MinimumSize = new System.Drawing.Size(418, 553);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(740, 429);
+            this.MinimumSize = new System.Drawing.Size(368, 425);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
