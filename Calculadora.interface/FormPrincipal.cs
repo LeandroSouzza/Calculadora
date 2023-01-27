@@ -260,14 +260,11 @@
             {
                 LabelResultado.Text += 9;
             }
-            if (e.KeyChar == 13)
+            if (e.KeyChar == 32)
             {
                 Igual("resultado");
             }
-            if (e.KeyChar == 8)
-            {
-                Apagador("apagador");
-            }
+
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -299,6 +296,11 @@
             if (e.KeyValue == 13)
             {
                 Igual("resultado");
+            }
+
+            if (e.KeyValue == 8)
+            {
+                Apagador("apagador");
             }
 
             if (e.KeyValue == 188)

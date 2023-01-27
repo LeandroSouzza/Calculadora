@@ -307,7 +307,6 @@
             this.TxtTeclado.Size = new System.Drawing.Size(94, 29);
             this.TxtTeclado.TabIndex = 26;
             this.TxtTeclado.UseVisualStyleBackColor = true;
-            this.TxtTeclado.Visible = false;
             // 
             // panelHistorico
             // 
@@ -404,11 +403,13 @@
             this.Controls.Add(this.BtnIgual);
             this.Controls.Add(this.LblValorCalcular);
             this.Controls.Add(this.BtnMais);
+            this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(843, 556);
             this.MinimumSize = new System.Drawing.Size(418, 551);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
+            this.Enter += new System.EventHandler(this.BtnIgual_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormPrincipal_KeyPress);
             this.ResumeLayout(false);
