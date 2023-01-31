@@ -409,7 +409,6 @@
             this.MinimumSize = new System.Drawing.Size(418, 551);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
-            this.Enter += new System.EventHandler(this.BtnIgual_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormPrincipal_KeyPress);
             this.ResumeLayout(false);

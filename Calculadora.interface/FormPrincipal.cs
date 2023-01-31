@@ -205,17 +205,19 @@
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 44)
+                e.Handled = true;
+
             if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
             }
-            else if (Resultado)
+            //
+            /*else if (Resultado)
             {
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
-            }
-
-            Resultado = false;
+            }*/
 
             if (e.KeyChar == 48)
             {
@@ -260,11 +262,7 @@
             {
                 LabelResultado.Text += 9;
             }
-            if (e.KeyChar == 32)
-            {
-                Igual("resultado");
-            }
-
+           
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -307,7 +305,11 @@
             {
                 Virgula("virgula");
             }
-
+            if (e.KeyValue == 110)
+            {
+                Virgula("virgula");
+            }
+            
         }
 
         private void button14_Click(object sender, EventArgs e)
