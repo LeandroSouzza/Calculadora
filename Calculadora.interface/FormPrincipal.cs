@@ -200,24 +200,26 @@
             Apagador("apagador");
         }
 
-        //Textbox aceitar só números//
-
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 44)
-                e.Handled = true;
-
-            if (LabelResultado.Text == "0")
+            /*if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
             }
-            //
-            /*else if (Resultado)
+            else if (Resultado)
             {
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
-            }*/
+            }
+
+            Resultado = false;*/
+
+            //Textbox aceitar só números//
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
 
             if (e.KeyChar == 48)
             {
@@ -290,12 +292,6 @@
             {
                 Operador("/");
             }
-
-            if (e.KeyValue == 13)
-            {
-                Igual("resultado");
-            }
-
             if (e.KeyValue == 8)
             {
                 Apagador("apagador");
@@ -309,7 +305,11 @@
             {
                 Virgula("virgula");
             }
-            
+            if (e.KeyValue == 13)
+            {
+                Igual("resultado");
+            }
+
         }
 
         private void button14_Click(object sender, EventArgs e)
