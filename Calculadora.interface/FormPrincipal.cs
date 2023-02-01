@@ -328,7 +328,10 @@
             //Rascunho do calculo porcentagem ao utiliza a SOMA
             else if (Calcular == '+')
             {
-                LabelResultado.Text = (Num1 / 100 * Num2).ToString();
+                decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
+
+                LabelResultado.Text = Operacao.ToString();
+                LblValorCalcular.Text += LabelResultado.Text;
             }
         }
 
