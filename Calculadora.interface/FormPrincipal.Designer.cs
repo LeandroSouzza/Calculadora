@@ -403,6 +403,7 @@
             this.Controls.Add(this.BtnIgual);
             this.Controls.Add(this.LblValorCalcular);
             this.Controls.Add(this.BtnMais);
+            this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(843, 556);
@@ -411,6 +412,7 @@
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormPrincipal_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
