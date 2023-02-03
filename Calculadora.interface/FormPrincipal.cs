@@ -297,14 +297,11 @@
                 Apagador("apagador");
             }
 
-            if (e.KeyValue == 188)
+            if (e.KeyValue == 188 || e.KeyValue == 110)
             {
                 Virgula("virgula");
             }
-            if (e.KeyValue == 110)
-            {
-                Virgula("virgula");
-            }
+            
             if (e.KeyValue == 13)
             {
                 Igual("resultado");
