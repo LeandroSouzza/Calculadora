@@ -209,7 +209,18 @@
                 e.Handled = true;
             }
 
+            if (LabelResultado.Text == "0")
+            {
+                LabelResultado.Text = "";
+            }
+            else if (Resultado)
+            {
+                LabelResultado.Text = "";
+                LblValorCalcular.Text = "";
+            }
 
+            Resultado = false;
+            
             if (e.KeyChar == 48)
             {
                 LabelResultado.Text += 0;
