@@ -203,7 +203,13 @@
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            /*if (LabelResultado.Text == "0")
+            //Textbox aceitar só números//
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+
+            if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
             }
@@ -213,13 +219,7 @@
                 LblValorCalcular.Text = "";
             }
 
-            Resultado = false;*/
-
-            //Textbox aceitar só números//
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-            {
-                e.Handled = true;
-            }
+            Resultado = false;
 
             if (e.KeyChar == 48)
             {
