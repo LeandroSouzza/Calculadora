@@ -206,7 +206,7 @@
             //Textbox aceitar só números//
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
             {
-                e.Handled = false;
+                e.Handled = true;
             }
 
             if (LabelResultado.Text == "0")
