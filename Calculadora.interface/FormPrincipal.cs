@@ -129,6 +129,11 @@
                 LblValorCalcular.Text += operacao;
 
                 LabelResultado.Text = "";
+
+            }
+            if (LabelResultado.Text.LastOrDefault() == ',')
+            {
+                LblValorCalcular.Text.Remove(',');
             }
         }
 

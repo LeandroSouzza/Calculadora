@@ -307,6 +307,7 @@
             this.TxtTeclado.Size = new System.Drawing.Size(94, 29);
             this.TxtTeclado.TabIndex = 26;
             this.TxtTeclado.UseVisualStyleBackColor = true;
+            this.TxtTeclado.Visible = false;
             // 
             // panelHistorico
             // 
