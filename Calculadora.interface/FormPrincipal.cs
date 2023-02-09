@@ -213,60 +213,205 @@
             {
                 e.Handled = true;
             }
-
-            if (LabelResultado.Text == "0")
-            {
-                LabelResultado.Text = "";
-            }
-            else if (Resultado)
-            {
-                LabelResultado.Text = "";
-                LblValorCalcular.Text = "";
-            }
-
-            Resultado = false;
             
             if (e.KeyChar == 48)
             {
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 0;
             }
 
             if (e.KeyChar == 49)
             {
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 1;
             }
 
             if (e.KeyChar == 50)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 2;
             }
 
             if (e.KeyChar == 51)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 3;
             }
             if (e.KeyChar == 52)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 4;
             }
             if (e.KeyChar == 53)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 5;
+
             }
             if (e.KeyChar == 54)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 6;
             }
             if (e.KeyChar == 55)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 7;
             }
             if (e.KeyChar == 56)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 8;
             }
             if (e.KeyChar == 57)
             {
+
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                if (LabelResultado.Text == "0")
+                {
+                    LabelResultado.Text = "";
+                }
+                else if (Resultado)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = "";
+                }
+
+                Resultado = false;
+
                 LabelResultado.Text += 9;
             }
            
