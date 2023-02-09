@@ -79,8 +79,8 @@
             lbl1His = lb1His[int.Parse(a) - 1];
             lbl2His = lb2His[int.Parse(a) - 1];
 
-            LblValorCalcular.Text = lbl2His.Text;
-            LabelResultado.Text = lbl1His.Text.Remove(lbl1His.Text.Length - 2, 2);
+            LblValorCalcular.Text = lbl1His.Text.Remove(lbl1His.Text.Length - 2, 2);
+            LabelResultado.Text = lbl2His.Text;
         }
 
         private void AtalhoHistorico_Click(object sender, EventArgs e)
