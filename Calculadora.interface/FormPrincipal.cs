@@ -117,6 +117,11 @@
                 LblValorCalcular.Text = "";
             }
             Resultado = false;
+            
+            if (LabelResultado.Text.LastOrDefault() == ',')
+            {
+               LabelResultado.Text = LabelResultado.Text.Replace(",", "");
+            }
 
             if (LabelResultado.Text != "")
             { 
@@ -131,10 +136,7 @@
                 LabelResultado.Text = "";
 
             }
-            if (LabelResultado.Text.LastOrDefault() == ',')
-            {
-                LblValorCalcular.Text.Remove(',');
-            }
+           
         }
 
         private void agregarNumero(object sender, EventArgs e)
