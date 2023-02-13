@@ -188,25 +188,18 @@
         {
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
-
-            if (Resultado)
-            {
-                LblValorCalcular.Text = LabelResultado.Text;
-
-            }
-            Resultado = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            LabelResultado.Text = "0";
+
             if (Resultado)
             {
                 LblValorCalcular.Text = "";
                 LabelResultado.Text = "0";
             }
-            Resultado = false;
-
-            LabelResultado.Text = "0";
         }
 
         private void BtnVírgula_Click(object sender, EventArgs e)
