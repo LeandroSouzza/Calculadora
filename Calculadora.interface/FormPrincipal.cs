@@ -186,15 +186,27 @@
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            LabelResultado.Text = "";
+            LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
+
+            if (Resultado)
+            {
+                LblValorCalcular.Text = LabelResultado.Text;
+
+            }
+            Resultado = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LabelResultado.Text = "";
+            if (Resultado)
+            {
+                LblValorCalcular.Text = "";
+                LabelResultado.Text = "0";
+            }
+            Resultado = false;
+
             LabelResultado.Text = "0";
-            LblValorCalcular.Text = "";
         }
 
         private void BtnVírgula_Click(object sender, EventArgs e)
