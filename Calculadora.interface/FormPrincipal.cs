@@ -182,6 +182,12 @@
                 if (!LabelResultado.Text.Contains(","))
 
                     LabelResultado.Text += ",";
+
+            if (Resultado)
+            {
+                LblValorCalcular.Text = "";
+                LabelResultado.Text = "0";
+            }
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
@@ -511,7 +517,7 @@
                 }
                 else if (Calcular == '-')
                 {
-                    LabelResultado.Text = (Num1 - Num2).ToString();
+                    LabelResultado.Text = (Num1 - Num2).ToString("F");
                     Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == 'x')
