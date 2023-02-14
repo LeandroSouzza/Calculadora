@@ -497,6 +497,13 @@
                 LabelResultado.Text = Operacao.ToString();
                 LblValorCalcular.Text += LabelResultado.Text;
             }
+            else if (Calcular == '-')
+            {
+                decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
+
+                LabelResultado.Text = Operacao.ToString("N0");
+                LblValorCalcular.Text += LabelResultado.Text;
+            }
         }
 
         private void panelHistorico_Paint(object sender, PaintEventArgs e)
