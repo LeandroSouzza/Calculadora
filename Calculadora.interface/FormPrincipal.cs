@@ -7,8 +7,6 @@
 
         public bool Resultado { get; set; }
 
-        public bool ZerarCalc { get; set; }
-
         public bool ResetHistorico { get; set; }
 
         public FormPrincipal()
@@ -188,8 +186,6 @@
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            ZerarCalc = true;
-
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
         }
@@ -203,7 +199,6 @@
                 LblValorCalcular.Text = "";
                 LabelResultado.Text = "0";
             }
-            ZerarCalc = true;
         }
 
         private void BtnVírgula_Click(object sender, EventArgs e)
@@ -521,7 +516,7 @@
                 }
                 else if (Calcular == 'x')
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString();
+                    LabelResultado.Text = (Num1 * Num2).ToString("N0");
                     Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == '%')
@@ -553,18 +548,6 @@
         {
             {
                 Igual("resultado");
-
-                if (ZerarCalc)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = LabelResultado.Text;
-                }
-                ZerarCalc = false;
-
-                if (Resultado)
-                {
-                    LblValorCalcular.Text += LabelResultado.Text;
-                }
             }
         }
     }
