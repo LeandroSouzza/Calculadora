@@ -7,6 +7,8 @@
 
         public bool Resultado { get; set; }
 
+        public bool ZerarCalc { get; set; }
+
         public bool ResetHistorico { get; set; }
 
         public FormPrincipal()
@@ -186,13 +188,14 @@
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
+            ZerarCalc = true;
+
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             LabelResultado.Text = "0";
 
             if (Resultado)
@@ -200,6 +203,7 @@
                 LblValorCalcular.Text = "";
                 LabelResultado.Text = "0";
             }
+            ZerarCalc = true;
         }
 
         private void BtnVírgula_Click(object sender, EventArgs e)
@@ -484,7 +488,7 @@
             {
                 decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
 
-                LabelResultado.Text = Operacao.ToString("N0");
+                LabelResultado.Text = Operacao.ToString();
                 LblValorCalcular.Text += LabelResultado.Text;
             }
         }
@@ -549,6 +553,18 @@
         {
             {
                 Igual("resultado");
+
+                if (ZerarCalc)
+                {
+                    LabelResultado.Text = "";
+                    LblValorCalcular.Text = LabelResultado.Text;
+                }
+                ZerarCalc = false;
+
+                if (Resultado)
+                {
+                    LblValorCalcular.Text += LabelResultado.Text;
+                }
             }
         }
     }
