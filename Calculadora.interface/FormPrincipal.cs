@@ -489,7 +489,7 @@
             {
                 decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
 
-                LabelResultado.Text = Operacao.ToString();
+                LabelResultado.Text = Operacao.ToString("N0");
                 LblValorCalcular.Text += LabelResultado.Text;
             }
         }
@@ -527,7 +527,7 @@
                 }
                 else if (Calcular == '%')
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString("N0");
+                    LabelResultado.Text = (Num1 * Num2).ToString();
                     Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == '/')
