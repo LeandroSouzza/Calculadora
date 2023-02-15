@@ -529,7 +529,7 @@
                 }
                 else if (Calcular == '-')
                 {
-                    LabelResultado.Text = (Num1 - Num2).ToString("F");
+                    LabelResultado.Text = (Num1 - Num2).ToString();
                     Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == 'x')
