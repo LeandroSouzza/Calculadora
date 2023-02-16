@@ -254,11 +254,6 @@
                 LabelResultado.Text += 0;
             }
 
-            if (e.KeyChar == 13)
-            {
-                LabelResultado.Text = "\r";
-            }
-
                 if (e.KeyChar == 49)
             {
                 if (LabelResultado.Text == "0")
@@ -442,6 +437,11 @@
 
                 LabelResultado.Text += 9;
             }
+            if (e.KeyChar == 13)
+            {
+                focoAlternativo.Text = "";
+                Igual("resultado");
+            }
 
 
 
@@ -480,11 +480,6 @@
             if (e.KeyValue == 188 || e.KeyValue == 110)
             {
                 Virgula("virgula");
-            }
-            
-            if (e.KeyValue == 13)
-            {
-                Igual("resultado");
             }
 
             focoAlternativo.Focus();
@@ -570,6 +565,7 @@
                         Num1 = Convert.ToDouble(LabelResultado.Text);
                     }
                 }
+                focoAlternativo.Focus();
             }
 
             Resultado = true;
