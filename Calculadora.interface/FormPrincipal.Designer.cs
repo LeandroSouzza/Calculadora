@@ -57,6 +57,7 @@
             this.btnHistorico = new System.Windows.Forms.Button();
             this.AtalhoHistorico = new System.Windows.Forms.Button();
             this.LabelResultado = new System.Windows.Forms.Label();
+            this.focoAlternativo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblValorCalcular
@@ -75,6 +76,7 @@
             this.BtnIgual.Name = "BtnIgual";
             this.BtnIgual.Size = new System.Drawing.Size(90, 59);
             this.BtnIgual.TabIndex = 3;
+            this.BtnIgual.TabStop = false;
             this.BtnIgual.Text = "=";
             this.BtnIgual.UseVisualStyleBackColor = true;
             this.BtnIgual.Click += new System.EventHandler(this.BtnIgual_Click);
@@ -87,6 +89,7 @@
             this.BtnVírgula.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BtnVírgula.Size = new System.Drawing.Size(90, 59);
             this.BtnVírgula.TabIndex = 8;
+            this.BtnVírgula.TabStop = false;
             this.BtnVírgula.Text = ",";
             this.BtnVírgula.UseVisualStyleBackColor = true;
             this.BtnVírgula.Click += new System.EventHandler(this.BtnVírgula_Click);
@@ -98,6 +101,7 @@
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(90, 61);
             this.btn0.TabIndex = 27;
+            this.btn0.TabStop = false;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
             this.btn0.Click += new System.EventHandler(this.agregarNumero);
@@ -109,6 +113,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(90, 59);
             this.button14.TabIndex = 18;
+            this.button14.TabStop = false;
             this.button14.Text = "+/-";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
@@ -120,6 +125,7 @@
             this.BtnMais.Name = "BtnMais";
             this.BtnMais.Size = new System.Drawing.Size(90, 61);
             this.BtnMais.TabIndex = 1;
+            this.BtnMais.TabStop = false;
             this.BtnMais.Text = "+";
             this.BtnMais.UseVisualStyleBackColor = true;
             this.BtnMais.Click += new System.EventHandler(this.clickOperacao);
@@ -131,6 +137,7 @@
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(90, 61);
             this.btn3.TabIndex = 28;
+            this.btn3.TabStop = false;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.agregarNumero);
@@ -142,6 +149,7 @@
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(90, 61);
             this.btn2.TabIndex = 29;
+            this.btn2.TabStop = false;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
             this.btn2.Click += new System.EventHandler(this.agregarNumero);
@@ -153,6 +161,7 @@
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(90, 61);
             this.btn1.TabIndex = 30;
+            this.btn1.TabStop = false;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.agregarNumero);
@@ -164,6 +173,7 @@
             this.BtnMenos.Name = "BtnMenos";
             this.BtnMenos.Size = new System.Drawing.Size(90, 61);
             this.BtnMenos.TabIndex = 4;
+            this.BtnMenos.TabStop = false;
             this.BtnMenos.Text = "-";
             this.BtnMenos.UseVisualStyleBackColor = true;
             this.BtnMenos.Click += new System.EventHandler(this.clickOperacao);
@@ -175,6 +185,7 @@
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(90, 61);
             this.btn6.TabIndex = 31;
+            this.btn6.TabStop = false;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
             this.btn6.Click += new System.EventHandler(this.agregarNumero);
@@ -186,6 +197,7 @@
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(90, 61);
             this.btn5.TabIndex = 32;
+            this.btn5.TabStop = false;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.agregarNumero);
@@ -197,6 +209,7 @@
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(90, 61);
             this.btn4.TabIndex = 33;
+            this.btn4.TabStop = false;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.agregarNumero);
@@ -208,6 +221,7 @@
             this.BtnVezez.Name = "BtnVezez";
             this.BtnVezez.Size = new System.Drawing.Size(90, 59);
             this.BtnVezez.TabIndex = 5;
+            this.BtnVezez.TabStop = false;
             this.BtnVezez.Text = "x";
             this.BtnVezez.UseVisualStyleBackColor = true;
             this.BtnVezez.Click += new System.EventHandler(this.clickOperacao);
@@ -219,6 +233,7 @@
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(90, 61);
             this.btn9.TabIndex = 34;
+            this.btn9.TabStop = false;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
             this.btn9.Click += new System.EventHandler(this.agregarNumero);
@@ -230,6 +245,7 @@
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(90, 61);
             this.btn8.TabIndex = 35;
+            this.btn8.TabStop = false;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.agregarNumero);
@@ -241,6 +257,7 @@
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(90, 61);
             this.btn7.TabIndex = 36;
+            this.btn7.TabStop = false;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.agregarNumero);
@@ -252,6 +269,7 @@
             this.BtnDivide.Name = "BtnDivide";
             this.BtnDivide.Size = new System.Drawing.Size(90, 61);
             this.BtnDivide.TabIndex = 6;
+            this.BtnDivide.TabStop = false;
             this.BtnDivide.Text = "/";
             this.BtnDivide.UseVisualStyleBackColor = true;
             this.BtnDivide.Click += new System.EventHandler(this.clickOperacao);
@@ -263,6 +281,7 @@
             this.btnPorcentagem.Name = "btnPorcentagem";
             this.btnPorcentagem.Size = new System.Drawing.Size(90, 61);
             this.btnPorcentagem.TabIndex = 25;
+            this.btnPorcentagem.TabStop = false;
             this.btnPorcentagem.Text = "%";
             this.btnPorcentagem.UseVisualStyleBackColor = true;
             this.btnPorcentagem.Click += new System.EventHandler(this.btnPorcentagem_Click);
@@ -274,6 +293,7 @@
             this.BtnApagar.Name = "BtnApagar";
             this.BtnApagar.Size = new System.Drawing.Size(90, 129);
             this.BtnApagar.TabIndex = 22;
+            this.BtnApagar.TabStop = false;
             this.BtnApagar.Text = "←";
             this.BtnApagar.UseVisualStyleBackColor = true;
             this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
@@ -285,6 +305,7 @@
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(90, 128);
             this.BtnLimpar.TabIndex = 23;
+            this.BtnLimpar.TabStop = false;
             this.BtnLimpar.Text = "C";
             this.BtnLimpar.UseVisualStyleBackColor = true;
             this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
@@ -296,6 +317,7 @@
             this.cancelarRegistro.Name = "cancelarRegistro";
             this.cancelarRegistro.Size = new System.Drawing.Size(90, 128);
             this.cancelarRegistro.TabIndex = 24;
+            this.cancelarRegistro.TabStop = false;
             this.cancelarRegistro.Text = "CE";
             this.cancelarRegistro.UseVisualStyleBackColor = true;
             this.cancelarRegistro.Click += new System.EventHandler(this.button2_Click);
@@ -369,6 +391,15 @@
             this.LabelResultado.Text = "0";
             this.LabelResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // focoAlternativo
+            // 
+            this.focoAlternativo.AutoSize = true;
+            this.focoAlternativo.Location = new System.Drawing.Point(133, 71);
+            this.focoAlternativo.Name = "focoAlternativo";
+            this.focoAlternativo.Size = new System.Drawing.Size(49, 20);
+            this.focoAlternativo.TabIndex = 42;
+            this.focoAlternativo.Text = "Foco2";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -404,6 +435,7 @@
             this.Controls.Add(this.BtnIgual);
             this.Controls.Add(this.LblValorCalcular);
             this.Controls.Add(this.BtnMais);
+            this.Controls.Add(this.focoAlternativo);
             this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.KeyPreview = true;
@@ -449,5 +481,6 @@
         private Button LimpaHist;
         private Label LblMensagemHist;
         private Label LabelResultado;
+        private Label focoAlternativo;
     }
 }

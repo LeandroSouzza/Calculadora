@@ -68,8 +68,7 @@
 
         private void PnForaFoco(object sender, EventArgs e)
         {
-            Panel pn = sender as Panel;
-            pn.BackColor = Color.Transparent;
+
         }
 
         private void PnCliqueHis(object sender, EventArgs e)
@@ -136,7 +135,9 @@
                 LabelResultado.Text = "";
 
             }
-           
+
+            focoAlternativo.Focus();
+
         }
 
         private void agregarNumero(object sender, EventArgs e)
@@ -160,6 +161,8 @@
             Resultado = false;
 
             LabelResultado.Text += button.Text;
+
+            focoAlternativo.Focus();
         }
 
         private void Apagador(string apagador)
@@ -174,6 +177,8 @@
             if (LabelResultado.Text == "")
 
                 LabelResultado.Text = "0";
+
+            focoAlternativo.Focus();
         }
 
         private void Virgula(string virgula)
@@ -188,12 +193,16 @@
                 LblValorCalcular.Text = "";
                 LabelResultado.Text = "0";
             }
+
+            focoAlternativo.Focus();
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
+
+            focoAlternativo.Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -204,6 +213,8 @@
             {
                 LblValorCalcular.Text = "";
                 LabelResultado.Text = "0";
+
+                focoAlternativo.Focus();
             }
         }
 
@@ -243,7 +254,12 @@
                 LabelResultado.Text += 0;
             }
 
-            if (e.KeyChar == 49)
+            if (e.KeyChar == 13)
+            {
+                LabelResultado.Text = "\r";
+            }
+
+                if (e.KeyChar == 49)
             {
                 if (LabelResultado.Text == "0")
                 {
@@ -426,7 +442,9 @@
 
                 LabelResultado.Text += 9;
             }
-           
+
+
+
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -468,6 +486,8 @@
             {
                 Igual("resultado");
             }
+
+            focoAlternativo.Focus();
 
         }
 
