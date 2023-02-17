@@ -2,7 +2,7 @@
 {
     public partial class FormPrincipal : Form
     {
-        private double Num1 = 0, Num2 = 0;
+        private decimal Num1 = 0, Num2 = 0;
         private char Calcular;
 
         public bool Resultado { get; set; }
@@ -124,7 +124,7 @@
 
             if (LabelResultado.Text != "")
             { 
-                Num1 = Convert.ToDouble(LabelResultado.Text);
+                Num1 = Convert.ToDecimal(LabelResultado.Text);
 
                 Calcular = Convert.ToChar(operacao);
 
@@ -543,7 +543,7 @@
             {
                 if (!Resultado)
                 {
-                    Num2 = Convert.ToDouble(LabelResultado.Text);
+                    Num2 = Convert.ToDecimal(LabelResultado.Text);
                 }
 
                 AtribuirValores();
@@ -551,29 +551,29 @@
                 if (Calcular == '+')
                 {
                     LabelResultado.Text = (Num1 + Num2).ToString();
-                    Num1 = Convert.ToDouble(LabelResultado.Text);
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
                 else if (Calcular == '-')
                 {
                     LabelResultado.Text = (Num1 - Num2).ToString();
-                    Num1 = Convert.ToDouble(LabelResultado.Text);
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
                 else if (Calcular == 'x')
                 {
                     LabelResultado.Text = (Num1 * Num2).ToString("N0");
-                    Num1 = Convert.ToDouble(LabelResultado.Text);
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
                 else if (Calcular == '%')
                 {
                     LabelResultado.Text = (Num1 * Num2).ToString();
-                    Num1 = Convert.ToDouble(LabelResultado.Text);
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
                 else if (Calcular == '/')
                 {
                     if (LabelResultado.Text != "0")
                     {
                         LabelResultado.Text = (Num1 / Num2).ToString();
-                        Num1 = Convert.ToDouble(LabelResultado.Text);
+                        Num1 = Convert.ToDecimal(LabelResultado.Text);
                     }
                 }
                 focoAlternativo.Focus();
