@@ -202,6 +202,11 @@
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
 
+            Num1 = 0;
+            Num2 = 0;
+            Calcular = char.MinValue;
+
+
             focoAlternativo.Focus();
         }
 
@@ -213,6 +218,10 @@
             {
                 LblValorCalcular.Text = "";
                 LabelResultado.Text = "0";
+
+                Num1 = 0;
+                Num2 = 0;
+                Calcular = char.MinValue;
 
                 focoAlternativo.Focus();
             }
