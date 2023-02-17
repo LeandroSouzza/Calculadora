@@ -3,7 +3,7 @@
     public partial class FormPrincipal : Form
     {
         private decimal Num1 = 0, Num2 = 0;
-        private char Calcular;
+        private string Calcular;
 
         public bool Resultado { get; set; }
 
@@ -126,7 +126,7 @@
             { 
                 Num1 = Convert.ToDecimal(LabelResultado.Text);
 
-                Calcular = Convert.ToChar(operacao);
+                Calcular = operacao;
 
                 LblValorCalcular.Text = LabelResultado.Text;
 
@@ -204,7 +204,7 @@
 
             Num1 = 0;
             Num2 = 0;
-            Calcular = char.MinValue;
+            Calcular = "";
 
 
             focoAlternativo.Focus();
@@ -217,11 +217,10 @@
             if (Resultado)
             {
                 LblValorCalcular.Text = "";
-                LabelResultado.Text = "0";
 
                 Num1 = 0;
                 Num2 = 0;
-                Calcular = char.MinValue;
+                Calcular = "";
 
                 focoAlternativo.Focus();
             }
@@ -504,26 +503,26 @@
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-            if (Calcular == 'x')
+            if (Calcular == "")
             {
                 decimal Operacao = decimal.Parse(LabelResultado.Text) / 100;
                 LabelResultado.Text = Operacao.ToString();
                 LblValorCalcular.Text += LabelResultado.Text;
             }
-            else if (Calcular == '+')
+            else if (Calcular == "+")
             {
                 decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
 
                 LabelResultado.Text = Operacao.ToString("N0");
                 LblValorCalcular.Text += LabelResultado.Text;
             }
-            else if (Calcular == '/')
+            else if (Calcular == "/")
             {
                 decimal Operacao = decimal.Parse(LabelResultado.Text) / 100;
                 LabelResultado.Text = Operacao.ToString();
                 LblValorCalcular.Text += LabelResultado.Text;
             }
-            else if (Calcular == '-')
+            else if (Calcular == "-")
             {
                 decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
 
@@ -548,27 +547,27 @@
 
                 AtribuirValores();
 
-                if (Calcular == '+')
+                if (Calcular == "+")
                 {
                     LabelResultado.Text = (Num1 + Num2).ToString();
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
-                else if (Calcular == '-')
+                else if (Calcular == "-")
                 {
                     LabelResultado.Text = (Num1 - Num2).ToString();
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
-                else if (Calcular == 'x')
+                else if (Calcular == "*")
                 {
                     LabelResultado.Text = (Num1 * Num2).ToString("N0");
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
-                else if (Calcular == '%')
+                else if (Calcular == "%")
                 {
                     LabelResultado.Text = (Num1 * Num2).ToString();
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
-                else if (Calcular == '/')
+                else if (Calcular == "/")
                 {
                     if (LabelResultado.Text != "0")
                     {
