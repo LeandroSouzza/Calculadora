@@ -593,6 +593,7 @@
         {
             {
                 Igual("resultado");
+                LblValorCalcular.Text = LabelResultado.Text;
             }
         }
     }
