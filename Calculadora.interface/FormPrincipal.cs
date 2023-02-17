@@ -557,7 +557,7 @@
                     LabelResultado.Text = (Num1 - Num2).ToString();
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
-                else if (Calcular == "*")
+                else if (Calcular == "x")
                 {
                     LabelResultado.Text = (Num1 * Num2).ToString("N0");
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
