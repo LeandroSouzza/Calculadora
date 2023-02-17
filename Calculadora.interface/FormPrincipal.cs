@@ -585,7 +585,10 @@
 
         private void AtribuirValores()
         {
-            LblValorCalcular.Text = $"{Num1}{Calcular}{Num2} = ";
+
+            var numero1String = Num1 == 0 ? "" : $"{ Num1}";
+            
+            LblValorCalcular.Text = $"{numero1String}{Calcular}{Num2} = ";
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
