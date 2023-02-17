@@ -437,6 +437,12 @@
 
                 LabelResultado.Text += 9;
             }
+
+            if (e.KeyChar == 8)
+            {
+                Apagador("apagador");
+            }
+
             if (e.KeyChar == 13)
             {
                 focoAlternativo.Text = "";
@@ -471,10 +477,6 @@
             if (e.KeyValue == 111)
             {
                 Operador("/");
-            }
-            if (e.KeyValue == 8)
-            {
-                Apagador("apagador");
             }
 
             if (e.KeyValue == 188 || e.KeyValue == 110)
@@ -544,7 +546,7 @@
                 }
                 else if (Calcular == '-')
                 {
-                    LabelResultado.Text = (Num1 - Num2).ToString();
+                    LabelResultado.Text = (Num1 - Num2).ToString("F1");
                     Num1 = Convert.ToDouble(LabelResultado.Text);
                 }
                 else if (Calcular == 'x')
