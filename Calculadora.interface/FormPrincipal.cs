@@ -134,6 +134,8 @@
 
                 LabelResultado.Text = "";
 
+                LblMensagemHist.Text = "";
+
             }
 
             focoAlternativo.Focus();
@@ -161,6 +163,8 @@
             Resultado = false;
 
             LabelResultado.Text += button.Text;
+
+            LblMensagemHist.Text = "";
 
             focoAlternativo.Focus();
         }
@@ -244,7 +248,9 @@
             {
                 e.Handled = true;
             }
-            
+
+            LblMensagemHist.Text = "";
+
             if (e.KeyChar == 48)
             {
                 if (LabelResultado.Text == "0")
