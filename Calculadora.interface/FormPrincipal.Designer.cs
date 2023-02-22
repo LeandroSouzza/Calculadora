@@ -429,7 +429,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(724, 384);
+            ClientSize = new Size(352, 384);
             Controls.Add(labelHistorico);
             Controls.Add(LabelResultado);
             Controls.Add(LblMensagemHist);

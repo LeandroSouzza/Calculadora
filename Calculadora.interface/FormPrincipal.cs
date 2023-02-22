@@ -504,7 +504,11 @@
 
         private void button14_Click(object sender, EventArgs e)
         {
-            LabelResultado.Text = (double.Parse(LabelResultado.Text) * -1).ToString();
+            if (LabelResultado.Text != "0")
+            {
+                LabelResultado.Text = (double.Parse(LabelResultado.Text) * -1).ToString();
+                focoAlternativo.Focus();
+            }
         }
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
