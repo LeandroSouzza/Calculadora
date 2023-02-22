@@ -116,14 +116,14 @@
                 LblValorCalcular.Text = "";
             }
             Resultado = false;
-            
+
             if (LabelResultado.Text.LastOrDefault() == ',')
             {
-               LabelResultado.Text = LabelResultado.Text.Replace(",", "");
+                LabelResultado.Text = LabelResultado.Text.Replace(",", "");
             }
 
             if (LabelResultado.Text != "")
-            { 
+            {
                 Num1 = Convert.ToDecimal(LabelResultado.Text);
 
                 Calcular = operacao;
@@ -268,7 +268,7 @@
                 LabelResultado.Text += 0;
             }
 
-                if (e.KeyChar == 49)
+            if (e.KeyChar == 49)
             {
                 if (LabelResultado.Text == "0")
                 {
@@ -586,14 +586,14 @@
 
             Resultado = true;
             Historico(LabelResultado.Text.ToString(), LblValorCalcular.Text);
-            
+
         }
 
         private void AtribuirValores()
         {
 
-            var numero1String = Num1 == 0 ? "" : $"{ Num1}";
-            
+            var numero1String = Num1 == 0 ? "" : $"{Num1}";
+
             LblValorCalcular.Text = $"{numero1String}{Calcular}{Num2} = ";
         }
 

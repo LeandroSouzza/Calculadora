@@ -28,427 +28,451 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblValorCalcular = new System.Windows.Forms.Label();
-            this.BtnIgual = new System.Windows.Forms.Button();
-            this.BtnVírgula = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.BtnMais = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn1 = new System.Windows.Forms.Button();
-            this.BtnMenos = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
-            this.BtnVezez = new System.Windows.Forms.Button();
-            this.btn9 = new System.Windows.Forms.Button();
-            this.btn8 = new System.Windows.Forms.Button();
-            this.btn7 = new System.Windows.Forms.Button();
-            this.BtnDivide = new System.Windows.Forms.Button();
-            this.btnPorcentagem = new System.Windows.Forms.Button();
-            this.BtnApagar = new System.Windows.Forms.Button();
-            this.BtnLimpar = new System.Windows.Forms.Button();
-            this.cancelarRegistro = new System.Windows.Forms.Button();
-            this.TxtTeclado = new System.Windows.Forms.Button();
-            this.panelHistorico = new System.Windows.Forms.Panel();
-            this.LblMensagemHist = new System.Windows.Forms.Label();
-            this.LimpaHist = new System.Windows.Forms.Button();
-            this.btnHistorico = new System.Windows.Forms.Button();
-            this.AtalhoHistorico = new System.Windows.Forms.Button();
-            this.LabelResultado = new System.Windows.Forms.Label();
-            this.focoAlternativo = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            LblValorCalcular = new Label();
+            BtnIgual = new Button();
+            BtnVírgula = new Button();
+            btn0 = new Button();
+            button14 = new Button();
+            BtnMais = new Button();
+            btn3 = new Button();
+            btn2 = new Button();
+            btn1 = new Button();
+            BtnMenos = new Button();
+            btn6 = new Button();
+            btn5 = new Button();
+            btn4 = new Button();
+            BtnVezez = new Button();
+            btn9 = new Button();
+            btn8 = new Button();
+            btn7 = new Button();
+            BtnDivide = new Button();
+            btnPorcentagem = new Button();
+            BtnApagar = new Button();
+            BtnLimpar = new Button();
+            cancelarRegistro = new Button();
+            TxtTeclado = new Button();
+            panelHistorico = new Panel();
+            LblMensagemHist = new Label();
+            LimpaHist = new Button();
+            AtalhoHistorico = new Button();
+            LabelResultado = new Label();
+            focoAlternativo = new Label();
+            labelHistorico = new Label();
+            SuspendLayout();
             // 
             // LblValorCalcular
             // 
-            this.LblValorCalcular.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblValorCalcular.Location = new System.Drawing.Point(5, 34);
-            this.LblValorCalcular.Name = "LblValorCalcular";
-            this.LblValorCalcular.Size = new System.Drawing.Size(383, 28);
-            this.LblValorCalcular.TabIndex = 2;
-            this.LblValorCalcular.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            LblValorCalcular.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LblValorCalcular.Location = new Point(4, 26);
+            LblValorCalcular.Name = "LblValorCalcular";
+            LblValorCalcular.Size = new Size(335, 21);
+            LblValorCalcular.TabIndex = 2;
+            LblValorCalcular.TextAlign = ContentAlignment.TopRight;
             // 
             // BtnIgual
             // 
-            this.BtnIgual.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnIgual.Location = new System.Drawing.Point(298, 447);
-            this.BtnIgual.Name = "BtnIgual";
-            this.BtnIgual.Size = new System.Drawing.Size(90, 59);
-            this.BtnIgual.TabIndex = 3;
-            this.BtnIgual.TabStop = false;
-            this.BtnIgual.Text = "=";
-            this.BtnIgual.UseVisualStyleBackColor = true;
-            this.BtnIgual.Click += new System.EventHandler(this.BtnIgual_Click);
+            BtnIgual.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnIgual.Location = new Point(261, 335);
+            BtnIgual.Margin = new Padding(3, 2, 3, 2);
+            BtnIgual.Name = "BtnIgual";
+            BtnIgual.Size = new Size(79, 44);
+            BtnIgual.TabIndex = 3;
+            BtnIgual.TabStop = false;
+            BtnIgual.Text = "=";
+            BtnIgual.UseVisualStyleBackColor = true;
+            BtnIgual.Click += BtnIgual_Click;
             // 
             // BtnVírgula
             // 
-            this.BtnVírgula.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnVírgula.Location = new System.Drawing.Point(203, 448);
-            this.BtnVírgula.Name = "BtnVírgula";
-            this.BtnVírgula.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.BtnVírgula.Size = new System.Drawing.Size(90, 59);
-            this.BtnVírgula.TabIndex = 8;
-            this.BtnVírgula.TabStop = false;
-            this.BtnVírgula.Text = ",";
-            this.BtnVírgula.UseVisualStyleBackColor = true;
-            this.BtnVírgula.Click += new System.EventHandler(this.BtnVírgula_Click);
+            BtnVírgula.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnVírgula.Location = new Point(178, 336);
+            BtnVírgula.Margin = new Padding(3, 2, 3, 2);
+            BtnVírgula.Name = "BtnVírgula";
+            BtnVírgula.RightToLeft = RightToLeft.No;
+            BtnVírgula.Size = new Size(79, 44);
+            BtnVírgula.TabIndex = 8;
+            BtnVírgula.TabStop = false;
+            BtnVírgula.Text = ",";
+            BtnVírgula.UseVisualStyleBackColor = true;
+            BtnVírgula.Click += BtnVírgula_Click;
             // 
             // btn0
             // 
-            this.btn0.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn0.Location = new System.Drawing.Point(107, 445);
-            this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(90, 61);
-            this.btn0.TabIndex = 27;
-            this.btn0.TabStop = false;
-            this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.Click += new System.EventHandler(this.agregarNumero);
+            btn0.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn0.Location = new Point(94, 334);
+            btn0.Margin = new Padding(3, 2, 3, 2);
+            btn0.Name = "btn0";
+            btn0.Size = new Size(79, 46);
+            btn0.TabIndex = 27;
+            btn0.TabStop = false;
+            btn0.Text = "0";
+            btn0.UseVisualStyleBackColor = true;
+            btn0.Click += agregarNumero;
             // 
             // button14
             // 
-            this.button14.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button14.Location = new System.Drawing.Point(11, 447);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(90, 59);
-            this.button14.TabIndex = 18;
-            this.button14.TabStop = false;
-            this.button14.Text = "+/-";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            button14.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            button14.Location = new Point(10, 335);
+            button14.Margin = new Padding(3, 2, 3, 2);
+            button14.Name = "button14";
+            button14.Size = new Size(79, 44);
+            button14.TabIndex = 18;
+            button14.TabStop = false;
+            button14.Text = "+/-";
+            button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
             // 
             // BtnMais
             // 
-            this.BtnMais.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMais.Location = new System.Drawing.Point(300, 382);
-            this.BtnMais.Name = "BtnMais";
-            this.BtnMais.Size = new System.Drawing.Size(90, 61);
-            this.BtnMais.TabIndex = 1;
-            this.BtnMais.TabStop = false;
-            this.BtnMais.Text = "+";
-            this.BtnMais.UseVisualStyleBackColor = true;
-            this.BtnMais.Click += new System.EventHandler(this.clickOperacao);
+            BtnMais.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnMais.Location = new Point(262, 286);
+            BtnMais.Margin = new Padding(3, 2, 3, 2);
+            BtnMais.Name = "BtnMais";
+            BtnMais.Size = new Size(79, 46);
+            BtnMais.TabIndex = 1;
+            BtnMais.TabStop = false;
+            BtnMais.Text = "+";
+            BtnMais.UseVisualStyleBackColor = true;
+            BtnMais.Click += clickOperacao;
             // 
             // btn3
             // 
-            this.btn3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn3.Location = new System.Drawing.Point(203, 382);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(90, 61);
-            this.btn3.TabIndex = 28;
-            this.btn3.TabStop = false;
-            this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.agregarNumero);
+            btn3.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn3.Location = new Point(178, 286);
+            btn3.Margin = new Padding(3, 2, 3, 2);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(79, 46);
+            btn3.TabIndex = 28;
+            btn3.TabStop = false;
+            btn3.Text = "3";
+            btn3.UseVisualStyleBackColor = true;
+            btn3.Click += agregarNumero;
             // 
             // btn2
             // 
-            this.btn2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn2.Location = new System.Drawing.Point(107, 382);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(90, 61);
-            this.btn2.TabIndex = 29;
-            this.btn2.TabStop = false;
-            this.btn2.Text = "2";
-            this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.agregarNumero);
+            btn2.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn2.Location = new Point(94, 286);
+            btn2.Margin = new Padding(3, 2, 3, 2);
+            btn2.Name = "btn2";
+            btn2.Size = new Size(79, 46);
+            btn2.TabIndex = 29;
+            btn2.TabStop = false;
+            btn2.Text = "2";
+            btn2.UseVisualStyleBackColor = true;
+            btn2.Click += agregarNumero;
             // 
             // btn1
             // 
-            this.btn1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn1.Location = new System.Drawing.Point(11, 382);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(90, 61);
-            this.btn1.TabIndex = 30;
-            this.btn1.TabStop = false;
-            this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.agregarNumero);
+            btn1.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn1.Location = new Point(10, 286);
+            btn1.Margin = new Padding(3, 2, 3, 2);
+            btn1.Name = "btn1";
+            btn1.Size = new Size(79, 46);
+            btn1.TabIndex = 30;
+            btn1.TabStop = false;
+            btn1.Text = "1";
+            btn1.UseVisualStyleBackColor = true;
+            btn1.Click += agregarNumero;
             // 
             // BtnMenos
             // 
-            this.BtnMenos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnMenos.Location = new System.Drawing.Point(300, 315);
-            this.BtnMenos.Name = "BtnMenos";
-            this.BtnMenos.Size = new System.Drawing.Size(90, 61);
-            this.BtnMenos.TabIndex = 4;
-            this.BtnMenos.TabStop = false;
-            this.BtnMenos.Text = "-";
-            this.BtnMenos.UseVisualStyleBackColor = true;
-            this.BtnMenos.Click += new System.EventHandler(this.clickOperacao);
+            BtnMenos.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnMenos.Location = new Point(262, 236);
+            BtnMenos.Margin = new Padding(3, 2, 3, 2);
+            BtnMenos.Name = "BtnMenos";
+            BtnMenos.Size = new Size(79, 46);
+            BtnMenos.TabIndex = 4;
+            BtnMenos.TabStop = false;
+            BtnMenos.Text = "-";
+            BtnMenos.UseVisualStyleBackColor = true;
+            BtnMenos.Click += clickOperacao;
             // 
             // btn6
             // 
-            this.btn6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn6.Location = new System.Drawing.Point(203, 315);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(90, 61);
-            this.btn6.TabIndex = 31;
-            this.btn6.TabStop = false;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.agregarNumero);
+            btn6.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn6.Location = new Point(178, 236);
+            btn6.Margin = new Padding(3, 2, 3, 2);
+            btn6.Name = "btn6";
+            btn6.Size = new Size(79, 46);
+            btn6.TabIndex = 31;
+            btn6.TabStop = false;
+            btn6.Text = "6";
+            btn6.UseVisualStyleBackColor = true;
+            btn6.Click += agregarNumero;
             // 
             // btn5
             // 
-            this.btn5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn5.Location = new System.Drawing.Point(107, 315);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(90, 61);
-            this.btn5.TabIndex = 32;
-            this.btn5.TabStop = false;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.agregarNumero);
+            btn5.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn5.Location = new Point(94, 236);
+            btn5.Margin = new Padding(3, 2, 3, 2);
+            btn5.Name = "btn5";
+            btn5.Size = new Size(79, 46);
+            btn5.TabIndex = 32;
+            btn5.TabStop = false;
+            btn5.Text = "5";
+            btn5.UseVisualStyleBackColor = true;
+            btn5.Click += agregarNumero;
             // 
             // btn4
             // 
-            this.btn4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn4.Location = new System.Drawing.Point(11, 315);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(90, 61);
-            this.btn4.TabIndex = 33;
-            this.btn4.TabStop = false;
-            this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = true;
-            this.btn4.Click += new System.EventHandler(this.agregarNumero);
+            btn4.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn4.Location = new Point(10, 236);
+            btn4.Margin = new Padding(3, 2, 3, 2);
+            btn4.Name = "btn4";
+            btn4.Size = new Size(79, 46);
+            btn4.TabIndex = 33;
+            btn4.TabStop = false;
+            btn4.Text = "4";
+            btn4.UseVisualStyleBackColor = true;
+            btn4.Click += agregarNumero;
             // 
             // BtnVezez
             // 
-            this.BtnVezez.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnVezez.Location = new System.Drawing.Point(300, 252);
-            this.BtnVezez.Name = "BtnVezez";
-            this.BtnVezez.Size = new System.Drawing.Size(90, 59);
-            this.BtnVezez.TabIndex = 5;
-            this.BtnVezez.TabStop = false;
-            this.BtnVezez.Text = "x";
-            this.BtnVezez.UseVisualStyleBackColor = true;
-            this.BtnVezez.Click += new System.EventHandler(this.clickOperacao);
+            BtnVezez.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnVezez.Location = new Point(262, 189);
+            BtnVezez.Margin = new Padding(3, 2, 3, 2);
+            BtnVezez.Name = "BtnVezez";
+            BtnVezez.Size = new Size(79, 44);
+            BtnVezez.TabIndex = 5;
+            BtnVezez.TabStop = false;
+            BtnVezez.Text = "x";
+            BtnVezez.UseVisualStyleBackColor = true;
+            BtnVezez.Click += clickOperacao;
             // 
             // btn9
             // 
-            this.btn9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn9.Location = new System.Drawing.Point(203, 250);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(90, 61);
-            this.btn9.TabIndex = 34;
-            this.btn9.TabStop = false;
-            this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.Click += new System.EventHandler(this.agregarNumero);
+            btn9.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn9.Location = new Point(178, 188);
+            btn9.Margin = new Padding(3, 2, 3, 2);
+            btn9.Name = "btn9";
+            btn9.Size = new Size(79, 46);
+            btn9.TabIndex = 34;
+            btn9.TabStop = false;
+            btn9.Text = "9";
+            btn9.UseVisualStyleBackColor = true;
+            btn9.Click += agregarNumero;
             // 
             // btn8
             // 
-            this.btn8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn8.Location = new System.Drawing.Point(107, 249);
-            this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(90, 61);
-            this.btn8.TabIndex = 35;
-            this.btn8.TabStop = false;
-            this.btn8.Text = "8";
-            this.btn8.UseVisualStyleBackColor = true;
-            this.btn8.Click += new System.EventHandler(this.agregarNumero);
+            btn8.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn8.Location = new Point(94, 187);
+            btn8.Margin = new Padding(3, 2, 3, 2);
+            btn8.Name = "btn8";
+            btn8.Size = new Size(79, 46);
+            btn8.TabIndex = 35;
+            btn8.TabStop = false;
+            btn8.Text = "8";
+            btn8.UseVisualStyleBackColor = true;
+            btn8.Click += agregarNumero;
             // 
             // btn7
             // 
-            this.btn7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn7.Location = new System.Drawing.Point(11, 249);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(90, 61);
-            this.btn7.TabIndex = 36;
-            this.btn7.TabStop = false;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.agregarNumero);
+            btn7.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btn7.Location = new Point(10, 187);
+            btn7.Margin = new Padding(3, 2, 3, 2);
+            btn7.Name = "btn7";
+            btn7.Size = new Size(79, 46);
+            btn7.TabIndex = 36;
+            btn7.TabStop = false;
+            btn7.Text = "7";
+            btn7.UseVisualStyleBackColor = true;
+            btn7.Click += agregarNumero;
             // 
             // BtnDivide
             // 
-            this.BtnDivide.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnDivide.Location = new System.Drawing.Point(299, 183);
-            this.BtnDivide.Name = "BtnDivide";
-            this.BtnDivide.Size = new System.Drawing.Size(90, 61);
-            this.BtnDivide.TabIndex = 6;
-            this.BtnDivide.TabStop = false;
-            this.BtnDivide.Text = "/";
-            this.BtnDivide.UseVisualStyleBackColor = true;
-            this.BtnDivide.Click += new System.EventHandler(this.clickOperacao);
+            BtnDivide.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnDivide.Location = new Point(262, 137);
+            BtnDivide.Margin = new Padding(3, 2, 3, 2);
+            BtnDivide.Name = "BtnDivide";
+            BtnDivide.Size = new Size(79, 46);
+            BtnDivide.TabIndex = 6;
+            BtnDivide.TabStop = false;
+            BtnDivide.Text = "/";
+            BtnDivide.UseVisualStyleBackColor = true;
+            BtnDivide.Click += clickOperacao;
             // 
             // btnPorcentagem
             // 
-            this.btnPorcentagem.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPorcentagem.Location = new System.Drawing.Point(300, 117);
-            this.btnPorcentagem.Name = "btnPorcentagem";
-            this.btnPorcentagem.Size = new System.Drawing.Size(90, 61);
-            this.btnPorcentagem.TabIndex = 25;
-            this.btnPorcentagem.TabStop = false;
-            this.btnPorcentagem.Text = "%";
-            this.btnPorcentagem.UseVisualStyleBackColor = true;
-            this.btnPorcentagem.Click += new System.EventHandler(this.btnPorcentagem_Click);
+            btnPorcentagem.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPorcentagem.Location = new Point(262, 88);
+            btnPorcentagem.Margin = new Padding(3, 2, 3, 2);
+            btnPorcentagem.Name = "btnPorcentagem";
+            btnPorcentagem.Size = new Size(79, 46);
+            btnPorcentagem.TabIndex = 25;
+            btnPorcentagem.TabStop = false;
+            btnPorcentagem.Text = "%";
+            btnPorcentagem.UseVisualStyleBackColor = true;
+            btnPorcentagem.Click += btnPorcentagem_Click;
             // 
             // BtnApagar
             // 
-            this.BtnApagar.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnApagar.Location = new System.Drawing.Point(204, 116);
-            this.BtnApagar.Name = "BtnApagar";
-            this.BtnApagar.Size = new System.Drawing.Size(90, 129);
-            this.BtnApagar.TabIndex = 22;
-            this.BtnApagar.TabStop = false;
-            this.BtnApagar.Text = "←";
-            this.BtnApagar.UseVisualStyleBackColor = true;
-            this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
+            BtnApagar.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnApagar.Location = new Point(178, 87);
+            BtnApagar.Margin = new Padding(3, 2, 3, 2);
+            BtnApagar.Name = "BtnApagar";
+            BtnApagar.Size = new Size(79, 97);
+            BtnApagar.TabIndex = 22;
+            BtnApagar.TabStop = false;
+            BtnApagar.Text = "←";
+            BtnApagar.UseVisualStyleBackColor = true;
+            BtnApagar.Click += BtnApagar_Click;
             // 
             // BtnLimpar
             // 
-            this.BtnLimpar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnLimpar.Location = new System.Drawing.Point(108, 117);
-            this.BtnLimpar.Name = "BtnLimpar";
-            this.BtnLimpar.Size = new System.Drawing.Size(90, 128);
-            this.BtnLimpar.TabIndex = 23;
-            this.BtnLimpar.TabStop = false;
-            this.BtnLimpar.Text = "C";
-            this.BtnLimpar.UseVisualStyleBackColor = true;
-            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
+            BtnLimpar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnLimpar.Location = new Point(94, 88);
+            BtnLimpar.Margin = new Padding(3, 2, 3, 2);
+            BtnLimpar.Name = "BtnLimpar";
+            BtnLimpar.Size = new Size(79, 96);
+            BtnLimpar.TabIndex = 23;
+            BtnLimpar.TabStop = false;
+            BtnLimpar.Text = "C";
+            BtnLimpar.UseVisualStyleBackColor = true;
+            BtnLimpar.Click += BtnLimpar_Click;
             // 
             // cancelarRegistro
             // 
-            this.cancelarRegistro.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cancelarRegistro.Location = new System.Drawing.Point(11, 117);
-            this.cancelarRegistro.Name = "cancelarRegistro";
-            this.cancelarRegistro.Size = new System.Drawing.Size(90, 128);
-            this.cancelarRegistro.TabIndex = 24;
-            this.cancelarRegistro.TabStop = false;
-            this.cancelarRegistro.Text = "CE";
-            this.cancelarRegistro.UseVisualStyleBackColor = true;
-            this.cancelarRegistro.Click += new System.EventHandler(this.button2_Click);
+            cancelarRegistro.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            cancelarRegistro.Location = new Point(10, 88);
+            cancelarRegistro.Margin = new Padding(3, 2, 3, 2);
+            cancelarRegistro.Name = "cancelarRegistro";
+            cancelarRegistro.Size = new Size(79, 96);
+            cancelarRegistro.TabIndex = 24;
+            cancelarRegistro.TabStop = false;
+            cancelarRegistro.Text = "CE";
+            cancelarRegistro.UseVisualStyleBackColor = true;
+            cancelarRegistro.Click += button2_Click;
             // 
             // TxtTeclado
             // 
-            this.TxtTeclado.Location = new System.Drawing.Point(12, 0);
-            this.TxtTeclado.Name = "TxtTeclado";
-            this.TxtTeclado.Size = new System.Drawing.Size(94, 29);
-            this.TxtTeclado.TabIndex = 26;
-            this.TxtTeclado.UseVisualStyleBackColor = true;
-            this.TxtTeclado.Visible = false;
+            TxtTeclado.Location = new Point(10, 0);
+            TxtTeclado.Margin = new Padding(3, 2, 3, 2);
+            TxtTeclado.Name = "TxtTeclado";
+            TxtTeclado.Size = new Size(82, 22);
+            TxtTeclado.TabIndex = 26;
+            TxtTeclado.UseVisualStyleBackColor = true;
+            TxtTeclado.Visible = false;
             // 
             // panelHistorico
             // 
-            this.panelHistorico.Location = new System.Drawing.Point(407, 83);
-            this.panelHistorico.Name = "panelHistorico";
-            this.panelHistorico.Size = new System.Drawing.Size(375, 409);
-            this.panelHistorico.TabIndex = 37;
+            panelHistorico.Location = new Point(356, 62);
+            panelHistorico.Margin = new Padding(3, 2, 3, 2);
+            panelHistorico.Name = "panelHistorico";
+            panelHistorico.Size = new Size(328, 307);
+            panelHistorico.TabIndex = 37;
             // 
             // LblMensagemHist
             // 
-            this.LblMensagemHist.AutoSize = true;
-            this.LblMensagemHist.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblMensagemHist.Location = new System.Drawing.Point(437, 52);
-            this.LblMensagemHist.Name = "LblMensagemHist";
-            this.LblMensagemHist.Size = new System.Drawing.Size(0, 28);
-            this.LblMensagemHist.TabIndex = 1;
+            LblMensagemHist.AutoSize = true;
+            LblMensagemHist.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LblMensagemHist.Location = new Point(382, 39);
+            LblMensagemHist.Name = "LblMensagemHist";
+            LblMensagemHist.Size = new Size(0, 21);
+            LblMensagemHist.TabIndex = 1;
             // 
             // LimpaHist
             // 
-            this.LimpaHist.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.LimpaHist.Location = new System.Drawing.Point(789, 456);
-            this.LimpaHist.Name = "LimpaHist";
-            this.LimpaHist.Size = new System.Drawing.Size(25, 36);
-            this.LimpaHist.TabIndex = 0;
-            this.LimpaHist.Text = "🗑";
-            this.LimpaHist.UseVisualStyleBackColor = false;
-            this.LimpaHist.Click += new System.EventHandler(this.LimpaHist_Click);
-            // 
-            // btnHistorico
-            // 
-            this.btnHistorico.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnHistorico.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnHistorico.Location = new System.Drawing.Point(437, 8);
-            this.btnHistorico.Name = "btnHistorico";
-            this.btnHistorico.Size = new System.Drawing.Size(142, 36);
-            this.btnHistorico.TabIndex = 38;
-            this.btnHistorico.Text = "Histórico";
-            this.btnHistorico.UseVisualStyleBackColor = false;
+            LimpaHist.BackColor = SystemColors.ButtonShadow;
+            LimpaHist.Location = new Point(690, 342);
+            LimpaHist.Margin = new Padding(3, 2, 3, 2);
+            LimpaHist.Name = "LimpaHist";
+            LimpaHist.Size = new Size(22, 27);
+            LimpaHist.TabIndex = 0;
+            LimpaHist.Text = "🗑";
+            LimpaHist.UseVisualStyleBackColor = false;
+            LimpaHist.Click += LimpaHist_Click;
             // 
             // AtalhoHistorico
             // 
-            this.AtalhoHistorico.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.AtalhoHistorico.Location = new System.Drawing.Point(343, 1);
-            this.AtalhoHistorico.Name = "AtalhoHistorico";
-            this.AtalhoHistorico.Size = new System.Drawing.Size(25, 28);
-            this.AtalhoHistorico.TabIndex = 39;
-            this.AtalhoHistorico.Text = "🕗";
-            this.AtalhoHistorico.UseVisualStyleBackColor = false;
-            this.AtalhoHistorico.Click += new System.EventHandler(this.AtalhoHistorico_Click);
+            AtalhoHistorico.BackColor = SystemColors.AppWorkspace;
+            AtalhoHistorico.Location = new Point(300, 1);
+            AtalhoHistorico.Margin = new Padding(3, 2, 3, 2);
+            AtalhoHistorico.Name = "AtalhoHistorico";
+            AtalhoHistorico.Size = new Size(22, 21);
+            AtalhoHistorico.TabIndex = 39;
+            AtalhoHistorico.Text = "🕗";
+            AtalhoHistorico.UseVisualStyleBackColor = false;
+            AtalhoHistorico.Click += AtalhoHistorico_Click;
             // 
             // LabelResultado
             // 
-            this.LabelResultado.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LabelResultado.Location = new System.Drawing.Point(12, 62);
-            this.LabelResultado.Name = "LabelResultado";
-            this.LabelResultado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LabelResultado.Size = new System.Drawing.Size(377, 51);
-            this.LabelResultado.TabIndex = 40;
-            this.LabelResultado.Text = "0";
-            this.LabelResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            LabelResultado.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            LabelResultado.Location = new Point(10, 46);
+            LabelResultado.Name = "LabelResultado";
+            LabelResultado.RightToLeft = RightToLeft.No;
+            LabelResultado.Size = new Size(330, 38);
+            LabelResultado.TabIndex = 40;
+            LabelResultado.Text = "0";
+            LabelResultado.TextAlign = ContentAlignment.TopRight;
             // 
             // focoAlternativo
             // 
-            this.focoAlternativo.AutoSize = true;
-            this.focoAlternativo.Location = new System.Drawing.Point(133, 71);
-            this.focoAlternativo.Name = "focoAlternativo";
-            this.focoAlternativo.Size = new System.Drawing.Size(49, 20);
-            this.focoAlternativo.TabIndex = 42;
-            this.focoAlternativo.Text = "Foco2";
+            focoAlternativo.AutoSize = true;
+            focoAlternativo.Location = new Point(116, 53);
+            focoAlternativo.Name = "focoAlternativo";
+            focoAlternativo.Size = new Size(39, 15);
+            focoAlternativo.TabIndex = 42;
+            focoAlternativo.Text = "Foco2";
+            // 
+            // labelHistorico
+            // 
+            labelHistorico.AutoSize = true;
+            labelHistorico.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelHistorico.Location = new Point(382, 9);
+            labelHistorico.Name = "labelHistorico";
+            labelHistorico.Size = new Size(79, 21);
+            labelHistorico.TabIndex = 44;
+            labelHistorico.Text = "Histórico";
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(402, 509);
-            this.Controls.Add(this.LabelResultado);
-            this.Controls.Add(this.LblMensagemHist);
-            this.Controls.Add(this.AtalhoHistorico);
-            this.Controls.Add(this.LimpaHist);
-            this.Controls.Add(this.btnHistorico);
-            this.Controls.Add(this.panelHistorico);
-            this.Controls.Add(this.btn7);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn1);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn0);
-            this.Controls.Add(this.TxtTeclado);
-            this.Controls.Add(this.btnPorcentagem);
-            this.Controls.Add(this.cancelarRegistro);
-            this.Controls.Add(this.BtnLimpar);
-            this.Controls.Add(this.BtnApagar);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.BtnVírgula);
-            this.Controls.Add(this.BtnDivide);
-            this.Controls.Add(this.BtnVezez);
-            this.Controls.Add(this.BtnMenos);
-            this.Controls.Add(this.BtnIgual);
-            this.Controls.Add(this.LblValorCalcular);
-            this.Controls.Add(this.BtnMais);
-            this.Controls.Add(this.focoAlternativo);
-            this.DoubleBuffered = true;
-            this.IsMdiContainer = true;
-            this.KeyPreview = true;
-            this.MaximumSize = new System.Drawing.Size(843, 556);
-            this.MinimumSize = new System.Drawing.Size(418, 551);
-            this.Name = "FormPrincipal";
-            this.Text = "Form1";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormPrincipal_KeyPress);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(724, 384);
+            Controls.Add(labelHistorico);
+            Controls.Add(LabelResultado);
+            Controls.Add(LblMensagemHist);
+            Controls.Add(AtalhoHistorico);
+            Controls.Add(LimpaHist);
+            Controls.Add(panelHistorico);
+            Controls.Add(btn7);
+            Controls.Add(btn8);
+            Controls.Add(btn9);
+            Controls.Add(btn4);
+            Controls.Add(btn5);
+            Controls.Add(btn6);
+            Controls.Add(btn1);
+            Controls.Add(btn2);
+            Controls.Add(btn3);
+            Controls.Add(btn0);
+            Controls.Add(TxtTeclado);
+            Controls.Add(btnPorcentagem);
+            Controls.Add(cancelarRegistro);
+            Controls.Add(BtnLimpar);
+            Controls.Add(BtnApagar);
+            Controls.Add(button14);
+            Controls.Add(BtnVírgula);
+            Controls.Add(BtnDivide);
+            Controls.Add(BtnVezez);
+            Controls.Add(BtnMenos);
+            Controls.Add(BtnIgual);
+            Controls.Add(LblValorCalcular);
+            Controls.Add(BtnMais);
+            Controls.Add(focoAlternativo);
+            DoubleBuffered = true;
+            IsMdiContainer = true;
+            KeyPreview = true;
+            Margin = new Padding(3, 2, 3, 2);
+            MaximumSize = new Size(740, 427);
+            MinimumSize = new Size(368, 423);
+            Name = "FormPrincipal";
+            Text = "Form1";
+            KeyDown += FormPrincipal_KeyDown;
+            KeyPress += FormPrincipal_KeyPress;
+            KeyUp += FormPrincipal_KeyDown;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -476,11 +500,11 @@
         private Button cancelarRegistro;
         private Button TxtTeclado;
         private Panel panelHistorico;
-        private Button btnHistorico;
         private Button AtalhoHistorico;
         private Button LimpaHist;
         private Label LblMensagemHist;
         private Label LabelResultado;
         private Label focoAlternativo;
+        private Label labelHistorico;
     }
 }
