@@ -68,7 +68,8 @@
 
         private void PnForaFoco(object sender, EventArgs e)
         {
-
+            Panel pn = sender as Panel;
+            pn.BackColor = Color.Transparent;
         }
 
         private void PnCliqueHis(object sender, EventArgs e)
