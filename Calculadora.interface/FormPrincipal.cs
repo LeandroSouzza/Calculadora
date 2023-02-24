@@ -89,6 +89,10 @@
                 WindowState = FormWindowState.Maximized;
                 MaximumSize = this.Size;
             }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
         }
 
         private void LimpaHist_Click(object sender, EventArgs e)
