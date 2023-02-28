@@ -137,8 +137,6 @@
 
                 LblValorCalcular.Text += operacao;
 
-                LabelResultado.Text = "";
-
                 LblMensagemHist.Text = "";
 
             }
@@ -163,6 +161,10 @@
             {
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
+            }
+            else if (LabelResultado.Text == Num1.ToString())
+            {
+                LabelResultado.Text = "";
             }
 
             Resultado = false;
@@ -271,6 +273,10 @@
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
                 }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
+                }
 
                 Resultado = false;
 
@@ -287,6 +293,10 @@
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -306,6 +316,10 @@
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
                 }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
+                }
 
                 Resultado = false;
 
@@ -319,14 +333,14 @@
                 {
                     LabelResultado.Text = "";
                 }
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
                 else if (Resultado)
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -340,14 +354,14 @@
                 {
                     LabelResultado.Text = "";
                 }
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
                 else if (Resultado)
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -361,14 +375,14 @@
                 {
                     LabelResultado.Text = "";
                 }
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
                 else if (Resultado)
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -383,14 +397,14 @@
                 {
                     LabelResultado.Text = "";
                 }
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
                 else if (Resultado)
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -404,14 +418,14 @@
                 {
                     LabelResultado.Text = "";
                 }
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
                 else if (Resultado)
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -425,14 +439,14 @@
                 {
                     LabelResultado.Text = "";
                 }
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
                 else if (Resultado)
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -446,14 +460,14 @@
                 {
                     LabelResultado.Text = "";
                 }
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
                 else if (Resultado)
                 {
                     LabelResultado.Text = "";
                     LblValorCalcular.Text = "";
+                }
+                else if (LabelResultado.Text == Num1.ToString())
+                {
+                    LabelResultado.Text = "";
                 }
 
                 Resultado = false;
@@ -605,7 +619,7 @@
         private void AtribuirValores()
         {
 
-           // var numero1String = Num1 == 0 ? "" : $"{Num1}";
+            // var numero1String = Num1 == 0 ? "" : $"{Num1}";
 
             LblValorCalcular.Text = $"{Num1} {Calcular} {Num2} = ";
         }
