@@ -536,7 +536,7 @@
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
-            if (Calcular == "")
+            if (Calcular == "x")
             {
                 decimal Operacao = decimal.Parse(LabelResultado.Text) / 100;
                 LabelResultado.Text = Operacao.ToString();
@@ -592,7 +592,7 @@
                 }
                 else if (Calcular == "x")
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString();
+                    LabelResultado.Text = (Num1 * Num2).ToString("N0");
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
                 else if (Calcular == "%")
