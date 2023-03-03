@@ -556,7 +556,7 @@
                 decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
 
                 LabelResultado.Text = Operacao.ToString("N0");
-                LblValorCalcular.Text += LabelResultado.Text;
+                LblValorCalcular.Text = $"{Num1} {Calcular} {LabelResultado.Text} ";
             }
             else if (Calcular == "/")
             {
@@ -568,8 +568,8 @@
             {
                 decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
 
-                LabelResultado.Text = Operacao.ToString();
-                LblValorCalcular.Text += LabelResultado.Text;
+                LabelResultado.Text = Operacao.ToString("N0");
+                LblValorCalcular.Text = $"{Num1} {Calcular} {LabelResultado.Text} ";
             }
         }
 
