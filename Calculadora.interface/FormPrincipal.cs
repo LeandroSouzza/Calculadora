@@ -7,7 +7,9 @@
 
         public bool Resultado { get; set; }
 
-        public bool ResetHistorico { get; set; }
+        public bool BotaoPorce { get; set; }
+
+    public bool ResetHistorico { get; set; }
 
         public FormPrincipal()
         {
@@ -162,11 +164,16 @@
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
             }
+
+            else if (BotaoPorce)
+            {
+                LabelResultado.Text = "";
+                LblValorCalcular.Text = Num1.ToString() + Calcular.ToString();
+            }
             else if (LabelResultado.Text == Num1.ToString())
             {
                 LabelResultado.Text = "";
             }
-
             Resultado = false;
 
             LabelResultado.Text += button.Text;
@@ -536,6 +543,8 @@
 
         private void btnPorcentagem_Click(object sender, EventArgs e)
         {
+            BotaoPorce = true;
+
             if (Calcular == "x")
             {
                 decimal Operacao = decimal.Parse(LabelResultado.Text) / 100;
