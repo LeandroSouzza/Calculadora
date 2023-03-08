@@ -263,10 +263,6 @@
                 e.Handled = true;
             }
 
-            const int TamanhoMaximo = 16;
-            if (LabelResultado.Text.Length > TamanhoMaximo)
-                return;
-
             LblMensagemHist.Text = "";
 
             if (e.KeyChar == 48)
