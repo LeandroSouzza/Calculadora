@@ -288,6 +288,11 @@
 
             if (e.KeyChar == 49)
             {
+                const int TamanhoMaximo = 16;
+
+                if (LabelResultado.Text.Length > TamanhoMaximo)
+                    return;
+
                 if (LabelResultado.Text == "0")
                 {
                     LabelResultado.Text = "";
