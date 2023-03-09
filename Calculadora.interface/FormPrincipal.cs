@@ -155,6 +155,8 @@
             if (LabelResultado.Text.Length > TamanhoMaximo)
                 return;
 
+            LabelResultado.Text = String.Format("{0:#,###}", Convert.ToDecimal(LabelResultado.Text));
+
             if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
