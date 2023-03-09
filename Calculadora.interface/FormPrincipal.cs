@@ -263,6 +263,11 @@
                 e.Handled = true;
             }
 
+            const int TamanhoMaximo = 16;
+
+            if (LabelResultado.Text.Length > TamanhoMaximo)
+                return;
+
             LblMensagemHist.Text = "";
 
             if (e.KeyChar == 48)
@@ -288,11 +293,6 @@
 
             if (e.KeyChar == 49)
             {
-                const int TamanhoMaximo = 16;
-
-                if (LabelResultado.Text.Length > TamanhoMaximo)
-                    return;
-
                 if (LabelResultado.Text == "0")
                 {
                     LabelResultado.Text = "";
