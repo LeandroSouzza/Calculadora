@@ -160,10 +160,6 @@
 
         public void InserirNumero(string inserir)
         {
-            const int TamanhoMaximo = 16;
-
-            if (LabelResultado.Text.Length > TamanhoMaximo)
-                return;
 
             if (LabelResultado.Text == "0")
             {
@@ -443,13 +439,8 @@
                 }
                 else if (Calcular == "x")
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString("N1");
+                    LabelResultado.Text = (Num1 * Num2).ToString();
                     Num1 = Convert.ToDecimal(LabelResultado.Text);
-
-                    if (LabelResultado.Text.LastOrDefault() == '0')
-                    {
-                        LabelResultado.Text = LabelResultado.Text.Replace(",0", "");
-                    }
                 }
                 else if (Calcular == "%")
                 {
