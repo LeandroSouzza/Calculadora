@@ -128,7 +128,12 @@
             {
                 LabelResultado.Text = LabelResultado.Text.Replace(",", "");
             }
-
+            
+            else if (LabelResultado.Text.LastOrDefault() == '0')
+            {
+                    LabelResultado.Text = LabelResultado.Text.Replace(",0", "");
+            }
+            
             if (LabelResultado.Text != "")
             {
                 Num1 = Convert.ToDecimal(LabelResultado.Text);
@@ -604,6 +609,11 @@
                 if (Calcular == "+")
                 {
                     LabelResultado.Text = (Num1 + Num2).ToString();
+
+                    if (LabelResultado.Text.LastOrDefault() == '0')
+                    {
+                        LabelResultado.Text = LabelResultado.Text.Replace(",0", "");
+                    }
                 }
                 else if (Calcular == "-")
                 {
@@ -611,7 +621,12 @@
                 }
                 else if (Calcular == "x")
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString();
+                    LabelResultado.Text = (Num1 * Num2).ToString("n1");
+
+                    if (LabelResultado.Text.LastOrDefault() == '0')
+                    {
+                        LabelResultado.Text = LabelResultado.Text.Replace(",0", "");
+                    }
                 }
                 else if (Calcular == "%")
                 {
