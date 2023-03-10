@@ -272,6 +272,8 @@
 
             LblMensagemHist.Text = "";
 
+            LabelResultado.Text = String.Format("{0:#,###}", Convert.ToDecimal(LabelResultado.Text));
+
             if (e.KeyChar == 48)
             {
                 if (LabelResultado.Text == "0")
