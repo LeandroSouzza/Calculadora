@@ -429,6 +429,7 @@
                 if (Calcular == "+")
                 {
                     LabelResultado.Text = (Num1 + Num2).ToString();
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
 
                     if (LabelResultado.Text.LastOrDefault() == '0')
                     {
@@ -438,10 +439,12 @@
                 else if (Calcular == "-")
                 {
                     LabelResultado.Text = (Num1 - Num2).ToString();
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
                 else if (Calcular == "x")
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString("n1");
+                    LabelResultado.Text = (Num1 * Num2).ToString("N1");
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
 
                     if (LabelResultado.Text.LastOrDefault() == '0')
                     {
@@ -451,12 +454,14 @@
                 else if (Calcular == "%")
                 {
                     LabelResultado.Text = (Num1 * Num2).ToString();
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
                 }
                 else if (Calcular == "/")
                 {
                     if (LabelResultado.Text != "0")
                     {
-                        LabelResultado.Text = (Num1 / Num2).ToString();           
+                        LabelResultado.Text = (Num1 / Num2).ToString(); 
+                        Num1 = Convert.ToDecimal(LabelResultado.Text);
                     }
                 }
                 focoAlternativo.Focus();
