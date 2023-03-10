@@ -155,6 +155,11 @@
         private void agregarNumero(object sender, EventArgs e)
         {
             var button = ((Button)sender);
+            InserirNumero(button.Text);
+        }
+
+        public void InserirNumero(string inserir)
+        {
             const int TamanhoMaximo = 16;
 
             if (LabelResultado.Text.Length > TamanhoMaximo)
@@ -169,7 +174,6 @@
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
             }
-
             else if (BotaoPorce)
             {
                 LabelResultado.Text = "";
@@ -181,7 +185,7 @@
             }
             Resultado = false;
 
-            LabelResultado.Text += button.Text;
+            LabelResultado.Text += inserir;
 
             LblMensagemHist.Text = "";
 
@@ -261,246 +265,64 @@
 
         private void FormPrincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             //Textbox aceitar só números//
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
             {
                 e.Handled = true;
             }
 
-            const int TamanhoMaximo = 16;
-
-            if (LabelResultado.Text.Length > TamanhoMaximo)
-                return;
-
-            LblMensagemHist.Text = "";
-
             if (e.KeyChar == 48)
             {
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 0;
+                InserirNumero("0");
             }
 
             if (e.KeyChar == 49)
             {
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 1;
+                InserirNumero("1");
             }
 
             if (e.KeyChar == 50)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 2;
+                InserirNumero("2");
             }
 
             if (e.KeyChar == 51)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 3;
+                InserirNumero("3");
             }
             if (e.KeyChar == 52)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 4;
+                InserirNumero("4");
             }
             if (e.KeyChar == 53)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 5;
-
+                InserirNumero("5");
             }
             if (e.KeyChar == 54)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 6;
+                InserirNumero("6");
             }
             if (e.KeyChar == 55)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 7;
+                InserirNumero("7");
             }
             if (e.KeyChar == 56)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 8;
+                InserirNumero("8");
             }
             if (e.KeyChar == 57)
             {
-
-                if (LabelResultado.Text == "0")
-                {
-                    LabelResultado.Text = "";
-                }
-                else if (Resultado)
-                {
-                    LabelResultado.Text = "";
-                    LblValorCalcular.Text = "";
-                }
-                else if (LabelResultado.Text == Num1.ToString())
-                {
-                    LabelResultado.Text = "";
-                }
-
-                Resultado = false;
-
-                LabelResultado.Text += 9;
+                InserirNumero("9");
             }
-
             if (e.KeyChar == 8)
             {
                 Apagador("apagador");
             }
-
             if (e.KeyChar == 13)
             {
                 focoAlternativo.Text = "";
                 Igual("resultado");
             }
-
-
-
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
