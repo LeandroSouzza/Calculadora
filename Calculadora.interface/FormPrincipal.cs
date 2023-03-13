@@ -4,12 +4,12 @@
     {
         private decimal Num1 = 0, Num2 = 0;
         private string Calcular;
-
+        private bool InseriuNumeroPosResultado;
         public bool Resultado { get; set; }
 
         public bool BotaoPorce { get; set; }
 
-    public bool ResetHistorico { get; set; }
+        public bool ResetHistorico { get; set; }
 
         public FormPrincipal()
         {
@@ -18,10 +18,10 @@
 
         //Declarar variáveis
 
-        Panel pnHis;
-        Label lbl1His, lbl2His;
-        int nHis = 1;
-        Label[] lb1His = new Label[0], lb2His = new Label[0];
+        private Panel pnHis;
+        private Label lbl1His, lbl2His;
+        private int nHis = 1;
+        private Label[] lb1His = new Label[0], lb2His = new Label[0];
 
         //Função Histórico
 
@@ -59,7 +59,6 @@
             lb1His[nHis - 1] = lbl1His;
             lb2His[nHis - 1] = lbl2His;
             nHis++;
-
         }
 
         private void PnFoco(object sender, EventArgs e)
@@ -121,19 +120,18 @@
             if (Resultado)
             {
                 LblValorCalcular.Text = "";
+                Resultado = false;
             }
-            Resultado = false;
 
             if (LabelResultado.Text.LastOrDefault() == ',')
             {
                 LabelResultado.Text = LabelResultado.Text.Replace(",", "");
             }
-            
             else if (LabelResultado.Text.LastOrDefault() == '0')
             {
-                    LabelResultado.Text = LabelResultado.Text.Replace(",0", "");
+                LabelResultado.Text = LabelResultado.Text.Replace(",0", "");
             }
-            
+
             if (LabelResultado.Text != "")
             {
                 Num1 = Convert.ToDecimal(LabelResultado.Text);
@@ -145,11 +143,9 @@
                 LblValorCalcular.Text += operacao;
 
                 LblMensagemHist.Text = "";
-
             }
 
             focoAlternativo.Focus();
-
         }
 
         private void agregarNumero(object sender, EventArgs e)
@@ -160,7 +156,6 @@
 
         public void InserirNumero(string inserir)
         {
-
             if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
@@ -169,6 +164,8 @@
             {
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
+                Resultado = false;
+                InseriuNumeroPosResultado = true;
             }
             else if (BotaoPorce)
             {
@@ -179,7 +176,6 @@
             {
                 LabelResultado.Text = "";
             }
-            Resultado = false;
 
             LabelResultado.Text += inserir;
 
@@ -228,7 +224,6 @@
             Num1 = 0;
             Num2 = 0;
             Calcular = "";
-
 
             focoAlternativo.Focus();
         }
@@ -323,9 +318,7 @@
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
-
 
             if (e.KeyValue == 107)
             {
@@ -353,7 +346,6 @@
             }
 
             focoAlternativo.Focus();
-
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -399,33 +391,34 @@
             }
             catch (Exception)
             {
-
-                
             }
-
-            
         }
 
         private void panelHistorico_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void Igual(string resultado)
         {
             if (LabelResultado.Text != "")
             {
-                if (!Resultado)
+                if (InseriuNumeroPosResultado)
+                {
+                    Num2 = Num1;
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
+                    InseriuNumeroPosResultado = false;
+                }
+                else if (!Resultado)
                 {
                     Num2 = Convert.ToDecimal(LabelResultado.Text);
                 }
 
                 AtribuirValores();
+                var resultadoCalculo = 0M;
 
                 if (Calcular == "+")
                 {
-                    LabelResultado.Text = (Num1 + Num2).ToString();
-                    Num1 = Convert.ToDecimal(LabelResultado.Text);
+                    resultadoCalculo = Num1 + Num2;
 
                     if (LabelResultado.Text.LastOrDefault() == '0')
                     {
@@ -434,38 +427,37 @@
                 }
                 else if (Calcular == "-")
                 {
-                    LabelResultado.Text = (Num1 - Num2).ToString();
-                    Num1 = Convert.ToDecimal(LabelResultado.Text);
+                    resultadoCalculo = Num1 - Num2;
                 }
                 else if (Calcular == "x")
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString();
-                    Num1 = Convert.ToDecimal(LabelResultado.Text);
+                    var result = Math.Truncate(Num1 * Num2);
+                    resultadoCalculo = Num1 * Num2;
                 }
                 else if (Calcular == "%")
                 {
-                    LabelResultado.Text = (Num1 * Num2).ToString();
-                    Num1 = Convert.ToDecimal(LabelResultado.Text);
+                    resultadoCalculo = Num1 * Num2;
                 }
                 else if (Calcular == "/")
                 {
                     if (LabelResultado.Text != "0")
                     {
-                        LabelResultado.Text = (Num1 / Num2).ToString(); 
-                        Num1 = Convert.ToDecimal(LabelResultado.Text);
+                        resultadoCalculo = Num1 / Num2;
                     }
                 }
+
                 focoAlternativo.Focus();
+
+                LabelResultado.Text = resultadoCalculo.ToString("###.###.###.###.###,#############");
+                Num1 = Convert.ToDecimal(LabelResultado.Text);
             }
 
             Resultado = true;
             Historico(LabelResultado.Text.ToString(), LblValorCalcular.Text);
-
         }
 
         private void AtribuirValores()
         {
-
             // var numero1String = Num1 == 0 ? "" : $"{Num1}";
 
             LblValorCalcular.Text = $"{Num1} {Calcular} {Num2} = ";
