@@ -462,8 +462,15 @@
 
                 focoAlternativo.Focus();
 
-                LabelResultado.Text = resultadoCalculo.ToString("###.###.###.###.###,#############");
-                Num1 = Convert.ToDecimal(LabelResultado.Text);
+                try
+                {
+                    LabelResultado.Text = resultadoCalculo.ToString("###.###.###.###.###,#############");
+                    Num1 = Convert.ToDecimal(LabelResultado.Text);
+                }
+                catch (Exception)
+                {
+
+                }
             }
 
             Resultado = true;
