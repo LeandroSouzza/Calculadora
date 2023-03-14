@@ -482,6 +482,12 @@
             // var numero1String = Num1 == 0 ? "" : $"{Num1}";
 
             LblValorCalcular.Text = $"{Num1} {Calcular} {Num2} = ";
+
+            if (Num2 == 0)
+            {
+                LblValorCalcular.Text = Num2.ToString().Replace("0", "");
+                LblValorCalcular.Text = Num1.ToString() + " =";
+            }
         }
 
         private void BtnIgual_Click(object sender, EventArgs e)
