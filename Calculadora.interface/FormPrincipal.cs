@@ -9,6 +9,8 @@
 
         public bool BotaoPorce { get; set; }
 
+        public bool SeApagar { get; set; }
+
         public bool ResetHistorico { get; set; }
 
         public FormPrincipal()
@@ -156,6 +158,17 @@
 
         public void InserirNumero(string inserir)
         {
+            const int TamanhoMaximo = 16;
+
+            if (LabelResultado.Text.Length > TamanhoMaximo)
+                return;
+
+            if (SeApagar)
+            {
+                LabelResultado.Text += inserir;
+            }
+            SeApagar = false;   
+
             if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
@@ -218,6 +231,7 @@
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
+            SeApagar = true;
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
 
