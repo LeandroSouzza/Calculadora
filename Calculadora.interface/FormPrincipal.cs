@@ -9,7 +9,9 @@
 
         public bool BotaoPorce { get; set; }
 
-        public bool SeApagar { get; set; }
+        public bool LimiteExcedeu { get; set; }
+
+        public bool ApagarCeCE { get; set; }
 
         public bool ResetHistorico { get; set; }
 
@@ -144,6 +146,11 @@
 
                 LblValorCalcular.Text += operacao;
 
+                if (LimiteExcedeu)
+                {
+                    LabelResultado.Text = "";
+                }
+
                 LblMensagemHist.Text = "";
             }
 
@@ -161,13 +168,16 @@
             const int TamanhoMaximo = 16;
 
             if (LabelResultado.Text.Length > TamanhoMaximo)
+            {
+                LimiteExcedeu = true;
                 return;
+            }
 
-            if (SeApagar)
+            if (ApagarCeCE)
             {
                 LabelResultado.Text += inserir;
             }
-            SeApagar = false;   
+            ApagarCeCE = false;   
 
             if (LabelResultado.Text == "0")
             {
@@ -231,7 +241,7 @@
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            SeApagar = true;
+            ApagarCeCE = true;
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
 
@@ -244,6 +254,8 @@
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            ApagarCeCE = true;
             LabelResultado.Text = "0";
 
             if (Resultado)
