@@ -121,6 +121,7 @@
 
         private void Operador(string operacao)
         {
+            InseriuNumeroPosResultado = false;
             if (Resultado)
             {
                 LblValorCalcular.Text = "";
