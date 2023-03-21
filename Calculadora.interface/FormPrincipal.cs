@@ -166,6 +166,7 @@
 
         public void InserirNumero(string inserir)
         {
+            ApagarCeCE = false;
             const int TamanhoMaximo = 16;
 
             if (LabelResultado.Text.Length > TamanhoMaximo)
@@ -500,6 +501,7 @@
             {
                 LblValorCalcular.Text = Num2.ToString().Replace("0", "");
                 LblValorCalcular.Text = Num1.ToString() + " =";
+                
             }
         }
 
