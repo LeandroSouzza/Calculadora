@@ -367,7 +367,7 @@
                 Operador("/");
             }
 
-            if (e.KeyValue == 188 || e.KeyValue == 110)
+            if (e.KeyCode == Keys.Oemcomma || e.KeyCode == Keys.Decimal)
             {
                 Virgula("virgula");
             }
