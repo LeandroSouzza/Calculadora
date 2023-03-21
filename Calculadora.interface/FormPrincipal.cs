@@ -166,7 +166,6 @@
 
         public void InserirNumero(string inserir)
         {
-            ApagarCeCE = false;
             const int TamanhoMaximo = 16;
 
             if (LabelResultado.Text.Length > TamanhoMaximo)
@@ -348,22 +347,22 @@
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
 
-            if (e.KeyValue == 107)
+            if (e.KeyCode == Keys.Add)
             {
                 Operador("+");
             }
 
-            if (e.KeyValue == 109)
+            if (e.KeyCode == Keys.Subtract)
             {
                 Operador("-");
             }
 
-            if (e.KeyValue == 106)
+            if (e.KeyCode == Keys.Multiply)
             {
                 Operador("x");
             }
 
-            if (e.KeyValue == 111)
+            if (e.KeyCode == Keys.Divide)
             {
                 Operador("/");
             }
@@ -501,7 +500,6 @@
             {
                 LblValorCalcular.Text = Num2.ToString().Replace("0", "");
                 LblValorCalcular.Text = Num1.ToString() + " =";
-                
             }
         }
 
