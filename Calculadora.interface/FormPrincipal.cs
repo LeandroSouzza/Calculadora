@@ -288,7 +288,9 @@
             {
                 e.Handled = true;
             }
+
             //chaves aplicadas com enumeração//
+
             if (e.KeyChar == (char)Keys.D0)
             {
                 InserirNumero("0");
@@ -346,7 +348,9 @@
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
+
             //chaves aplicadas com enumeração//
+
             if (e.KeyCode == Keys.Add)
             {
                 Operador("+");
