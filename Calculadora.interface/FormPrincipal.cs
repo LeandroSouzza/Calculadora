@@ -288,55 +288,55 @@
             {
                 e.Handled = true;
             }
-
-            if (e.KeyChar == 48)
+            //chaves aplicadas com enumeração//
+            if (e.KeyChar == (char)Keys.D0)
             {
                 InserirNumero("0");
             }
 
-            if (e.KeyChar == 49)
+            if (e.KeyChar == (char)Keys.D1)
             {
                 InserirNumero("1");
             }
 
-            if (e.KeyChar == 50)
+            if (e.KeyChar == (char)Keys.D2)
             {
                 InserirNumero("2");
             }
 
-            if (e.KeyChar == 51)
+            if (e.KeyChar == (char)Keys.D3)
             {
                 InserirNumero("3");
             }
-            if (e.KeyChar == 52)
+            if (e.KeyChar == (char)Keys.D4)
             {
                 InserirNumero("4");
             }
-            if (e.KeyChar == 53)
+            if (e.KeyChar == (char)Keys.D5)
             {
                 InserirNumero("5");
             }
-            if (e.KeyChar == 54)
+            if (e.KeyChar == (char)Keys.D6)
             {
                 InserirNumero("6");
             }
-            if (e.KeyChar == 55)
+            if (e.KeyChar == (char)Keys.D7)
             {
                 InserirNumero("7");
             }
-            if (e.KeyChar == 56)
+            if (e.KeyChar == (char)Keys.D8)
             {
                 InserirNumero("8");
             }
-            if (e.KeyChar == 57)
+            if (e.KeyChar == (char)Keys.D9)
             {
                 InserirNumero("9");
             }
-            if (e.KeyChar == 8)
+            if (e.KeyChar == (char)Keys.Back)
             {
                 Apagador("apagador");
             }
-            if (e.KeyChar == 13)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 focoAlternativo.Text = "";
                 Igual("resultado");
@@ -346,7 +346,7 @@
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             TxtTeclado.Text = Convert.ToString(e.KeyValue);
-
+            //chaves aplicadas com enumeração//
             if (e.KeyCode == Keys.Add)
             {
                 Operador("+");
@@ -409,6 +409,7 @@
                     LabelResultado.Text = Operacao.ToString();
                     LblValorCalcular.Text = $"{Num1} {Calcular} {LabelResultado.Text} ";
                 }
+
                 else if (Calcular == "-")
                 {
                     decimal Operacao = (decimal.Parse(LabelResultado.Text) / 100) * (decimal)Num1;
