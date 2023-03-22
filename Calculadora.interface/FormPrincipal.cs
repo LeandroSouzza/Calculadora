@@ -196,12 +196,13 @@
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = Num1.ToString() + Calcular.ToString();
             }
-            else if (LabelResultado.Text == Num1.ToString())
+            else if (decimal.TryParse(LabelResultado.Text, out var labelResultadoDecimal)  && labelResultadoDecimal == Num1)
             {
                 LabelResultado.Text = "";
             }
 
             LabelResultado.Text += inserir;
+            LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
 
             LblMensagemHist.Text = "";
 
@@ -288,7 +289,6 @@
             {
                 e.Handled = true;
             }
-
             //chaves aplicadas com enumeração//
 
             if (e.KeyChar == (char)Keys.D0)
