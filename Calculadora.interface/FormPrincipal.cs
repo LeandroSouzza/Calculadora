@@ -145,7 +145,10 @@
 
                 LblValorCalcular.Text = LabelResultado.Text;
 
+                LblValorCalcular.Text = String.Format("{0:################}", Convert.ToDecimal(LblValorCalcular.Text));
+
                 LblValorCalcular.Text += operacao;
+
 
                 if (LimiteExcedeu)
                 {
