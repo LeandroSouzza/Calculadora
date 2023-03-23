@@ -44,12 +44,14 @@
 
             lbl1His.Text = men;
             lbl1His.Font = new Font("Segoe UI", 10);
+            lbl1His.Size = new Size(300, 50);
             lbl1His.Name = "lbl1_" + nHis;
             lbl1His.Left = panelHistorico.Width - lbl1His.Width;
-
+            
             lbl2His.Text = num;
             lbl2His.Font = new Font("Segoe UI", 16, FontStyle.Bold);
             lbl2His.Top = 20;
+            lbl2His.Size = new Size(300, 50);
             lbl2His.Name = "lbl2_" + nHis;
             lbl2His.Height = 32;
             lbl2His.Left = panelHistorico.Width - lbl2His.Width;
