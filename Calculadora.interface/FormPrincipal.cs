@@ -7,6 +7,8 @@
         private bool InseriuNumeroPosResultado;
         public bool Resultado { get; set; }
 
+        public bool SegundoNumeroFoiInserido { get; set; }
+
         public bool BotaoPorce { get; set; }
 
         public bool LimiteExcedeu { get; set; }
@@ -130,6 +132,12 @@
                 Resultado = false;
             }
 
+            if (SegundoNumeroFoiInserido)
+            {
+                Igual("resultado");
+            }
+            SegundoNumeroFoiInserido = false;
+
             if (LabelResultado.Text.LastOrDefault() == ',')
             {
                 LabelResultado.Text = LabelResultado.Text.Replace(",", "");
@@ -150,7 +158,6 @@
                 LblValorCalcular.Text = String.Format("{0:################}", Convert.ToDecimal(LblValorCalcular.Text));
 
                 LblValorCalcular.Text += operacao;
-
 
                 if (LimiteExcedeu)
                 {
@@ -191,6 +198,7 @@
             }
             else if (Resultado)
             {
+                SegundoNumeroFoiInserido = false;
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = "";
                 Resultado = false;
@@ -203,10 +211,13 @@
             }
             else if (decimal.TryParse(LabelResultado.Text, out var labelResultadoDecimal)  && labelResultadoDecimal == Num1)
             {
+
+                SegundoNumeroFoiInserido = true;
                 LabelResultado.Text = "";
             }
 
             LabelResultado.Text += inserir;
+            
             LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
 
             LblMensagemHist.Text = "";
