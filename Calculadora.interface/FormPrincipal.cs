@@ -506,11 +506,23 @@
 
                 }
             }
+            try
+            {
+                if (Num1 == 0)
+                {
+                    LblValorCalcular.Text = Num1.ToString().Replace("0", "");
+                    LblValorCalcular.Text = Num2.ToString() + " =";
+                    LabelResultado.Text = Num2.ToString();
+                }
+                Resultado = true;
 
-            Resultado = true;
+                LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+                Historico(LabelResultado.Text.ToString(), LblValorCalcular.Text);
+            }
+            catch (Exception)
+            {
 
-            LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
-            Historico(LabelResultado.Text.ToString(), LblValorCalcular.Text);
+            }
         }
 
         private void AtribuirValores()
@@ -523,6 +535,7 @@
             {
                 LblValorCalcular.Text = Num2.ToString().Replace("0", "");
                 LblValorCalcular.Text = Num1.ToString() + " =";
+                LabelResultado.Text = Num1.ToString();
             }
         }
 
