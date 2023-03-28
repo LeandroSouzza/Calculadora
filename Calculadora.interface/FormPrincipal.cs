@@ -13,8 +13,6 @@
 
         public bool LimiteExcedeu { get; set; }
 
-        public bool ApagarCeCE { get; set; }
-
         public bool ResetHistorico { get; set; }
 
         public FormPrincipal()
@@ -185,13 +183,6 @@
                 LimiteExcedeu = true;
                 return;
             }
-
-            /*if (ApagarCeCE)
-            {
-                LabelResultado.Text += inserir;
-            }
-            ApagarCeCE = false;*/   
-
             if (LabelResultado.Text == "0")
             {
                 LabelResultado.Text = "";
@@ -218,7 +209,7 @@
 
             LabelResultado.Text += inserir;
             
-            //LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+            LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
 
             LblMensagemHist.Text = "";
 
@@ -259,7 +250,6 @@
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
-            ApagarCeCE = true;
             LblValorCalcular.Text = "";
             LabelResultado.Text = "0";
 
@@ -272,8 +262,6 @@
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            ApagarCeCE = true;
             LabelResultado.Text = "0";
 
             if (Resultado)
