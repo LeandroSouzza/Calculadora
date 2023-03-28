@@ -186,11 +186,11 @@
                 return;
             }
 
-            if (ApagarCeCE)
+            /*if (ApagarCeCE)
             {
                 LabelResultado.Text += inserir;
             }
-            ApagarCeCE = false;   
+            ApagarCeCE = false;*/   
 
             if (LabelResultado.Text == "0")
             {
@@ -218,7 +218,7 @@
 
             LabelResultado.Text += inserir;
             
-            LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+            //LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
 
             LblMensagemHist.Text = "";
 
