@@ -153,7 +153,7 @@
 
                 LblValorCalcular.Text = LabelResultado.Text;
 
-                //LblValorCalcular.Text = String.Format("{0:################}", Convert.ToDecimal(LblValorCalcular.Text));
+                LblValorCalcular.Text = String.Format("{0:################}", Convert.ToDecimal(LblValorCalcular.Text));
 
                 LblValorCalcular.Text += operacao;
 
@@ -176,6 +176,13 @@
 
         public void InserirNumero(string inserir)
         {
+            try
+            {
+                LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+            }
+            catch (Exception)
+            {
+            }
             const int TamanhoMaximo = 16;
 
             if (LabelResultado.Text.Length > TamanhoMaximo)
@@ -208,8 +215,6 @@
             }
 
             LabelResultado.Text += inserir;
-            
-           // LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
 
             LblMensagemHist.Text = "";
 
