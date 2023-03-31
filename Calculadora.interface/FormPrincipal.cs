@@ -153,7 +153,7 @@
 
                 LblValorCalcular.Text = LabelResultado.Text;
 
-                LblValorCalcular.Text = String.Format("{0:################}", Convert.ToDecimal(LblValorCalcular.Text));
+                //LblValorCalcular.Text = String.Format("{0:################}", Convert.ToDecimal(LblValorCalcular.Text));
 
                 LblValorCalcular.Text += operacao;
 
@@ -209,7 +209,7 @@
 
             LabelResultado.Text += inserir;
             
-            LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+           // LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
 
             LblMensagemHist.Text = "";
 
