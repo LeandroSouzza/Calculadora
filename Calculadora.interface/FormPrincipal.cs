@@ -176,12 +176,6 @@
 
         public void InserirNumero(string inserir)
         {
-            try
-            {
-            }
-            catch (Exception)
-            {
-            }
             const int TamanhoMaximo = 16;
 
             if (LabelResultado.Text.Length > TamanhoMaximo)
