@@ -200,6 +200,12 @@
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = Num1.ToString() + Calcular.ToString();
             }
+            else if (decimal.TryParse(LabelResultado.Text, out var labelResultadoDecimal) && labelResultadoDecimal == Num1)
+            {
+
+                SegundoNumeroFoiInserido = true;
+                LabelResultado.Text = "";
+            }
 
             LabelResultado.Text += inserir;
 
