@@ -506,7 +506,10 @@
                 }
                 Resultado = true;
 
-                LabelResultado.Text = String.Format("{0:#.###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+                if (!LabelResultado.Text.Contains(","))
+                {
+                    LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+                }
                 Historico(LabelResultado.Text.ToString(), LblValorCalcular.Text);
             }
             catch (Exception)
