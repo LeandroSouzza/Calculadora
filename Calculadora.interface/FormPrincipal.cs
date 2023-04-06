@@ -153,7 +153,7 @@
 
                 LblValorCalcular.Text = LabelResultado.Text;
 
-                LblValorCalcular.Text = String.Format("{0:################}", Convert.ToDecimal(LblValorCalcular.Text));
+                LblValorCalcular.Text = String.Format("{0:#.###############}", Convert.ToDecimal(LblValorCalcular.Text));
 
                 LblValorCalcular.Text += operacao;
 
@@ -208,7 +208,7 @@
 
             LabelResultado.Text += inserir;
 
-            if(LabelResultado.Text != "0")
+            if(LabelResultado.Text != "0" && !LabelResultado.Text.Contains(","))
             {
                 LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
             }
@@ -506,7 +506,7 @@
                 }
                 Resultado = true;
 
-                LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+                LabelResultado.Text = String.Format("{0:#.###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
                 Historico(LabelResultado.Text.ToString(), LblValorCalcular.Text);
             }
             catch (Exception)
