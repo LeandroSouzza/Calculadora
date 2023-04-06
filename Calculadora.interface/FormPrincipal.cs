@@ -176,9 +176,8 @@
 
         public void InserirNumero(string inserir)
         {
-            const int TamanhoMaximo = 16;
-
-            if (LabelResultado.Text.Length > TamanhoMaximo)
+            LabelResultado.Font = new Font("Segoe UI Semibold", 20);
+            if (LabelResultado.Text.Length > 19)
             {
                 LimiteExcedeu = true;
                 return;
