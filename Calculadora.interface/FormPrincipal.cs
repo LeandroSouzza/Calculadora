@@ -178,7 +178,6 @@
         {
             try
             {
-                LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
             }
             catch (Exception)
             {
@@ -207,14 +206,13 @@
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = Num1.ToString() + Calcular.ToString();
             }
-            else if (decimal.TryParse(LabelResultado.Text, out var labelResultadoDecimal)  && labelResultadoDecimal == Num1)
-            {
-
-                SegundoNumeroFoiInserido = true;
-                LabelResultado.Text = "";
-            }
 
             LabelResultado.Text += inserir;
+
+            if(LabelResultado.Text != "0")
+            {
+                LabelResultado.Text = String.Format("{0:#,###,###,###,###,###}", Convert.ToDecimal(LabelResultado.Text));
+            }
 
             LblMensagemHist.Text = "";
 
