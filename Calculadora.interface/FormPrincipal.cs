@@ -153,7 +153,11 @@
 
                 LblValorCalcular.Text = LabelResultado.Text;
 
-                LblValorCalcular.Text = String.Format("{0:#.###############}", Convert.ToDecimal(LblValorCalcular.Text));
+                if (!LabelResultado.Text.Contains(","))
+                {
+
+                    LblValorCalcular.Text = String.Format("{0:#.###############}", Convert.ToDecimal(LblValorCalcular.Text));
+                }
 
                 LblValorCalcular.Text += operacao;
 
@@ -199,7 +203,7 @@
                 LabelResultado.Text = "";
                 LblValorCalcular.Text = Num1.ToString() + Calcular.ToString();
             }
-            else if (decimal.TryParse(LabelResultado.Text, out var labelResultadoDecimal) && labelResultadoDecimal == Num1)
+            else if (decimal.TryParse(LabelResultado.Text, out var labelResultadoDecimal) && labelResultadoDecimal == Num1 && LabelResultado.Text != "0,")
             {
 
                 SegundoNumeroFoiInserido = true;
